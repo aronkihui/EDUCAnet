@@ -222,3 +222,345 @@ Stack trace:
 #24 {main}
 REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
 ---
+2014/03/15 18:18:45 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.index" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CModule.php(105): CComponent->__get('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/layouts/main.php(42): CModule->__get('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(206): COutputProcessor->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#10 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(784): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/controllers/SiteController.php(32): CController->render('index')
+#14 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#15 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#20 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/index
+---
+2014/03/15 18:19:05 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.sites" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CModule.php(105): CComponent->__get('sites')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/layouts/main.php(42): CModule->__get('sites')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(206): COutputProcessor->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#10 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(784): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/controllers/SiteController.php(32): CController->render('index')
+#14 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#15 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#20 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/index
+---
+2014/03/15 21:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/index
+---
+2014/03/15 21:32:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:32:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('about')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('about')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/about
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/contact
+---
+2014/03/15 21:33:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('about')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('about')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/about
+---
+2014/03/15 21:33:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/page?view=about
+---
+2014/03/15 21:33:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/contact
+---
+2014/03/15 21:33:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/contact
+---
+2014/03/15 21:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/page?view=about
+---
+2014/03/15 21:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/contact
+---
+2014/03/15 21:36:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:42:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:42:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:42:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/page?view=about
+---
+2014/03/15 21:47:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:47:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:47:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/page?view=about
+---
+2014/03/15 21:53:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/contact
+---
+2014/03/15 21:57:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 21:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 22:13:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php
+---
+2014/03/15 22:13:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/page?view=about
+---
+2014/03/15 22:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalalumno')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalalumno
+---
+2014/03/15 22:36:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portalalumno
+---
+2014/03/15 22:36:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/contact
+---
+2014/03/15 22:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
+2014/03/15 22:37:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalalumno".' in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalalumno')
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalalumno')
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('site/portalalum...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/site/portalalumno
+---
