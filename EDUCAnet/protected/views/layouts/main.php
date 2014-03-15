@@ -46,7 +46,7 @@
                                 <div class="nav-collapse collapse"> 
                                     <?php $this->widget('zii.widgets.CMenu',array(                                        
                                         'items'=>array(
-                                                array('label'=>'Portal Alumno', 'url'=>array('/site/portalalumno')),
+                                                array('label'=>'Portal Alumno', 'url'=>array('/portalalumno/portalalumno')),
                                                 array('label'=>'Portal Docente', 'url'=>array('/site/contact')),
                                                 array('label'=>'Biblioteca Virtual', 'url'=>array('/site/page', 'view'=>'about')),
                                                 /*array('label'=>'Home', 'url'=>array('/site/index')),
