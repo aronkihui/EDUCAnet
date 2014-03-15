@@ -692,3 +692,41 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/site/portalalumno
 ---
+2014/03/16 00:09:42 [error] [php] Undefined variable: content (/Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/portalalumno/portalalumno.php:72)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(869): portalalumnoController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(782): portalalumnoController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortalalumnoController.php(6): portalalumnoController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): portalalumnoController->actionPortalalumno()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(286): portalalumnoController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(265): portalalumnoController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): portalalumnoController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalalumno/portalalumno
+in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/portalalumno/portalalumno.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortalalumnoController.php (6)
+in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/03/16 00:51:42 [error] [php] Illegal offset type in isset or empty (/Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/YiiBase.php:265)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(172): portalalumnoController->createWidget()
+#1 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/portalalumno/portalalumno.php(44): portalalumnoController->widget()
+#2 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CBaseController.php(95): portalalumnoController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(869): portalalumnoController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(782): portalalumnoController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortalalumnoController.php(6): portalalumnoController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): portalalumnoController->actionPortalalumno()
+#8 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(286): portalalumnoController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CController.php(265): portalalumnoController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): portalalumnoController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalalumno/portalalumno
+in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/views/portalalumno/portalalumno.php (44)
+in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortalalumnoController.php (6)
+in /Applications/XAMPP/xamppfiles/htdocs/EDUCAnet/EDUCAnet/index.php (13)
