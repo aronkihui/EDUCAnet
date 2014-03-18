@@ -1,5 +1,5 @@
 <?php
-class portalalumnoController extends Controller
+class PortalalumnoController extends Controller
 {
     public function actionPortalalumno()
     {

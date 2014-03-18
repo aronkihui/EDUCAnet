@@ -48,7 +48,7 @@
                                         'items'=>array(
                                                 array('label'=>'Portal Alumno', 'url'=>array('/portalalumno/portalalumno')),
                                                 array('label'=>'Portal Docente', 'url'=>array('/site/contact')),
-                                                array('label'=>'Biblioteca Virtual', 'url'=>array('/site/page', 'view'=>'about')),
+                                                array('label'=>'Biblioteca Virtual', 'url'=>array('/portalbiblioteca/portalbiblioteca')),
                                                 /*array('label'=>'Home', 'url'=>array('/site/index')),
                                                 array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                                                 array('label'=>'Contact', 'url'=>array('/site/contact')),

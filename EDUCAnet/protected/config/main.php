@@ -8,6 +8,7 @@
 
 //directorio de bootstrap cargado ...
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('images', dirname(__FILE__).'/../../../../images');
 //...
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
@@ -21,6 +22,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                
 	),
 
 	'modules'=>array(
