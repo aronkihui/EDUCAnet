@@ -7,4 +7,18 @@ class PortalbibliotecaController extends Controller
         $this->render('portalbiblio'); 
            
     }
+    
+    
+    
+    public function actionSubir_arch()
+    {
+        
+        $this->render('subir_arch');
+    }
+    
+    public function actionArch_usuario()
+    {
+        $this->render('arch_usuario');
+        
+    }
 }

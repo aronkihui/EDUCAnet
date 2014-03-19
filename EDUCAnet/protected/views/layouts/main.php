@@ -23,17 +23,16 @@
 </head>
 
 <body>
+    
+    
         <div class="container">
             <div class="page-header">
-                <?php if(isset($this->breadcrumbs)):?>
-                        <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-                                'links'=>$this->breadcrumbs,
-                        )); ?><!-- breadcrumbs -->
-                <?php endif?>
+               
                 <div class ="navbar navbar-inverse navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container">
                             <div class="span8 offset3">
+                                
                                 <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
@@ -64,6 +63,20 @@
                 </div><!-- mainmenu -->
             </div>
             <?php echo $content; ?>
+            
+            
+           
+               
+                    <div class="span12">
+                        </br></br></br>
+                         <?php if(isset($this->breadcrumbs)):?>
+                        <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+                                'links'=>$this->breadcrumbs,
+                        )); ?><!-- breadcrumbs -->
+                <?php endif?>
+                    </div>
+               
+            
 
             <div class="clear"></div>
 
