@@ -7,6 +7,9 @@
         <?php
             echo Yii::app()->bootstrap->registerAllCss();
             echo Yii::app()->bootstrap->registerCoreScripts();
+            
+           
+        
             /*Aquí están los CSS antiguos	
                     <!-- blueprint CSS framework -->
                     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
@@ -18,6 +21,10 @@
                     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
             */
         ?>
+        
+         <?php 
+            Yii::app()->clientScript->registerCoreScript('jquery'); 
+            ?>
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo Yii::app()->request->baseUrl; ?>/css/cabeza.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -77,6 +84,8 @@
                     </div>
                
             
+            
+          
 
             <div class="clear"></div>
 

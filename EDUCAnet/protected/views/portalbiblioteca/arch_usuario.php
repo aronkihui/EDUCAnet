@@ -34,19 +34,18 @@ $this->breadcrumbs=array(
     
         
         
-           <h2>Mis archivos </h2>
+     <h2>Mis archivos </h2>
+    <?php
+               echo CHtml::openTag('div', array('class' => 'row-fluid'));
+    $this->widget(
+    'bootstrap.widgets.TbThumbnails',
+    array(
+    'dataProvider' => $thumbDataProvider,
+    'template' => "{items}\n{pager}",
+    'itemView' => 'application.views.widgets.grouping._thumb',
+    )
+    );
+    echo CHtml::closeTag('div');
     
-</head>
-<body>
- 
-</br>
-
-
-<div class="container">
-
-	
-
-</div>
-
-</body>
+    ?>
 </html>
