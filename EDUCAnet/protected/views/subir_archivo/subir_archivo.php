@@ -105,7 +105,14 @@ ell formulario de registro del archivo .
 
         
 </div>   
-        
-      
+ 
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $mensaje) {
+        echo '<div class="flash-' . $key . '">' . $mensaje . "</div>\n";
+    }
+    
+  ?>   
+
 
 <?php endif; ?>
+

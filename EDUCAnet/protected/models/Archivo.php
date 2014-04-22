@@ -18,24 +18,11 @@
  * @property Comentario[] $comentarios
  * @property Registro[] $registros
  */
-class Subir_archivo extends CActiveRecord
+class Archivo extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
-    
-        public $idusuario;
-        public $nombre;	
-        public $descripcion;
-        public $area;
-        public $cursonivel;
-        
-        public $archivo;
-       
-    
-        public $verifyCode;
-        
-    
 	public function tableName()
 	{
 		return 'archivo';
@@ -48,19 +35,16 @@ class Subir_archivo extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
-			return array(
-
-                        array('archivo_nombre, archivo_area, archivo_cursonivel', 'length', 'max'=>45),
-                        array('archivo', 'file', 'types'=>'jpg,jpeg, gif, png, doc, pdf', 'allowEmpty' => FALSE),
-                        array('archivo_descripcion', 'length', 'max'=>50),
-                       // array('archivo_fecha','date','format'=>Yii::app()->locale->getDateFormat('short')),
-                        // The following rule is used by search().
-                        // @todo Please remove those attributes that should not be searched.
-                        //array('idarchivo, archivo_nombre, archivo_fecha, archivo_path, archivo_descripcion, archivo_area, archivo_cursonivel, usuario_idusuario', 'safe', 'on'=>'search'),
-                        // verifyCode sneeds to be entered correctly
-                        array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-                    
-                            );
+		return array(
+			array('archivo_nombre, archivo_fecha, archivo_path, archivo_descripcion, archivo_area, archivo_cursonivel, usuario_idusuario', 'required'),
+			array('usuario_idusuario', 'numerical', 'integerOnly'=>true),
+			array('archivo_nombre, archivo_area, archivo_cursonivel', 'length', 'max'=>45),
+			array('archivo_path', 'length', 'max'=>300),
+			array('archivo_descripcion', 'length', 'max'=>50),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('idarchivo, archivo_nombre, archivo_fecha, archivo_path, archivo_descripcion, archivo_area, archivo_cursonivel, usuario_idusuario', 'safe', 'on'=>'search'),
+		);
 	}
 
 	/**
@@ -106,30 +90,10 @@ class Subir_archivo extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
-        
-        
-        public function beforeSave()
-                {
-            
-            if(parent::beforeSave()){
-            {
-            date_default_timezone_set("America/Santiago");
-            $this->archivo_fecha = date("Y-m-d H:i:s");
-            
-            $path ="store/$this->archivo_area/$this->archivo_cursonivel/$this->archivo_nombre/$this->usuario_idusuario/";
-            $this->archivo_path=$path.$this->archivo;
-             return true;
-             }
-             return false;
-            }
-            
-        }
-        
-        
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
-/*
+
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idarchivo',$this->idarchivo);
@@ -144,15 +108,13 @@ class Subir_archivo extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
- * 
- */
 	}
 
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Subir_archivo the static model class
+	 * @return Archivo the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

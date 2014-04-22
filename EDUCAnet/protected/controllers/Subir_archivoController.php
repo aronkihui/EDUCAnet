@@ -31,48 +31,45 @@ class Subir_archivoController extends Controller
 		
          $model=new Subir_archivo;
 
-                // Uncomment the following line if AJAX validation is needed
-                // $this->performAjaxValidation($model);
-
                 if(isset($_POST['Subir_archivo']))
                 {
                         $model->attributes=$_POST['Subir_archivo'];
-                        $model->archivo=CUploadedFile::getInstance($model,'archivo'); //NEW (FORMULARIO)
-                        //$model->archivo_fecha=date("d-m-Y H:i:s");
-                        
-                               $model->setAttribute('archivo_fecha',date("d-m-Y H:i:s"));
-                               //exit($model->archivo_fecha);
+                        $model->archivo=CUploadedFile::getInstance($model,'archivo');
+                          
+                        $model->setAttribute('usuario_idusuario',1);
+
                         if($model->archivo == null)
                         {
                             
                             echo "Null file";
                             
                         }
-                        if($model->save())
-                            { 
+                              if($model->save())
+                            {  
+                                $estructura ="store/$model->archivo_area/$model->archivo_cursonivel/$model->archivo_nombre/$model->usuario_idusuario";
                          
-                       
-                         
-                                $estructura ="store/$model->archivo_area/$model->archivo_cursonivel/$model->archivo_nombre/$model->idusuario";
-                               
                                 if(!file_exists($estructura))
-                                    { //VE SI LA CARPETA EXISTE
-                                        mkdir($estructura,0775,true);//CREAR CARPETA CN TODOS LOS PERMISOS
-                                        
-                                     
+                                    { 
+                                        mkdir($estructura,0775,true);             
                                          $path="$estructura/$model->archivo";
+                                        
                                         $model->archivo->saveAs($path);
-                                        //$model->archivo->saveAs((YiiBase::getPathOfAlias('webroot').$estructura));
-                                        //$this->redirect(array('view','id'=>$model->id_archivo));
-                                }
+                                     $model->archivo_path=$path;
+                                     
+                                         Yii::app()->user->setFlash('subir_archivo', "Archivos subidos exitosamente");
+                                         $this->refresh();           
+                                    }
                                 else{
                                         $path="$estructura/$model->archivo";
-                                        $model->archivo->saveAs($path);//NEW (FORMULARIO)
-                                       // $this->redirect(array('view','id'=>$model->id_archivo));
+                                        $model->archivo->saveAs($path);                                        
+                                      
+                                      Yii::app()->user->setFlash('subir_archivo', "Archivo subido exitosamente!");
+                                      $this->refresh();
                                 }
-                                 
-                             
-                     }
+                       
+                                     
+                              
+                                     }
                              
                                   
                              

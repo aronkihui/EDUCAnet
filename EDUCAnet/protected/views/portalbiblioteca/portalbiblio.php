@@ -61,25 +61,25 @@ $this->widget('bootstrap.widgets.TbCarousel', array(
 <div class="container">
 <div class="span-5 last">
  <li class="span3">
-       <a href="#" class="thumbnail" rel="#"  data-title="Tooltip">
+     <a href="<?php echo Yii:: app() ->baseUrl.'/miperfil/miperfil'?>" class="thumbnail" rel="#"  data-title="Tooltip">
         <img src="<?php echo Yii:: app() ->baseUrl.'/../images/perfil.jpeg' ?>" alt="">
     </a>
 </li>
 
    <li class="span3">
-       <a href="#" class="thumbnail"  rel="#" data-title="Tooltip">
+       <a href="<?php echo Yii:: app() ->baseUrl.'/subir_archivo/subir_archivo'?>" class="thumbnail"  rel="#" data-title="Tooltip">
         <img src="<?php echo Yii:: app() ->baseUrl.'/../images/upload.png' ?>" alt="">
     </a>
 </li>
 
    <li class="span3">
-    <a href="#" class="thumbnail" rel="#" data-title="Tooltip">
+    <a href="<?php echo Yii:: app() ->baseUrl.'/mostrar_archivo/mostrar_archivo'?>" class="thumbnail" rel="#" data-title="Tooltip">
         <img src="<?php echo Yii:: app() ->baseUrl.'/../images/biblio_1.jpg' ?>" alt="">
     </a>
 </li>
 	
 </div>
-</div>>
+</div>
 
 </body>
 </html>

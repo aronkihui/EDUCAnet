@@ -13,10 +13,8 @@ class PortalbibliotecaController extends Controller
 			// They can be accessed via: index.php?r=site/page&view=FileName
 			'page'=>array(
 				'class'=>'CViewAction',
-			),
-                    //fileadminmanager
-                       'yiifilemanagerfilepicker'=>array(
-                    'class'=>'ext.yiifilemanagerfilepicker.YiiFileManagerFilePickerAction'),
+			)
+                    
 		);    
         }
     
