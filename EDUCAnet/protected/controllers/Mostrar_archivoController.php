@@ -8,12 +8,28 @@
 
 class Mostrar_archivoController extends Controller
 {
+   
     
-    public function actionMostrar_archivo()
+    public function actionView()
     {
-                 
-              
-              //SELECT * FROM `archivo` WHERE archivo_fecha <= '$fecha' ORDER BY idarchivo desc limit 3 
+      $dato=$_GET['view']  ;
+      exit($dato);
+        
+    }
+
+    
+    //cambiar el permiso para el usuario logeado con sesion activa 
+    public function accesRules()
+   {
+       return array(
+        array('allow',  // allow all users to perform 'index' and 'view' actions
+        'actions'=>array('view'),
+        'users'=>array('*'),
+        ));
+   }
+
+    public function actionMostrar_archivo()
+    {         
       $fecha=date('Y-m-d H:i:s');
               $criteria = new CDbCriteria;
               $criteria->condition = 'archivo_fecha<=:fecha ';
@@ -49,5 +65,7 @@ $mods=new CSqlDataProvider($sql, array(
         $this->render('mostrar_archivo',array('model'=>$model,'models'=>$mods));
  
     }
+    
+    
     
 }

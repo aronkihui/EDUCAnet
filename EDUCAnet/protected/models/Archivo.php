@@ -17,13 +17,25 @@
  * @property Usuario $usuarioIdusuario
  * @property Comentario[] $comentarios
  * @property Registro[] $registros
+ * 
  */
+
+
+
+
+
+
+
 class Archivo extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
-	public function tableName()
+    
+   
+
+
+   public function tableName()
 	{
 		return 'archivo';
 	}
