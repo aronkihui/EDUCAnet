@@ -17,27 +17,13 @@
  * @property Usuario $usuarioIdusuario
  * @property Comentario[] $comentarios
  * @property Registro[] $registros
- * 
  */
-
-
-
-
-
-
-
-class Archivo extends CActiveRecord
+class BusquedaAvanzada extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
-    
-   
-  
-   
-
-
-   public function tableName()
+	public function tableName()
 	{
 		return 'archivo';
 	}
@@ -128,7 +114,7 @@ class Archivo extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Archivo the static model class
+	 * @return BusquedaAvanzada the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

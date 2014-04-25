@@ -19,31 +19,32 @@
                                                                                      )),
                                                                                     '---',  
                                       array('label'=>'Electricidad', 'url'=>'#', 'items'=>array( 
-                                                                                     array('label'=>'Primero','url'=>array('mostrar_archivo/view','view'=>'Electricidad primero')),
-                                                                                     array('label'=>'Segundo','url'=>array('mostrar_archivo/view','view'=>'Electricidad segundo')),
-                                                                                     array('label'=>'Tercero','url'=>array('mostrar_archivo/view','view'=>'Electricidad tercero')),
-                                                                                     array('label'=>'Cuarto','url'=>array('mostrar_archivo/view','view'=>'Electricidad cuarto'))
+                                                                                     array('label'=>'Primero','url'=>array('mostrar_archivo/view','view'=>'electricidad primero')),
+                                                                                     array('label'=>'Segundo','url'=>array('mostrar_archivo/view','view'=>'electricidad segundo')),
+                                                                                     array('label'=>'Tercero','url'=>array('mostrar_archivo/view','view'=>'electricidad tercero')),
+                                                                                     array('label'=>'Cuarto','url'=>array('mostrar_archivo/view','view'=>'electricidad cuarto'))
                                                                                      )),
                                       '---',  
                                       array('label'=>'Estructuras Metalicas', 'url'=>'#', 'items'=>array( 
-                                                                                     array('label'=>'Primero','url'=>array('mostrar_archivo/view','view'=>'Estructuras Metalicas primero')),
-                                                                                     array('label'=>'Segundo','url'=>array('mostrar_archivo/view','view'=>'Estructuras Metalicas segundo')),
-                                                                                     array('label'=>'Tercero','url'=>array('mostrar_archivo/view','view'=>'Estructuras Metalicas tercero')),
-                                                                                     array('label'=>'Cuarto','url'=>array('mostrar_archivo/view','view'=>'Estructuras Metalicas cuarto'))
+                                                                                     array('label'=>'Primero','url'=>array('mostrar_archivo/view','view'=>'estructuras metalicas primero')),
+                                                                                     array('label'=>'Segundo','url'=>array('mostrar_archivo/view','view'=>'estructuras metalicas segundo')),
+                                                                                     array('label'=>'Tercero','url'=>array('mostrar_archivo/view','view'=>'estructuras metalicas tercero')),
+                                                                                     array('label'=>'Cuarto','url'=>array('mostrar_archivo/view','view'=>'estructuras metalicas cuarto'))
                                                                                      )),
                                       '---',  
                                       array('label'=>'Instalaciones Sanitarias', 'url'=>'#', 'items'=>array( 
-                                                                                     array('label'=>'Primero','url'=>array('mostrar_archivo/view','view'=>'Instalaciones Sanitarias primero')),
-                                                                                     array('label'=>'Segundo','url'=>array('mostrar_archivo/view','view'=>'Instalaciones Sanitarias segundo')),
-                                                                                     array('label'=>'Tercero','url'=>array('mostrar_archivo/view','view'=>'Instalaciones Sanitarias tercero')),
-                                                                                     array('label'=>'Cuarto','url'=>array('mostrar_archivo/view','view'=>'Instalaciones Sanitarias cuarto'))
+                                                                                     array('label'=>'Primero','url'=>array('mostrar_archivo/view','view'=>'instalaciones_sanitarias primero')),
+                                                                                     array('label'=>'Segundo','url'=>array('mostrar_archivo/view','view'=>'instalaciones_sanitarias segundo')),
+                                                                                     array('label'=>'Tercero','url'=>array('mostrar_archivo/view','view'=>'instalaciones_sanitarias tercero')),
+                                                                                     array('label'=>'Cuarto','url'=>array('mostrar_archivo/view','view'=>'instalaciones_sanitarias cuarto'))
                                                                                      )),
                                     '---',
-                                      array('label'=>'Bibliografia General', 'url'=>'#')
+                                      array('label'=>'Bibliografia General', 'url'=>array('mostrar_archivo/view_general','view'=>'biblioGeneral'))
                                                                                                                                                         
                                       )
                     ),
-                array('label'=>'Busqueda Avanzada', 'url'=> '')
+                array('label'=>'Busqueda Avanzada', 'url'=>array('mostrar_archivo/view_avanzada'))
+                
                      ),
         ),
         '<form class="navbar-search pull-right" action=""><input type="text" class="search-query span2" placeholder="Buscar"></form>',
@@ -52,13 +53,55 @@
 )); ?>                        
 
 
+
+
+
 <div>
     <h2>Archivos recientes  </h2>
 </div>
 
-<div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+
+
+<div>
+    aqui va todoo lo correspondiende al la seccion escogida
+</div>
+
+
+
+
+
+<?php 
+
+
+
+
+
+//llamo a formulario de busqueda avanzada
+if(isset($respuesta))
+{
+
+     
+   $this->renderPartial('_formBusquedaAvanzada',array('respuesta'=>$respuesta,'model'=>$model));
+}
+
+
+
+?>
+
+
+
+
+
+
+
+
+<?php
+
+if(isset($models))
+{
+
+ $form=$this->beginWidget('CActiveForm', array(
 'id'=>'store-form',
 'enableAjaxValidation'=>false,
     
@@ -75,6 +118,8 @@ $this->widget('bootstrap.widgets.TbThumbnails', array(
    
 ));
 
-?>
 
-<?php $this->endWidget(); ?>
+
+$this->endWidget(); 
+}
+?>

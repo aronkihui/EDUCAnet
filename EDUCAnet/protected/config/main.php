@@ -61,6 +61,20 @@ return array(
         'class'=>'application.extensions.yiifilemanager.YiiDiskFileManager',
         'storage_path' => "/var/tmp/fileman",
 ),
+    
+    
+    'misfunciones' => array(
+        'class'=>'application.components.MisFunciones',
+        'idioma'=>'es',),
+    
+    //aqui registre mi archivo con funciones para el controllador
+    
+    'misconsultas'=>array (
+        'class'=>'application.controllers.misConsultas',
+        
+      
+    ),
+ 
                 //...
             
 'user'=>array(
