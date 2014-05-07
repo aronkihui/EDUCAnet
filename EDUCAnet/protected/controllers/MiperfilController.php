@@ -10,7 +10,8 @@ class MiperfilController extends Controller
 {
     public function actionMiperfil()
     {
-        $this->render('miperfil');
+        $model=new Archivo;
+        $this->render('miperfil',array('model'=>$model));
         
     }
     

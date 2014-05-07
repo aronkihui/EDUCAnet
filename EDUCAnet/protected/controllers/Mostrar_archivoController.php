@@ -176,4 +176,18 @@ class Mostrar_archivoController extends Controller
     
     
     
+    
+    public function actionDescargar()
+    {
+        $model = new Archivo();
+        $name = $_GET['file'];
+        $upload_path = Yii::app()->params['uploadPath'];
+
+        if( file_exists( $upload_path.$name ) ){
+        Yii::app()->getRequest()->sendFile( $name , file_get_contents( $upload_path.$name ) );
+        }
+        else{
+        $this->render('download404');
+        } 
+        } 
 }
