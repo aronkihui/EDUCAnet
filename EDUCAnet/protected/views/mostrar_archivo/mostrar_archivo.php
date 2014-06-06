@@ -47,12 +47,24 @@
                 
                      ),
         ),
-        '<form class="navbar-search pull-right" action=""><input type="text" class="search-query span2" placeholder="Buscar"></form>',
+        '<form class="navbar-search pull-right" action="">  <input type="text" class="search-query span2" placeholder="Buscar"></form>',
         
     ),
 )); ?>                        
 
 
+<?php	
+$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+	    'name'=>'buscar',
+	    'value'=>'',
+	    'source'=>$this->createUrl('miperfil/autobusqueda'),
+	    // additional javascript options for the autocomplete plugin
+	    'options'=>array(
+	            'showAnim'=>'fold',
+	    ),
+	));	
+
+?>
 
 
 

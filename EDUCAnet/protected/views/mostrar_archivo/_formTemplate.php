@@ -7,7 +7,7 @@
        data-title="<?php echo $data['archivo_nombre']?>">
         <img src='<?php echo Yii::app()->getBaseUrl() .'/'.$data['archivo_path']   ?>'>
         <p><?php echo $data['archivo_descripcion']?></p> 
-        <a href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$data['archivo_path'])) ;?>">Descargar</a>
+        <a class="btn-inverse" href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$data['archivo_path'])) ;?>">Descargar</a>
         
     </a>
 </li>

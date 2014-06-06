@@ -33,11 +33,10 @@ class Archivo extends CActiveRecord
 	 */
     
    
-  
-   
+        public $archivo;
 
 
-   public function tableName()
+        public function tableName()
 	{
 		return 'archivo';
 	}
