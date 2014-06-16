@@ -20,9 +20,9 @@
       <!—Sidebar content—>
       <ul class="nav nav-pills nav-stacked">
           
-          <li class="active"><a href="<?php echo $this->createUrl('miperfil/miperfil');?>"><span class="badge pull-right">42</span> Mi Perfil </a> </li>
+          <li class="active"><a href="<?php echo $this->createUrl('miperfil/misDatosPersonales');?>"><span class="badge pull-right">42</span> Mis datos  </a> </li>
       <li class=""><a href="<?php echo $this->createUrl('miperfil/misDescargas');?>"><span class="badge pull-right"></span> Mis Descargas </a> </li>
-      <li class=""><a href="<?php echo $this->createUrl('miperfil/misSubidas');?>"><span class="badge pull-right"></span> Mis Subidas </a> </li>
+      <li class=""><a href="<?php echo $this->createUrl('miperfil/misSubidas');?>"><span class="badge pull-right"></span> Mis archivos </a> </li>
       <li class=""><a href="<?php echo $this->createUrl('miperfil/registroSesion');?>"><span class="badge pull-right"></span> Mis sesiones </a> </li>
     
     </ul>
@@ -33,16 +33,22 @@
  
         <div class="container-fluid well  panel panel-primary" >
             
-            <p>       
-        <?php    
-            //llamo a formulario de busqueda avanzada
-
+            <p>    
+                
+               
+    <?php    
+          
     switch (isset($respuesta))
     {
-    
+    case $respuesta=='misdatos':
+    {
+        $this->renderPartial('_misdatos');
+            break;
+    }
     case $respuesta=='missubidas':
     {
-        $this->renderPartial('_missubidas');
+        
+        $this->renderPartial('_missubidas',array('datos'=>$datos));
     break;
     }
     case $respuesta=='misdescargas':

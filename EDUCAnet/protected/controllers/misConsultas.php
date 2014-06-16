@@ -35,6 +35,19 @@ class misConsultas  extends CApplicationComponent
     }
     
     
+    public function consultaPorId($id)
+    {
+        $sql="select * from archivo where usuario_idusuario ='$id'";
+        return new CSqlDataProvider($sql,array(
+            'totalItemCount'=>2,
+            'sort'=>array('attributes'=>array('archivo_nombre','archivo_fecha','archivo_area','archivo_cursonivel')),
+            'pagination'=>false,//array('pageSize'=>8),
+            'keyField'=>'idarchivo'
+        ));
+        
+    }
+    
+    
     public function mostrarArchivos()
     {
       $sql='SELECT * FROM archivo ORDER BY idarchivo desc';

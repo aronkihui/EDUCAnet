@@ -6,5 +6,15 @@
  * and open the template in the editor.
  */
 
+
 ?>
-<p>mis subidas</p>
+<h3>mis subidas</h3>
+
+<div>
+    <?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $datos,
+    'columns' => array('archivo_nombre', 'archivo_area','archivo_cursonivel','archivo_fecha'),
+));
+    ?>
+</div>
