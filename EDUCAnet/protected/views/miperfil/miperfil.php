@@ -24,6 +24,7 @@
       <li class=""><a href="<?php echo $this->createUrl('miperfil/misDescargas');?>"><span class="badge pull-right"></span> Mis Descargas </a> </li>
       <li class=""><a href="<?php echo $this->createUrl('miperfil/misSubidas');?>"><span class="badge pull-right"></span> Mis archivos </a> </li>
       <li class=""><a href="<?php echo $this->createUrl('miperfil/registroSesion');?>"><span class="badge pull-right"></span> Mis sesiones </a> </li>
+      <li class=''><a href="<?php echo $this->createUrl('miperfil/comentarios');?>"><span class='badge pull-right'></span> Comentarios</a></li>
     
     </ul>
   
@@ -53,15 +54,17 @@
     }
     case $respuesta=='misdescargas':
     {
-        $this->renderPartial('_misdescargas');
+        $this->renderPartial('_misdescargas',array('datos'=>$datos));
         break;
     }
     
     case $respuesta=='registrosesion':
     {
-        $this->renderPartial('_registrosesion');
+        $this->renderPartial('_registrosesion',array('datos'=>$datos));
             break;
     }
+    case $respuesta=='comentarios':
+        $this->renderPartial('_comentarios');
     
     }
 

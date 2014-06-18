@@ -48,6 +48,32 @@ class misConsultas  extends CApplicationComponent
     }
     
     
+    public function consultaRegDescargas($id)
+    {
+        
+        $sql="select registro_fecha archivo_idarchivo from registro_descargas where  usuario_idusuario='$id' ";
+        return new CSqlDataProvider($sql,array(
+            'totalItemCount'=>2,
+            'sort'=>array('attributes'=>array('registro_fecha','archivo_idarchivo')),
+            'pagination'=>false,
+            'keyField'=>''//
+        ));
+    }
+    
+    //consultas registro sesion
+    public function consultaRegSesion($id)
+    {
+        
+        $sql="select * from registro_sesion where idregistro_sesion='$id' ";
+        return new CSqlDataProvider($sql,array(
+            'totalItemCount'=>2,
+            'sort'=>array('attributes'=>array('hora_inicio','hora_fin')),
+            'keyField'=>'idregistro_sesion'
+        ));
+    }
+
+    
+
     public function mostrarArchivos()
     {
       $sql='SELECT * FROM archivo ORDER BY idarchivo desc';

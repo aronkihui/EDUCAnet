@@ -7,4 +7,15 @@
  */
 
 ?>
-<p>registro sesion</p>
+
+
+<h3>registro sesion</h3>
+
+<div>
+    <?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $datos,
+    'columns' => array('hora_inicio','hora_fin'),
+));
+    ?>
+</div>

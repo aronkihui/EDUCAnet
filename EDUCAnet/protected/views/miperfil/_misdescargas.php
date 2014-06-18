@@ -8,4 +8,16 @@
 
 ?>
 
-<p>misdescargas</p>
+<h3>misdescargas</h3>
+
+
+
+
+<div>
+    <?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $datos,
+    'columns' => array('registro_fecha','archivo_idarchivo'),
+));
+    ?>
+</div>

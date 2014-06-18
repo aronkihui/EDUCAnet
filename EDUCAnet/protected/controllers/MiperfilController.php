@@ -50,25 +50,36 @@ class MiperfilController extends Controller
         
         public function  actionRegistroSesion()
         {
-            $respuesta='registrosesion';
-           $this->render('miperfil',array('respuesta'=>$respuesta));
-           
             
+            $id=1;
+            $datos=Yii::app()->misconsultas->consultaRegSesion($id);
+            
+           $this->render('miperfil',array('respuesta'=>'registrosesion','datos'=>$datos));
+            
+        }
+        
+        
+        public function actionComentarios()
+        {
+            $id=1;
+            $this->render('miperfil',array('respuesta'=>'comentarios'));
         }
         
         
         public  function actionMisDescargas()
         {
-            $respuesta='misdescargas';
-            
-            
            
-           $this->render('miperfil',array('respuesta'=>$respuesta));
+           //tomar el id del usuario activo
+            $id=1;
+            $datos=Yii::app()->misconsultas->consultaRegDescargas($id);
+           $this->render('miperfil',array('respuesta'=>'misdescargas','datos'=>$datos));
             
         }
         
          public  function actionMisSubidas()
         {
+             
+             //tomar id del usuario activo
              $id=1;
             $datos=Yii::app()->misconsultas->consultaPorId($id);
            $this->render('miperfil',array('respuesta'=>'missubidas','datos'=>$datos));
