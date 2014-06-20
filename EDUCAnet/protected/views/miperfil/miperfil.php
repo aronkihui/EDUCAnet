@@ -50,7 +50,7 @@
     {
         
         $this->renderPartial('_missubidas',array('datos'=>$datos));
-    break; quellon
+    break;
     }
     case $respuesta=='misdescargas':
     {

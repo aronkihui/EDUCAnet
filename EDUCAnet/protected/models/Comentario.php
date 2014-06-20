@@ -36,8 +36,8 @@ class Comentario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('comentario_contenido, comentario_fecha, archivo_idarchivo, usuario_idusuario', 'required'),
-			array('archivo_idarchivo, usuario_idusuario', 'numerical', 'integerOnly'=>true),
+			array(' comentario_contenido', 'required'),
+			//array('archivo_idarchivo, usuario_idusuario', 'numerical', 'integerOnly'=>true),
 			array('comentario_contenido', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -116,7 +116,7 @@ class Comentario extends CActiveRecord
         
          public function beforeSave()
                 {
-            exit('llamada a beforesave');
+           
             if(parent::beforeSave()){
             {
             date_default_timezone_set("America/Santiago");

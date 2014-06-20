@@ -88,10 +88,10 @@ return new CSqlDataProvider($sql, array(
     //CONSULTA PARA COMENTARIOS
     public function obtenerComentarios($id)
     {
-        $sql="Select * from comentarios where archivo_idarchivo ='$id'  order By idcomentario asc";
+        $sql="Select comentario_fecha,comentario_contenido,usuario_idusuario,usuario.nombreusuario from comentario, usuario where comentario.archivo_idarchivo='$id'  and usuario.idusuario= `usuario_idusuario` order by `idcomentario`desc";
         return new CSqlDataProvider($sql,array(
             'totalItemCount'=>3,
-            'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','usuario_idusuario'),),
+            'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','usuario_idusuario','nombreusuario'),),
             'keyField'=>'idcomentario'
         ));
     }
