@@ -8,21 +8,7 @@
 
 ?>
 
-<script>
-function comentariosRealizados() {
-    
 
-      document.getElementById('contenedor1').hidden = false;          
-   document.getElementById("contenedor").innerHTML="comentarios realizados";
-}
-
-function comentariosRecibidos()
-{
-    document.getElementById('contenedor2').hidden = false;          
-   
-    document.getElementById("contenedor").innerHTML="comentarios recibidos";
-}
-</script>
 
 
 <h3 class="centered">Todos mis Comentarios</h3>
@@ -65,15 +51,12 @@ function comentariosRecibidos()
   
 
 
-    <div  id="contenedor1" hidden>
+    <div  id="contenedor" >
         
-        <p>kledrlkjwelkr</p>
+        <p>klwjer</p>
     </div>
     
-    <div  id="contenedor2" hidden>
-        
-        <p>kledrlkjwelkr</p>
-    </div>
+    
 </div>
 
     

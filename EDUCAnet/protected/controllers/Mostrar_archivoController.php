@@ -189,5 +189,17 @@ class Mostrar_archivoController extends Controller
         else{
         $this->render('download404');
         } 
-        } 
+     } 
+     
+     
+     public function actionComentar()
+     {
+        
+         
+     }
+     public function actionAllcomentarios()
+     {
+         
+        $this->render('_perfilArchivo');  
+     }
 }
