@@ -8,8 +8,8 @@
         <img src='<?php echo Yii::app()->getBaseUrl() .'/'.$data['archivo_path']   ?>'></img>
         <p><?php echo $data['archivo_descripcion']?></p> 
         <a class="btn-inverse" href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$data['archivo_path'])) ;?>">Descargar</a>
-    
-        <a class="btn-inverse" href="<?php echo $this->createUrl('mostrar_archivo/allcomentarios')?>">Ver Mas</a>
+       
+        <a class="btn-inverse" href="<?php echo $this->createUrl('mostrar_archivo/allcomentarios',array('id'=>$data['idarchivo']));?>">Ver Mas</a>
         
    
        

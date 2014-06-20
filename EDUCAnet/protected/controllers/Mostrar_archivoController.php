@@ -199,7 +199,40 @@ class Mostrar_archivoController extends Controller
      }
      public function actionAllcomentarios()
      {
+         $model=new Comentario();
+         //CONSULTO PARA QUE ME DEVUELVA LOS DATOS DEL ARCHIVO
+         $datos=Yii::app()->misconsultas->obtenerComentarios($_GET['id']);
          
-        $this->render('_perfilArchivo');  
+        $this->render('_perfilArchivo',array('datos'=>$datos,'model'=>$model));  
      }
+     
+     
+     public function actionSubircomentario()
+     {
+         $model=new Comentario;
+
+                if(isset($_POST['Comentario']))
+                {
+                        $model->attributes=$_POST['Comentario'];$model->archivo=CUploadedFile::getInstance($model,'archivo');
+                          
+                        //esto es para setear los atributos de los llaves foraneas en la bd
+                        //$model->setAttribute('usuario_idusuario',1);
+
+                        
+                              if($model->save())
+                            {  
+                               
+                            }
+               }
+         
+     }
+		
+         
+
+          
+     
+     
+     
+     
+     
 }

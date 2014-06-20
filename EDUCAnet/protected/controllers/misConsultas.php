@@ -85,6 +85,17 @@ return new CSqlDataProvider($sql, array(
         
     }
     
+    //CONSULTA PARA COMENTARIOS
+    public function obtenerComentarios($id)
+    {
+        $sql="Select * from comentarios where archivo_idarchivo ='$id'  order By idcomentario asc";
+        return new CSqlDataProvider($sql,array(
+            'totalItemCount'=>3,
+            'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','usuario_idusuario'),),
+            'keyField'=>'idcomentario'
+        ));
+    }
+    
 }
         
         

@@ -24,7 +24,6 @@
 
 
 
-     
 
 
 <?php $this->beginWidget('bootstrap.widgets.TbModal', array('id'=>'myModal')); ?>
@@ -35,25 +34,20 @@
 </div>
  
 <div class="modal-body">
-    <p>Escribe tu comentario aqui</p>
-    
-    
    
+    <p>Escribe tu comentario aqui</p>
     
 </div>
  
 <div class="modal-footer">
+     
     <?php $this->widget('bootstrap.widgets.TbButton', array(
-        'type'=>'primary',
-        'label'=>'publicar',
+        'label'=>'Cancelar',
         'url'=>'#',
         'htmlOptions'=>array('data-dismiss'=>'modal'),
     )); ?>
-    <?php $this->widget('bootstrap.widgets.TbButton', array(
-        'label'=>'Cerrar',
-        'url'=>'#',
-        'htmlOptions'=>array('data-dismiss'=>'modal'),
-    )); ?>
+    
+    
 </div>
  
 <?php $this->endWidget(); ?>
@@ -68,12 +62,31 @@
 )); ?>
 </div>
     
+    
+    <div class="form">
+        
+         <?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'comentarios',        
+	'enableClientValidation'=>false,  
+        'enableAjaxValidation' => false,
+	'htmlOptions' => array('enctype' => 'multipart/form-data'),//FORMULARIO  BUSQUEDA AVANZADA ARCHIVO
+)); ?>
+    
+    <?php  echo $form->errorSummary($model); ?>
+                <?php echo $form->labelEx($model,'comentario_contenido'); ?>
+		<?php echo $form->textArea($model,'comentario_contenido'); ?>
+		<?php echo $form->error($model,'comentario_contenido'); ?> 
+    <?php echo CHtml::submitButton('Publicar',array('class'=> 'btn btn-primary')); ?>
+    <?php $this->endWidget(); ?>
+    </div>
+    
         
         
 
     
 </div>
     
+   <!-- este contenedor div es para mostrar los comentarios--> 
     <div class="container-fluid well  panel panel-primary" >
 
     
