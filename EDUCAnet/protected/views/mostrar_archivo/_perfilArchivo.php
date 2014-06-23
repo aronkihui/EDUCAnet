@@ -17,10 +17,17 @@
 <div class=" container-fluid">
     
         
-        <div class="container-fluid well  panel panel-primary" >
-
-<p>perfil de archivos</p>
-
+<div class="container-fluid well  panel panel-primary" >
+    
+    <!--contenedor para imagen y modal-->
+<div class="container-fluid ">
+    <h2 class="centered">Perfil de archivos</h2>
+<!--cargar imagen del archivo en miniatura-->
+<div class="span4  centered">
+     <a href="<?php echo Yii:: app() ->baseUrl.'/miperfil/miperfil';?>" class="thumbnail" rel="#"  data-title="Tooltip">
+        <img src="<?php echo (Yii::app()->baseUrl); echo'/';echo ($archivo)?>" alt="">
+       
+    </a>
 
 
 
@@ -76,12 +83,7 @@
 )); ?>
 </div>
     
-    
-    
-    
-        
-        
-
+ </div>   
     
 </div>
     

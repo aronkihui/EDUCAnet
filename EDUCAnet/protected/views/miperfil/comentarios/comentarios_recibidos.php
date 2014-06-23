@@ -8,4 +8,4 @@
 
 ?>
 
-<p>comentarios recibidos</p>
+<p>comentarios recibidos xD</p>

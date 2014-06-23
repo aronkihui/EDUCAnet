@@ -192,16 +192,15 @@ class Mostrar_archivoController extends Controller
      } 
      
      
-     public function actionComentar()
-     {
-        
-         
-     }
+     
      public function actionAllcomentarios()
      {
          $model=new Comentario();
          //CONSULTO PARA QUE ME DEVUELVA LOS DATOS DEL ARCHIVO el get viene del mostrar archivos 
          $idarchivo=$_GET['id'];
+        
+        $archivo=$_GET['archivo'];
+         
          $datos=Yii::app()->misconsultas->obtenerComentarios($idarchivo);
          
          //esto es para es para los comentarios
@@ -219,7 +218,7 @@ class Mostrar_archivoController extends Controller
                }
                
          
-        $this->render('_perfilArchivo',array('datos'=>$datos,'model'=>$model));  
+        $this->render('_perfilArchivo',array('datos'=>$datos,'model'=>$model,'archivo'=>$archivo));  
      }
      
      

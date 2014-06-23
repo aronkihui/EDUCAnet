@@ -66,6 +66,16 @@ class MiperfilController extends Controller
         }
         
         
+        public function actionComentarios_realizados()
+        {
+            $this->render('comentarios/comentarios_realizados',array());
+        }
+        
+        public function actionComentarios_recibidos()
+        {
+             $this->render('comentarios/comentarios_recibidos',array());
+        }
+        
         public  function actionMisDescargas()
         {
            
