@@ -76,8 +76,8 @@ function contenido(id){
         
         <p>klwjer</p>
         <!--contendor para mostrar los los comentarios-->
-        <div id="1" style="display:none"><?php $this->renderPartial('comentarios/comentarios_realizados');?></div>
-        <div id="2" style="display:none"><?php $this->renderPartial('comentarios/comentarios_recibidos'); ?></div>      
+        <div id="1" style="display:none"><?php $this->renderPartial('comentarios/comentarios_realizados',array('datos'=>$datos));?></div>
+        <div id="2" style="display:none"><?php $this->renderPartial('comentarios/comentarios_recibidos',array('datos'=>$dato2)); ?></div>      
        
     </div>
     

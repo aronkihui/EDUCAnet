@@ -47,7 +47,14 @@ class MiperfilController extends Controller
 	    Yii::app()->end();
 	}
         
-        
+     public function actionBuscarComentariosPorUsuario()
+     {
+
+
+     }
+
+
+     
         public function  actionRegistroSesion()
         {
             
@@ -62,13 +69,24 @@ class MiperfilController extends Controller
         public function actionComentarios()
         {
             $id=1;
-            $this->render('miperfil',array('respuesta'=>'comentarios'));
+            
+              //comentarios realizados
+            $datos=Yii::app()->misconsultas->obtenerComentariosRealizados($id);
+            
+            //comentarios recibidos ?
+            $id=1;
+            $dato2=Yii::app()->misconsultas->consultaPorId($id);
+            
+            $this->render('miperfil',array('respuesta'=>'comentarios','datos'=>$datos,'dato2'=>$datos));
         }
         
         
         public function actionComentarios_realizados()
         {
-            $this->render('comentarios/comentarios_realizados',array());
+            
+               $id=1;
+            $datos=Yii::app()->misconsultas->obtenerComentariosRealizados($id);
+            $this->render('comentarios_realizados',array('datos'=>$datos));
         }
         
         public function actionComentarios_recibidos()
@@ -99,6 +117,7 @@ class MiperfilController extends Controller
         
         public function actionMisDatosPersonales()
         {
+         
             $this->render('miperfil',array('respuesta'=>'misdatos'));
         }
         

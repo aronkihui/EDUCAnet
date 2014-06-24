@@ -37,7 +37,7 @@ class misConsultas  extends CApplicationComponent
     
     public function consultaPorId($id)
     {
-        $sql="select * from archivo where usuario_idusuario ='$id'";
+        $sql="select * from archivo where usuario_idusuario ='$id' order by archivo_fecha desc";
         return new CSqlDataProvider($sql,array(
             'totalItemCount'=>2,
             'sort'=>array('attributes'=>array('archivo_nombre','archivo_fecha','archivo_area','archivo_cursonivel')),
@@ -46,6 +46,8 @@ class misConsultas  extends CApplicationComponent
         ));
         
     }
+    
+    
     
     
     public function consultaRegDescargas($id)
@@ -92,6 +94,26 @@ return new CSqlDataProvider($sql, array(
         return new CSqlDataProvider($sql,array(
             'totalItemCount'=>3,
             'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','usuario_idusuario','nombreusuario'),),
+            'keyField'=>'idcomentario'
+        ));  
+    }
+    
+    public function obtenerComentariosRealizados($id)
+    {
+        $sql="Select comentario_fecha,comentario_contenido,archivo_idarchivo from comentario where usuario_idusuario= '$id' order by comentario_fecha desc ";
+        return new CSqlDataProvider($sql,array(
+            'totalItemCount'=>3,
+            'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','archivo_idarchivo'),),
+            'keyField'=>'idcomentario'
+        ));
+    }
+    
+     public function obtenerComentariosRecibidos($id)
+    {
+        $sql="Select comentario_fecha,comentario_contenido,archivo_idarchivo from comentario where usuario_idusuario= '$id' order by comentario_fecha desc ";
+        return new CSqlDataProvider($sql,array(
+            'totalItemCount'=>3,
+            'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','archivo_idarchivo'),),
             'keyField'=>'idcomentario'
         ));
     }

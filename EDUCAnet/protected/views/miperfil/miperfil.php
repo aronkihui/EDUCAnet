@@ -64,7 +64,7 @@
             break;
     }
     case $respuesta=='comentarios':
-        $this->renderPartial('_comentarios');
+        $this->renderPartial('_comentarios',array('datos'=>$datos,'dato2'=>$dato2));
     
     }
 
