@@ -8,24 +8,12 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
-    
-    
-    'import'=>array(
-'application.models.*',
-'application.components.*',
-'application.extensions.yiifilemanager.*',
-'application.extensions.yiifilemanagerfilepicker.*',               
-),
 
 	// application components
 	'components'=>array(
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
-             'fileman' => array(
-        'class'=>'application.extensions.yiifilemanager.YiiDiskFileManager',
-        'storage_path' => "/var/tmp/fileman",
-),
 		// uncomment the following to use a MySQL database
 		/*
 		'db'=>array(

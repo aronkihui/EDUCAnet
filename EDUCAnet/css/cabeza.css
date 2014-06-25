@@ -15,7 +15,187 @@ and open the template in the editor.
     text-align: center;
 }
 
+.logo
+{
+  display: block;
+  padding: 10px 20px 10px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  text-shadow: 0 1px 0 #ffffff;
+  color: #777777;
+}
+
 .menulateral
 {
-    width: 300px;
+    float: left;
+    width: 220px;
+    height: 202px;
+    border-left-style: solid;
+    border-color: orange;
+}
+
+.btnsml
+{
+    margin-left: 0;
+    list-style: none;
+}
+
+.sitio
+{
+    float: left;
+    font-size: 22px;
+    padding-bottom: 22px;
+}
+
+.nombreportal
+{
+    font-size: 40px;
+    color: orange;
+    padding-bottom: 22px;
+}
+
+.cuerpo
+{
+    width: 955px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.contexensible
+{
+    float: right;
+    width: 700px;
+    height: 500px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: orange;
+    box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.075);
+}
+
+.contenedorexp
+{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.login
+{
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.contenedor
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 955px;
+}
+
+.educanet
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
+.nombreusuario
+{
+    float: left;
+    color: white;
+    padding-left: 25px;
+}
+
+.salir
+{
+    float: right;
+    font-weight: bold;
+}
+
+.atras
+{
+    font-weight: bold; 
+}
+
+.celda
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+}
+
+.celdanombre
+{
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 2px;
+}
+
+.celdat
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    font-weight: bold;
+}
+
+.celdatnota
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    font-weight: bold;
+    color: #3b739f;
+}
+
+.celdatnotaroja
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    font-weight: bold;
+    color: red;
+}
+
+.anotacion
+{
+    width: 621px;
+    padding-left: 15px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: gray;
+    box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.075);
+}
+
+.ariatexto
+{
+    width: 626px;
+    height: 325px;
+}
+
+.negativa
+{    
+    color: red;
+}
+
+.positiva
+{    
+    color: #3b739f;
+}
+
+.formnotas 
+{
+    width: 20px;
 }

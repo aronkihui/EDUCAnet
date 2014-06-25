@@ -1,1 +1,0 @@
-SELECT * FROM `archivo` WHERE archivo_fecha <= '2014-04-09 13:19:55.000000' ORDER BY idarchivo desc limit 3 
