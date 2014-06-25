@@ -8,6 +8,11 @@
 
 class misConsultas  extends CApplicationComponent
 {
+    
+    //variables globales
+    public $valorId=1;
+    
+    
     public function init()
     {}
 

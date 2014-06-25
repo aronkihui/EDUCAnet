@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class MiperfilController extends Controller
+class MiperfilController extends Controller 
 {
     public function actionMiperfil()
     {
@@ -47,12 +47,7 @@ class MiperfilController extends Controller
 	    Yii::app()->end();
 	}
         
-     public function actionBuscarComentariosPorUsuario()
-     {
-
-
-     }
-
+     
 
      
         public function  actionRegistroSesion()
@@ -65,6 +60,7 @@ class MiperfilController extends Controller
             
         }
         
+       
         
         public function actionComentarios()
         {
@@ -77,7 +73,7 @@ class MiperfilController extends Controller
             $id=1;
             $dato2=Yii::app()->misconsultas->consultaPorId($id);
             
-            $this->render('miperfil',array('respuesta'=>'comentarios','datos'=>$datos,'dato2'=>$datos));
+            $this->render('miperfil',array('respuesta'=>'comentarios','datos'=>$datos,'dato2'=>$dato2));
         }
         
         
@@ -85,15 +81,43 @@ class MiperfilController extends Controller
         {
             
                $id=1;
+              
             $datos=Yii::app()->misconsultas->obtenerComentariosRealizados($id);
             $this->render('comentarios_realizados',array('datos'=>$datos));
         }
         
+     
+ 
         public function actionComentarios_recibidos()
         {
-             $this->render('comentarios/comentarios_recibidos',array());
+           //Yii::app()->misconsultas->valorId='3';   
+          if(isset($GET['id'])){
+              
+           $val=$_GET['id'];
+           exit($val);
+           
+          
+          }
+            //echo($dr);
+           
+            
         }
-        
+     
+        public function actionRespuestaComentarios()
+        {
+            
+           $dr= Yii::app()->misconsultas->valorId;
+          
+            //$dr=1;
+            //$xd=$this->actionComentarios_recibidos();
+            echo ($dr);
+            
+           
+        }
+
+
+
+
         public  function actionMisDescargas()
         {
            
@@ -143,3 +167,11 @@ class MiperfilController extends Controller
         
     
 }
+
+
+
+
+
+
+
+?>
