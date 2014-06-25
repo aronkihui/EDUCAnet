@@ -66,7 +66,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=bd_educanet',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'linuxdebian',
 			'charset' => 'utf8',
 		),
 

@@ -6,10 +6,8 @@
  * and open the template in the editor.
  */
 
-class NotasForm extends CFormModel
-{
-        public $idnota;
-        public $contenido;
-        public $idalumno;
-        public $idasignaturacomun;
-}
+?>
+
+<p>
+    mis datos personales
+</p>
