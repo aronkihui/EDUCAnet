@@ -1,16 +1,15 @@
- <?php
 
-/* @var $model ContactForm */
-/* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . 'Subir archivos a la biblioteca';
-$this->breadcrumbs=array(
-	'Subir archivos ',
-);
-?>
+<html>
 
-<h1>Subida de archivos </h1>
+    <head>
+    <h1 class="title well centered ">Subida de archivos </h1>
 
+</head>
+<body >
+
+<div class="container-fluid well  panel panel-primary ">
+    <div class="centered row-fluid">
 <?php if(Yii::app()->user->hasFlash('subir_archivo')): ?>
 
 <div class="flash-success">
@@ -25,7 +24,7 @@ teniendo en cuenta que tiene que llenar completamente
 ell formulario de registro del archivo .
 </p>
 
-<div class="form">
+<div class="form container-fluid box">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'subir-archivo',        
@@ -46,15 +45,31 @@ ell formulario de registro del archivo .
 	
         
         <div class="row-fluid">
-		<?php echo $form->labelEx($model,'archivo_area'); ?>
-		<?php echo $form->textField($model,'archivo_area'); ?>
-		<?php echo $form->error($model,'archivo_area'); ?>
+                <?php echo $form->labelEx($model,'archivo_area'); ?>
+		<?php echo $form->dropDownList($model,'archivo_area',array('electricidad'=>'Electricidad',
+                                                                           'estructuras metalicas'=>'Estructuras metalicas',
+                                                                           'edificacion'=>'Edificacion',
+                                                                           'instalaciones sanitarias'=>'Instalaciones sanitarias',
+                                                                          'mecanica'=> 'Mecanica Automotriz',
+                                                                           'matematicas'=>'Matematicas',
+                                                                           'lenguaje'=>'Lenguaje',
+                                                                           'historia'=>'Historia',
+                                                                           'ingles'=>'Ingles',
+                                                                           'biologia'=>'Biologia',
+                                                                           'fisica'=>'Fisica',
+                                                                           'quimica'=>'Quimica' ));?>
+                <?php echo $form->error($model,'archivo_area'); ?>
         </div>
         
         
          <div class="row-fluid">
+             
+               
 		<?php echo $form->labelEx($model,'archivo_cursonivel'); ?>
-		<?php echo $form->textField($model,'archivo_cursonivel'); ?>
+		 <?php echo $form->dropDownList($model,'archivo_cursonivel',array('primero'=>'Primero',
+                                                                                  'segundo'=>'Segundo',
+                                                                                  'tercero'=>'Tercero',
+                                                                                  'cuarto'=>'Cuarto'));?>		
 		<?php echo $form->error($model,'archivo_cursonivel'); ?>
          </div>
        
@@ -91,7 +106,8 @@ ell formulario de registro del archivo .
 		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		</div>
-		<div class="hint">Por favor introduce las letras tal como se muestran en la imagen de arriba.
+		<div class="hint">Por favor introduce las letras tal como 
+                    <br/>se muestran en la imagen de arriba.
 		<br/>Las letras no distinguen entre mayusculas o minusculas.</div>
 		<?php echo $form->error($model,'verifyCode'); ?>
 	</div>
@@ -115,4 +131,8 @@ ell formulario de registro del archivo .
 
 
 <?php endif; ?>
+</div>
 
+</div>
+    </body>
+    </html>

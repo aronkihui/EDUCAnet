@@ -1,21 +1,24 @@
 
 
-<div>
-<li class="span3">
+
+   
+<li class="span3 box">
     <a href="<?php echo Yii::app()->getBaseUrl() .'/'.$data['archivo_path']?>" class="thumbnail"
        rel="tooltip"
-       data-title="<?php echo $data['archivo_nombre']?>">
-        <img src='<?php echo Yii::app()->getBaseUrl() .'/'.$data['archivo_path']   ?>'></img>
-        <p><?php echo $data['archivo_descripcion']?></p> 
-        <a class="btn-inverse" href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$data['archivo_path'])) ;?>">Descargar</a>
-       
-        <a class="btn-inverse" href="<?php echo $this->createUrl('mostrar_archivo/allcomentarios',array('id'=>$data['idarchivo'],'archivo'=>$data['archivo_path']));?>">Ver Mas</a>
+       data-title="<?php echo $data['archivo_nombre'];?>">
+        <img src='<?php echo Yii::app()->getBaseUrl() .'/'.$data['archivo_path'];   ?>'></img>
         
    
        
     </a>
+    <p>nombre del archivo: <?php echo $data['archivo_nombre'];?></>
+        <p> descripcion del archivo: <?php echo $data['archivo_descripcion']?></p> 
+        <a class="btn-inverse badge" href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$data['archivo_path'])) ;?>">Descargar</a>
+        
+        <a class="btn-inverse badge" href="<?php echo $this->createUrl('mostrar_archivo/allcomentarios',array('id'=>$data['idarchivo'],'archivo'=>$data['archivo_path']));?>">Ver Mas</a>
+        
 </li>
-</div>
+
 
 
 

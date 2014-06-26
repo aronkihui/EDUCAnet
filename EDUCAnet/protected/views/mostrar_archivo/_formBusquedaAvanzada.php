@@ -1,22 +1,6 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- * 
- */
-
-?>
-
-
-
-
-
-
-
-
-<div class="form">
+<div>
+<div class="form ">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'busqueda-avanzada',        
@@ -33,19 +17,37 @@
 		<?php echo $form->labelEx($model,'archivo_nombre'); ?>
 		<?php echo $form->textField($model,'archivo_nombre'); ?>
 		<?php echo $form->error($model,'archivo_nombre'); ?>
+            
+            
+            
+            
 	</div>
 	
         
         <div class="row-fluid">
 		<?php echo $form->labelEx($model,'archivo_area'); ?>
-		<?php echo $form->textField($model,'archivo_area'); ?>
+		<?php echo $form->dropDownList($model,'archivo_area',array('electricidad'=>'Electricidad',
+                                                                           'estructuras metalicas'=>'Estructuras metalicas',
+                                                                           'edificacion'=>'Edificacion',
+                                                                           'instalaciones sanitarias'=>'Instalaciones sanitarias',
+                                                                          'mecanica'=> 'Mecanica Automotriz',
+                                                                           'matematicas'=>'Matematicas',
+                                                                           'lenguaje'=>'Lenguaje',
+                                                                           'historia'=>'Historia',
+                                                                           'ingles'=>'Ingles',
+                                                                           'biologia'=>'Biologia',
+                                                                           'fisica'=>'Fisica',
+                                                                           'quimica'=>'Quimica' ));?>
 		<?php echo $form->error($model,'archivo_area'); ?>
         </div>
         
         
          <div class="row-fluid">
 		<?php echo $form->labelEx($model,'archivo_cursonivel'); ?>
-		<?php echo $form->textField($model,'archivo_cursonivel'); ?>
+		 <?php echo $form->dropDownList($model,'archivo_cursonivel',array('primero'=>'Primero',
+                                                                                  'segundo'=>'Segundo',
+                                                                                  'tercero'=>'Tercero',
+                                                                                  'cuarto'=>'Cuarto'));?>	
 		<?php echo $form->error($model,'archivo_cursonivel'); ?>
          </div>
       
@@ -61,13 +63,37 @@
 
 
 
-<div>
-    <?php
-$this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider' => $respuesta,
-    'columns' => array('archivo_nombre', 'archivo_area','archivo_fecha'),
-));
-    ?>
+
+    
+    <div class=" row-fluid ">
+         <p>tabla con resultados</p>
+         <table class="table table-condensed ">
+             <thead >
+             <th class="alert alert-info">NOMBRE ARCHIVO</th>
+             <th class="alert alert-info">AREA ARCHIVO</th>
+             <th class="alert alert-info"> FECHA CREACION</th>
+             <th class="alert alert-info">DESCRIPCION</th>
+             <th class="alert alert-info">DESCARGAR</th>
+             
+         </thead>
+        <?php foreach($respuesta->data as $dat)
+      
+        {//principio del for?>
+             <tr>
+             <td><?php echo $dat['archivo_nombre'];?></td> 
+         <td><?php echo $dat['archivo_area'];?></td> 
+         <td><?php echo $dat['archivo_fecha'];?></td> 
+         <td><?php echo $dat['archivo_descripcion'];?></td> 
+         <td><a class="btn-success badge" href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$dat['archivo_path'])) ;?>">Descargar</a></td>
+         
+            </tr>
+        <?php } //fin del foreach ?>
+         </table>
+        
+    </div>
+    
+    
+    
 </div>
     
 

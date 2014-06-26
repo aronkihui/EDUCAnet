@@ -141,8 +141,10 @@ class Mostrar_archivoController extends Controller
         $model->attributes=$_POST['BusquedaAvanzada'];
         }
         
+        $nombre=$model->archivo_nombre;
         
-        $respuesta= Yii::app()->misconsultas->misConsultaBusquedaAvanzada($model->archivo_nombre,$model->archivo_area,$model->archivo_cursonivel);
+        
+        $respuesta= Yii::app()->misconsultas->misConsultaBusquedaAvanzada($nombre,$model->archivo_area,$model->archivo_cursonivel);
         
         $this->render('mostrar_archivo',array('model'=>$model,'respuesta'=>$respuesta));
     }
@@ -200,6 +202,8 @@ class Mostrar_archivoController extends Controller
          $idarchivo=$_GET['id'];
         
         $archivo=$_GET['archivo'];
+        
+        $nombre='gola';
          
          $datos=Yii::app()->misconsultas->obtenerComentarios($idarchivo);
          
@@ -218,7 +222,7 @@ class Mostrar_archivoController extends Controller
                }
                
          
-        $this->render('_perfilArchivo',array('datos'=>$datos,'model'=>$model,'archivo'=>$archivo));  
+        $this->render('_perfilArchivo',array('datos'=>$datos,'model'=>$model,'archivo'=>$archivo,'nombre'=>$nombre));  
      }
      
      

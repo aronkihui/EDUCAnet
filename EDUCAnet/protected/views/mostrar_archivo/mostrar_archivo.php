@@ -1,3 +1,4 @@
+<html>
 <?php $this->widget('bootstrap.widgets.TbNavbar', array(
     'type'=>'inverse', // null or 'inverse'
     'brand'=>'Biblioteca Virtual',
@@ -52,11 +53,76 @@
     ),
 )); ?>                        
 
+  <head>  
+
+    <h2 class='title well centered '>Archivos recientes  </h2>
+
+</head>
+
+<body>
+    
+    <div class="container-fluid well  panel panel-primary">
+
+
+
+
+        <div class=" container-fluid well  panel panel-primary">
+
+
+
+            <div class="container-fluid centered">
+                
+                
+                <?php 
+//llamo a formulario de busqueda avanzada
+if(isset($respuesta))
+{    
+   $this->renderPartial('_formBusquedaAvanzada',array('respuesta'=>$respuesta,'model'=>$model));
+}?>
+                <?php
+
+if(isset($models))
+{
+ $form=$this->beginWidget('CActiveForm', array(
+'id'=>'store-form',
+'enableAjaxValidation'=>false,
+    
+));
+?>
+
+                
+                
+<?php
+ 
+$dataProvider=$models;
+
+$this->widget('bootstrap.widgets.TbThumbnails', array(
+'dataProvider'=>$dataProvider,//viene desde el controlador
+'template'=>"{items}\n{pager}",
+'itemView'=>'_formTemplate',
+   
+));
+
+
+$this->endWidget(); 
+}
+?>
+
+
+                </div>
+    
+</div>
+</div>
+</body>
+
+
+
 
 <?php	
 $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
 	    'name'=>'buscar',
 	    'value'=>'',
+            
 	    'source'=>$this->createUrl('miperfil/autobusqueda'),
 	    // additional javascript options for the autocomplete plugin
 	    'options'=>array(
@@ -68,70 +134,9 @@ $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
 
 
 
-<div>
-    <h2>Archivos recientes  </h2>
-</div>
-
-
-
-
-<div>
-    aqui va todoo lo correspondiende al la seccion escogida
-</div>
 
 
 
 
 
-<?php 
-
-
-
-
-
-//llamo a formulario de busqueda avanzada
-if(isset($respuesta))
-{
-
-     
-   $this->renderPartial('_formBusquedaAvanzada',array('respuesta'=>$respuesta,'model'=>$model));
-}
-
-
-
-?>
-
-
-
-
-
-
-
-
-<?php
-
-if(isset($models))
-{
-
- $form=$this->beginWidget('CActiveForm', array(
-'id'=>'store-form',
-'enableAjaxValidation'=>false,
-    
-));
-
-//$dataProvider = new CActiveDataProvider('Archivo'); // that's the table
-//$dataProvider=$models;//pasado como argumento en el controlador
-$dataProvider=$models;
-
-$this->widget('bootstrap.widgets.TbThumbnails', array(
-'dataProvider'=>$dataProvider,//viene desde el controlador
-'template'=>"{items}\n{pager}",
-'itemView'=>'_formTemplate',
-   
-));
-
-
-
-$this->endWidget(); 
-}
-?>
+</html>

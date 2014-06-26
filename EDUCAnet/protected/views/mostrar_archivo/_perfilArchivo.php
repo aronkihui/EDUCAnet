@@ -1,15 +1,7 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-?>
 
 <head>
-    <h3>nombre del archivo</h3>
+<h3 class="title centered wide well">Perfil de archivos</h3>
 </head>
 
 <body>
@@ -21,7 +13,7 @@
     
     <!--contenedor para imagen y modal-->
 <div class="container-fluid ">
-    <h2 class="centered">Perfil de archivos</h2>
+    <h2 class="centered">Nombre del archivo <?php echo ($nombre)?></h2>
 <!--cargar imagen del archivo en miniatura-->
 <div class="span4  centered">
      <a href="<?php echo Yii:: app() ->baseUrl.'/miperfil/miperfil';?>" class="thumbnail" rel="#"  data-title="Tooltip">
