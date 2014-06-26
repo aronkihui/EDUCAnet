@@ -1,14 +1,5 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-?>
-
-<p>comentarios recibidos xD</p>
+<h3 class="title">Comentarios Recibidos  </h3>
 
 
 
@@ -34,8 +25,17 @@
         </a>
         <div class="media-body">
           <h4 class="media-heading">usuario1 </h4>
-          <p>
-              <a  id="<?php echo $datos['idarchivo']?>" data-toggle="modal" data-target="#myModal" onclick='enviar(id)' > <?php echo $datos['archivo_nombre'];?></a>
+          
+          
+     
+          <p>nombre del archivo :
+            <?php     echo CHtml::ajaxLink(
+    $datos['archivo_nombre'],          // the link body (it will NOT be HTML-encoded.)
+    array('miperfil/reqTest01','id'=>$datos['idarchivo']), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array(
+        'update'=>"#".$datos['idarchivo'],
+    )
+);?> 
               
               <br/>
               
@@ -50,134 +50,37 @@
               <br/>
               <?php echo $datos['archivo_cursonivel'];?>
               <br/>
-              <?php echo $datos['idarchivo'];?>
-              
-              
-             
-               <script>
-                   
-                   
-    function nuevoAjax(){
-    var xmlhttp=false;
-    try {
-    xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
-    } catch (e) {
-    try {
-    xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
-    } catch (E) {
-    xmlhttp = false;
-    }
-    }
-
-    if (!xmlhttp && typeof XMLHttpRequest!=='undefined') {
-    xmlhttp = new XMLHttpRequest();
-    }
-    return xmlhttp;
-    } 
-                   
-                  function enviar(id)
-                  {
-                      ruta= '<?php echo Yii::app()->baseUrl.'/miperfil/comentarios_recibidos'?>';
-                        id1='id='+id;
-                       
-                     url=ruta+"?"+id1;
-                     
-                      alert(url);
-                      ajax=nuevoAjax();
-                    ajax.open ("GET",url,true);
-                    ajax.onreadystatechange=function() {
-                    if (ajax.readyState === 4) {
-                    contenedor.innerHTML = ajax.responseText;
-                    }
-                    }
-                    ajax.send(null);
-                        } 
-                    
-                  
-               
-            }
-                
-</script>
+      
+ 
+ <div >
+     <table class='table-bordered '>
+     <tr id='<?php echo $datos['idarchivo']?>'>   
+     
+     
+       </tr>  
+     </table>
+      
+      
+ 
+ </div>
             
-              
-
-              
-              
-              
           </p>
-          
-          
-                    
-         
-        </div>
+        
+  </div>
           
           <div class="media-body">
    
               
               
-</div>
+            </div>
           
       </li>
       
      
       </div>
-     
-       
-       
-
-
-
+ 
      
     </ul>
         
  <?php }?>
         
-
-
-          
-
-          
-  
-    
-    <?php $this->beginWidget('bootstrap.widgets.TbModal', array('id'=>'myModal'));     ?>
- 
-<div class="modal-header">
-    <a class="close" data-dismiss="modal">&times;</a>
-    <h4>Comentarios recibidos del archivo </h4>
-</div>
- 
-<div class="modal-body">
-   
-    
-    <!-- aqui va los comentarios traidos por consultar el id del archivo-->
- <?php echo $this->actionRespuestaComentarios()  ?>
-  
-              
-             
-             
-</div>
- 
-<div class="modal-footer">
-     
-    <p>footer para botones</p>
-    
-</div>
-      <?php $this->endWidget(); ?>
-   
-
-        
-          
-          
-          
-        
-
- 
-
-
-
-     
-     
-  
-    
-    
-  

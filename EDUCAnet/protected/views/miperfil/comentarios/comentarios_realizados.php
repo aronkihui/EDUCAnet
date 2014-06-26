@@ -1,13 +1,5 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-?>
-<p>comentarios  realizados</p>
+<h3 class="title">Comentarios  Realizados</h3>
 
  <div class="container-fluid well  panel panel-primary" >
 
@@ -15,7 +7,7 @@
     
     <ul class="media-list">
       
-        
+         
       
         <?php  foreach ($datos->data AS $datos)
         {?>
@@ -27,12 +19,14 @@
         </a>
         <div class="media-body">
           <h4 class="media-heading">usuario1 </h4>
-          <p></p>
-         <?php echo($datos['comentario_contenido'])?>
+           
+          <p> contenido del comentario: 
+         <?php echo($datos['comentario_contenido'])?></p>
+          
         </div>
           
           <div class="media-body">
-    <h10 class="media-heading">comentado el</h10>
+    <h10 class="media-heading">comentado el: <?php echo($datos['comentario_fecha'])?></h10>
 </div>
           
       </li>

@@ -22,7 +22,7 @@ class MiperfilController extends Controller
        return array(
         array('allow',  
 
-        'actions'=>array('view'),
+        'actions'=>array('index','view','updateajax'),
         'users'=>array('*'),
         ));
        
@@ -88,32 +88,8 @@ class MiperfilController extends Controller
         
      
  
-        public function actionComentarios_recibidos()
-        {
-           //Yii::app()->misconsultas->valorId='3';   
-          if(isset($GET['id'])){
-              
-           $val=$_GET['id'];
-           exit($val);
-           
-          
-          }
-            //echo($dr);
-           
-            
-        }
+      
      
-        public function actionRespuestaComentarios()
-        {
-            
-           $dr= Yii::app()->misconsultas->valorId;
-          
-            //$dr=1;
-            //$xd=$this->actionComentarios_recibidos();
-            echo ($dr);
-            
-           
-        }
 
 
 
@@ -164,6 +140,57 @@ class MiperfilController extends Controller
         
         return array('respuesta'=>$respuesta);
     }
+    
+    public function actionXD()
+    {
+        
+        $this->render('miperfil/comentarios/xD');
+    }
+
+
+    
+    
+    
+    
+    public function actionReqTest01() 
+            {
+        
+  
+        $var=$_GET['id'];
+        $datos=Yii::app()->misconsultas->obtenerComentariosPorIdArchivo($var);
+    
+   
+        echo('<p>');
+        echo('id');
+        echo('</br>');
+        echo($var);
+       echo ('</br>');
+       echo('</p>');
+  
+       
+     /*
+      foreach ($datos->data AS $datos)
+      {
+          print_r($datos);
+      }
+      * 
+      */
+       
+      
+       
+       for($i=0;$i<=10;$i++)
+       {
+           echo('<td> ');
+           echo($i);
+           echo'  </td>';
+       }
+      
+        
+    Yii::app()->end();
+}
+    
+    
+    
         
     
 }

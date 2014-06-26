@@ -1,12 +1,3 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-?>
 
 
 
@@ -74,7 +65,6 @@ function contenido(id){
 
     <div  id="contenedor" >
         
-        <p>klwjer</p>
         <!--contendor para mostrar los los comentarios-->
         <div id="1" style="display:none"><?php $this->renderPartial('comentarios/comentarios_realizados',array('datos'=>$datos));?></div>
         <div id="2" style="display:none"><?php $this->renderPartial('comentarios/comentarios_recibidos',array('datos'=>$dato2)); ?></div>      
