@@ -15,7 +15,14 @@
         <p> descripcion del archivo: <?php echo $data['archivo_descripcion']?></p> 
         <a class="btn-inverse badge" href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$data['archivo_path'])) ;?>">Descargar</a>
         
-        <a class="btn-inverse badge" href="<?php echo $this->createUrl('mostrar_archivo/allcomentarios',array('id'=>$data['idarchivo'],'archivo'=>$data['archivo_path']));?>">Ver Mas</a>
+        <a class="btn-inverse badge" <?php echo CHtml::link('Ver mas',array('mostrar_archivo/allcomentarios',
+                                         'id'=>$data['idarchivo'],
+                                         'archivo'=>$data['archivo_path'],
+                                         'nombre'=>$data['archivo_nombre'],
+            )); ?>
+           
+
+        
         
 </li>
 

@@ -103,7 +103,7 @@ return new CSqlDataProvider($sql, array(
     
     public function obtenerComentariosRealizados($id)
     {
-        $sql="Select comentario_fecha,comentario_contenido,archivo_idarchivo from comentario where usuario_idusuario= '$id' order by comentario_fecha desc ";
+        $sql="Select * from comentario ,archivo where comentario.usuario_idusuario= '$id' order by comentario_fecha desc ";
         return new CSqlDataProvider($sql,array(
             'totalItemCount'=>3,
             'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','archivo_idarchivo'),),
@@ -113,7 +113,7 @@ return new CSqlDataProvider($sql, array(
     
      public function obtenerComentariosPorIdArchivo($id)
     {
-        $sql="Select comentario_contenido ,comentario_fecha ,archivo_idarchivo, idcomentario , nombreusuario  from comentario, usuario  where archivo_idarchivo='$id'and idusuario = usuario_idusuario order By idcomentario desc ";
+        $sql="Select * from comentario, usuario  where archivo_idarchivo='$id'and idusuario = usuario_idusuario order By idcomentario desc ";
         return new CSqlDataProvider($sql,array(
             'totalItemCount'=>3,
             'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','archivo_idarchivo','idcomentario','nombreusuario'),),

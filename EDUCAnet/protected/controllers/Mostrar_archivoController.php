@@ -203,7 +203,7 @@ class Mostrar_archivoController extends Controller
         
         $archivo=$_GET['archivo'];
         
-        $nombre='gola';
+        $nombre=$_GET['nombre'];
          
          $datos=Yii::app()->misconsultas->obtenerComentarios($idarchivo);
          

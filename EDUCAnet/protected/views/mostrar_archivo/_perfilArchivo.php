@@ -20,6 +20,8 @@
         <img src="<?php echo (Yii::app()->baseUrl); echo'/';echo ($archivo)?>" alt="">
        
     </a>
+    <br/>
+    <a class="btn-large btn-primary"   href="<?php echo $this->createUrl('mostrar_archivo/descargar',array('file'=>$archivo)) ;?>">Descargar</a>
 
 
 
