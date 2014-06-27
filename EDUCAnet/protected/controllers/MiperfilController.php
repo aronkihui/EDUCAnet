@@ -125,8 +125,6 @@ class MiperfilController extends Controller
         //esto muestra las archivos subidos
         public function actionListarMisArchivos()
     {     
-            
-            
         $model=new Archivo;
         
         

@@ -36,16 +36,12 @@
             
             <p>    
                 
-               
+      <?php $this->renderPartial('_misdatos');       ?> 
     <?php    
           
     switch (isset($respuesta))
     {
-    case $respuesta=='misdatos':
-    {
-        $this->renderPartial('_misdatos');
-            break;
-    }
+ 
     case $respuesta=='missubidas':
     {
         
