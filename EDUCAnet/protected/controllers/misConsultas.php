@@ -113,10 +113,10 @@ return new CSqlDataProvider($sql, array(
     
      public function obtenerComentariosPorIdArchivo($id)
     {
-        $sql="Select * comentario where archivo_idarchivo='$id' order By idcomentario desc ";
+        $sql="Select comentario_contenido ,comentario_fecha ,archivo_idarchivo, idcomentario , nombreusuario  from comentario, usuario  where archivo_idarchivo='$id'and idusuario = usuario_idusuario order By idcomentario desc ";
         return new CSqlDataProvider($sql,array(
             'totalItemCount'=>3,
-            'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','archivo_idarchivo','idcomentario'),),
+            'sort'=>array('attributes'=>  array('comentario_contenido','comentario_fecha','archivo_idarchivo','idcomentario','nombreusuario'),),
             'keyField'=>'idcomentario'
         ));
     }

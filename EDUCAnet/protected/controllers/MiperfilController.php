@@ -150,11 +150,13 @@ class MiperfilController extends Controller
         
   
         $var=$_GET['id'];
-        $datos=Yii::app()->misconsultas->obtenerComentariosPorIdArchivo($var);
+        $nombre=$_GET['nombre'];
+        
+       $datos=Yii::app()->misconsultas->obtenerComentariosPorIdArchivo($var);
     
         
         
-       $this->render('comentarios_totales',array('datos'=>$var));
+       $this->render('comentarios_totales',array('datos'=>$datos,'nombreArchivo'=>$nombre));
       
 
 }

@@ -29,7 +29,10 @@
           
      
           <p>nombre del archivo :
-              <a href="<?php  echo $this->createUrl('comentarios_totales',array('id'=>$datos['idarchivo'])); ?>"><?php echo $datos['archivo_nombre']?></a>
+              <?php echo CHtml::link($datos['archivo_nombre'],array('miperfil/comentarios_totales',
+                                         'id'=>$datos['idarchivo'],
+                                         'nombre'=>$datos['archivo_nombre']
+                                         )); ?>
               
               <br/>
               
