@@ -141,52 +141,22 @@ class MiperfilController extends Controller
         return array('respuesta'=>$respuesta);
     }
     
-    public function actionXD()
-    {
-        
-        $this->render('miperfil/comentarios/xD');
-    }
-
-
     
     
     
     
-    public function actionReqTest01() 
+    public function actionComentarios_totales() 
             {
         
   
         $var=$_GET['id'];
         $datos=Yii::app()->misconsultas->obtenerComentariosPorIdArchivo($var);
     
-   
-        echo('<p>');
-        echo('id');
-        echo('</br>');
-        echo($var);
-       echo ('</br>');
-       echo('</p>');
-  
-       
-     /*
-      foreach ($datos->data AS $datos)
-      {
-          print_r($datos);
-      }
-      * 
-      */
-       
-      
-       
-       for($i=0;$i<=10;$i++)
-       {
-           echo('<td> ');
-           echo($i);
-           echo'  </td>';
-       }
-      
         
-    Yii::app()->end();
+        
+       $this->render('comentarios_totales',array('datos'=>$var));
+      
+
 }
     
     

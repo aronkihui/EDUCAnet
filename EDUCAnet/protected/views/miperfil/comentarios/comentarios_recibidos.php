@@ -29,26 +29,19 @@
           
      
           <p>nombre del archivo :
-            <?php     echo CHtml::ajaxLink(
-    $datos['archivo_nombre'],          // the link body (it will NOT be HTML-encoded.)
-    array('miperfil/reqTest01','id'=>$datos['idarchivo']), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
-    array(
-        'update'=>"#".$datos['idarchivo'],
-    )
-);?> 
+              <a href="<?php  echo $this->createUrl('comentarios_totales',array('id'=>$datos['idarchivo'])); ?>"><?php echo $datos['archivo_nombre']?></a>
               
               <br/>
               
               <br/>
-              <?php echo $datos['archivo_fecha'];?>
+              <p> Fecha archivo :<?php echo $datos['archivo_fecha'];?></p>
+              
               <br/>
-              <?php echo $datos['archivo_path'];?>
+              <p>Descripcion del archivo: <?php echo $datos['archivo_descripcion'];?></p>
               <br/>
-              <?php echo $datos['archivo_descripcion'];?>
+              <p>Area del archivo: <?php echo $datos['archivo_area'];?></p>
               <br/>
-              <?php echo $datos['archivo_area'];?>
-              <br/>
-              <?php echo $datos['archivo_cursonivel'];?>
+              <p> Nivel del curso del archivo: <?php echo $datos['archivo_cursonivel'];?></p>
               <br/>
       
  
