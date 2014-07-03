@@ -6,16 +6,18 @@
  * and open the template in the editor.
  */
 
+
+
+class PortaldocenteController extends Controller{
+    
+    public function actionPortaldocente()
+    {
+        
+        $this->render('portaldocente');
+    }
+    
+    
+}
 ?>
 
 
-<h3>registro sesion</h3>
-
-<div>
-    <?php
-$this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider' => $datos,
-    'columns' => array('hora_inicio','hora_fin'),
-));
-    ?>
-</div>

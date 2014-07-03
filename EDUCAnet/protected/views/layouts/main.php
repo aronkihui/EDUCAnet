@@ -46,14 +46,14 @@
                                     <span class="icon-bar"></span>                                              
                                 </button>
 
-                                <a class="brand" href="<?php echo CHtml::encode(Yii::app()->homeurl);?><">
+                                <a class="brand" href="<?php echo CHtml::encode(Yii::app()->homeurl);?>">
                                     <?php echo Yii::app()->name; ?></a>   
 
                                 <div class="nav-collapse collapse"> 
                                     <?php $this->widget('zii.widgets.CMenu',array(                                        
                                         'items'=>array(
                                                 array('label'=>'Portal Alumno', 'url'=>array('/portalalumno/portalalumno')),
-                                                array('label'=>'Portal Docente', 'url'=>array('/site/contact')),
+                                                array('label'=>'Portal Docente', 'url'=>array('/portaldocente/portaldocente')),
                                                 array('label'=>'Biblioteca Virtual', 'url'=>array('/portalbiblioteca/portalbiblioteca')),
                                                 /*array('label'=>'Home', 'url'=>array('/site/index')),
                                                 array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),

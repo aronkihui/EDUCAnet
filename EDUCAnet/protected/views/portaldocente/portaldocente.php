@@ -1,10 +1,12 @@
+
+
 <?php
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
 
 $this->breadcrumbs=array(
-	'portalalumno',
+	'portaldocente',
 );
 
 ?>
@@ -33,13 +35,13 @@ $this->breadcrumbs=array(
 </head>
 
 <body>
-    <h2>Portal Alumno</h2>
+    <h2>Portal Docente</h2>
     <div class="menulateral">
             <?php $this->widget('zii.widgets.CMenu',array(                                        
                 'items'=>array(
                         array('label'=>'Información Académica', 'url'=>array('/portalalumno/portalalumno')),
                         array('label'=>'Mi Curso', 'url'=>array('/site/contact')),
-                        array('label'=>'Mis Docentes', 'url'=>array('')),
+                        array('label'=>'Mis Colegas', 'url'=>array('')),
                         array('label'=>'Biblioteca Virtual', 'url'=>array('/site/page', 'view'=>'about')),
                 ),
                 'htmlOptions' => array('class'=> 'nav navbar-nav'),
