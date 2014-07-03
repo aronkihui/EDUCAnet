@@ -21,15 +21,15 @@
 	 <?php
 	$this->widget('zii.widgets.jui.CJuiTabs',array(
 	    'tabs'=>array(
-                'Datos de usuario'=>array('id'=>'test-id1','content'=>$this->renderPartial(
+                'Datos de usuario'=>array('id'=>'datos-usuario','content'=>$this->renderPartial(
                                         'misdatos/misdatos1',
                                         array('Values'=>'esto es un renderpartial 1'),TRUE
                                         )), 
-                'Datos de alumno'=>array('id'=>'test-id2','content'=>$this->renderPartial(
+                'Datos de alumno'=>array('id'=>'datos-alumno','content'=>$this->renderPartial(
                                         'misdatos/misdatos2',
                                         array('Values'=>'esto es un renderpartial 2'),TRUE
                                         )), 
-                'Datos personales'=>array('id'=>'test-id3','content'=>$this->renderPartial(
+                'Datos personales'=>array('id'=>'datos-personales','content'=>$this->renderPartial(
                                         'misdatos/misdatos3',
                                         array('Values'=>'esto es un renderpartial 3'),TRUE
                                         )), 

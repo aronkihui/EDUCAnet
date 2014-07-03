@@ -7,11 +7,17 @@
  * @property integer $idusuario
  * @property string $nombreusuario
  * @property integer $tipousuario
+ * @property string $password
  *
  * The followings are the available model relations:
  * @property Alumno[] $alumnos
+ * @property Apoderado[] $apoderados
+ * @property Archivo[] $archivos
+ * @property Comentario[] $comentarios
  * @property Matriculador[] $matriculadors
  * @property Profesor[] $profesors
+ * @property RegistroDescargas[] $registroDescargases
+ * @property RegistroSesion[] $registroSesions
  */
 class Usuario extends CActiveRecord
 {
@@ -31,12 +37,13 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombreusuario, tipousuario', 'required'),
+			array('nombreusuario, tipousuario, password', 'required'),
 			array('tipousuario', 'numerical', 'integerOnly'=>true),
 			array('nombreusuario', 'length', 'max'=>10),
+			array('password', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idusuario, nombreusuario, tipousuario', 'safe', 'on'=>'search'),
+			array('idusuario, nombreusuario, tipousuario, password', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,8 +56,13 @@ class Usuario extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'alumnos' => array(self::HAS_MANY, 'Alumno', 'usuario_idusuario'),
+			'apoderados' => array(self::HAS_MANY, 'Apoderado', 'usuario_idusuario'),
+			'archivos' => array(self::HAS_MANY, 'Archivo', 'usuario_idusuario'),
+			'comentarios' => array(self::HAS_MANY, 'Comentario', 'usuario_idusuario'),
 			'matriculadors' => array(self::HAS_MANY, 'Matriculador', 'usuario_idusuario'),
 			'profesors' => array(self::HAS_MANY, 'Profesor', 'usuario_idusuario'),
+			'registroDescargases' => array(self::HAS_MANY, 'RegistroDescargas', 'usuario_idusuario'),
+			'registroSesions' => array(self::HAS_MANY, 'RegistroSesion', 'usuario_idusuario'),
 		);
 	}
 
@@ -63,6 +75,7 @@ class Usuario extends CActiveRecord
 			'idusuario' => 'Idusuario',
 			'nombreusuario' => 'Nombreusuario',
 			'tipousuario' => 'Tipousuario',
+			'password' => 'Password',
 		);
 	}
 
@@ -87,6 +100,7 @@ class Usuario extends CActiveRecord
 		$criteria->compare('idusuario',$this->idusuario);
 		$criteria->compare('nombreusuario',$this->nombreusuario,true);
 		$criteria->compare('tipousuario',$this->tipousuario);
+		$criteria->compare('password',$this->password,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -103,4 +117,23 @@ class Usuario extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
+        
+        
+        //esto es para login de usuario
+        public function validatePassword($password)
+        {
+        return $this->hashPassword($password)===$this->password;
+        }
+        
+        public function hashPassword($password)
+        {
+        return md5($password);
+        }
+        
+        
+        
+        
+        
 }

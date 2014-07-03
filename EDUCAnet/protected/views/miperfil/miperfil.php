@@ -36,12 +36,12 @@
             
             <p>    
                 
-      <?php $this->renderPartial('_misdatos');       ?> 
+      
     <?php    
           
     switch (isset($respuesta))
     {
- 
+           
     case $respuesta=='missubidas':
     {
         
@@ -61,7 +61,9 @@
     }
     case $respuesta=='comentarios':
         $this->renderPartial('_comentarios',array('datos'=>$datos,'dato2'=>$dato2));
-    
+        break;
+    default :
+            $this->renderPartial('_misdatos');    
     }
 
 

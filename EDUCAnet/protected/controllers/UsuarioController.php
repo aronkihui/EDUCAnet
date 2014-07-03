@@ -37,7 +37,7 @@ class UsuarioController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -70,6 +70,9 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
+                        
+                         $model->password=md5($model->password);
+                        
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idusuario));
 		}
@@ -77,6 +80,7 @@ class UsuarioController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+                   
 	}
 
 	/**
@@ -94,6 +98,8 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
+                        
+                          $model->password=md5($model->password);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idusuario));
 		}
@@ -101,6 +107,7 @@ class UsuarioController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
+                     
 	}
 
 	/**
