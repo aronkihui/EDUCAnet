@@ -30,20 +30,83 @@ $this->breadcrumbs=array(
         ?>
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo Yii::app()->request->baseUrl; ?>/css/cabeza.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        
+       
+        
 </head>
 
 <body>
-    <h2>Portal Alumno</h2>
-    <div class="menulateral">
-            <?php $this->widget('zii.widgets.CMenu',array(                                        
-                'items'=>array(
-                        array('label'=>'Información Académica', 'url'=>array('/portalalumno/portalalumno')),
-                        array('label'=>'Mi Curso', 'url'=>array('/site/contact')),
-                        array('label'=>'Mis Docentes', 'url'=>array('')),
-                        array('label'=>'Biblioteca Virtual', 'url'=>array('/site/page', 'view'=>'about')),
-                ),
-                'htmlOptions' => array('class'=> 'nav navbar-nav'),
-            )); ?>
+    
+    <div class="title "> <h2 class="centered">Portal Alumno</h2></div>
+    <div class="container-fluid">
+   
+        <div class="container-fluid well span2 ">
+      
+        
+        
+      <!—Sidebar content—>
+      <ul class="nav nav-pills nav-stacked">
+    
+     
+       <li class="active"><a href="<?php echo $this->createUrl('miperfil/registroSesion');?>"><span class="badge pull-right"></span> Biblioteca</a> </li>
+      <li class=""><a href="<?php echo $this->createUrl('miperfil/registroSesion');?>"><span class="badge pull-right"></span> Mi Perfil Biblioteca</a> </li>
+
+      <li class=""> 
+<?php echo CHtml::ajaxLink(
+    'Informacion Academica',          // the link body (it will NOT be HTML-encoded.)
+    array('portalalumno/info_academica'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array(
+        'update'=>'#res'
+    )
+        );?></li>
+      
+     <li class=""> 
+<?php echo CHtml::ajaxLink(
+    'Mi curso',          // the link body (it will NOT be HTML-encoded.)
+    array('portalalumno/mi_curso'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array(
+        'update'=>'#res'
+    )
+        );?></li> 
+      
+      
+      
+       <li class=""> 
+<?php echo CHtml::ajaxLink(
+    'Mis Profesores',          // the link body (it will NOT be HTML-encoded.)
+    array('portalalumno/mis_profesores'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array(
+        'update'=>'#res'
+    )
+        );?></li>
+      
+      <?php echo CHtml::ajaxLink(
+    'Mis Profesores',          // the link body (it will NOT be HTML-encoded.)
+    array('portalalumno/mis_anotaciones'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array(
+        'update'=>'#res'
+    )
+        );?></li>
+ 
+      
+      
+    </ul>
+  
+   
+        
+        
+        
+        
+  
+        </div>
+        
+        <div id="res" class="container-fluid well span22 ">
+            
+            
+           
+        </div>
+        
+    
     </div>
 </body>
 </html>
