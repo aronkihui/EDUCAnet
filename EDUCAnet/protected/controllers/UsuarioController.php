@@ -71,7 +71,7 @@ class UsuarioController extends Controller
                                 //$tipoUsuario = Yii::app()->user->getState('tipoUsuario');
                                // if($tipoUsuario==='1')
                                 //{
-                                        $this->redirect('http://localhost/EDUCAnet/EDUCAnet/index.php/portalbiblioteca/portalbiblioteca');
+                                        $this->redirect( Yii::app()->getBaseUrl() .'/' .'index.php/portalintranet/portalintranet');
                                // }
                                // elseif($tipoUsuario==='2')
                                 //{
@@ -85,6 +85,11 @@ class UsuarioController extends Controller
             
         }
         
+        public function actionLogout()
+	{
+		Yii::app()->user->logout();
+		$this->redirect(Yii::app()->getBaseUrl() .'/' .'index.php/portalbiblioteca/portalbiblioteca');
+	}
         
 
 

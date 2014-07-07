@@ -33,35 +33,39 @@
     
     
         <div class="container">
-            <div class="page-header">
-               
-                <div class ="navbar navbar-inverse navbar-fixed-top">
+        
+            <div class="page-header row-fluid ">
+                    
+                <div class ="navbar navbar-inverse navbar-fixed-top ">
+                    <a class="brand span1" ><?php echo Yii::app()->name; ?></a>   
                     <div class="navbar-inner">
-                        <div class="container">
-                            <div class="span8 offset3">
+                        <div class="container row-fluid">
+                            <div class="span10 offset2">
                                 
                                 <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>                                              
+                                    <span class="icon-bar"></span>     
+                                    <span class="icon-bar"></span>     
+                                    <span class="icon-bar"></span>     
+                                    <span class="icon-bar"></span>     
+                                    <span class="icon-bar"></span> 
+                                    <span class="icon-bar"></span>     
                                 </button>
 
-                                <a class="brand" href="<?php echo CHtml::encode(Yii::app()->homeurl);?>">
-                                    <?php echo Yii::app()->name; ?></a>   
+                              
 
                                 <div class="nav-collapse  collapse"> 
+                                     
                                     <?php $this->widget('zii.widgets.CMenu',array(                                        
                                         'items'=>array(
                                                 array('label'=>'Portal Alumno', 'url'=>array('/portalalumno/portalalumno')),
                                                 array('label'=>'Portal Docente', 'url'=>array('/portaldocente/portaldocente')),
                                                 array('label'=>'Biblioteca Virtual', 'url'=>array('/portalbiblioteca/portalbiblioteca')),
                                                 array('label'=>'Administrador sistema', 'url'=>array('/superuser/superuser')),
-                                                array('label'=>'matriculador', 'url'=>array('/matriculador/matriculador')),
-                                                 array('label'=>'login', 'url'=>array('/usuario/login')),
-                                                /*array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-                                                array('label'=>'Contact', 'url'=>array('/site/contact')),
-                                                array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                                                array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)*/
+                                                array('label'=>'matriculador', 'url'=>array('/matriculador/matriculador')),                                                
+                                                array('label'=>'Login', 'url'=>array('/usuario/login'), 'visible'=>Yii::app()->user->isGuest),
+                                                array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/usuario/logout'), 'visible'=>!Yii::app()->user->isGuest),
                                         ),
                                         'htmlOptions' => array('class'=> 'nav navbar-nav'),
                                     )); ?>

@@ -3585,3 +3585,155 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/alumno/inalumno/infoacademicafoacademica
 ---
+2014/07/07 07:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalbibliotec...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/portalbiblioteca
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/usuario/login
+---
+2014/07/07 07:09:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalbibliotec...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/portalbiblioteca
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/usuario/login
+---
+2014/07/07 07:12:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('logout')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('logout')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/logout')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/usuario/logout
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portalbiblioteca/portalbiblioteca
+---
+2014/07/07 07:13:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portalbiblioteca/portalbiblioteca
+---
+2014/07/07 07:14:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portalbiblioteca/portalbiblioteca
+---
+2014/07/07 07:15:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+---
+2014/07/07 07:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+---
+2014/07/07 07:15:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+---
+2014/07/07 07:16:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+---
+2014/07/07 07:16:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+---
+2014/07/07 07:25:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portaldocente/portaldocente
+---
+2014/07/07 08:29:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "portalintranet".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('portalintranet')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('portalintranet')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalintranet/...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalintranet/portalintranet
+---
+2014/07/07 08:57:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "www.google.cl".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('www.google.cl')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('www.google.cl')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalintranet/...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalintranet/www.google.cl
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portalintranet/portalintranet
+---
+2014/07/07 09:00:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "www.google.cl".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('www.google.cl')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('www.google.cl')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalintranet/...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalintranet/www.google.cl
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portalintranet/portalintranet
+---
+2014/07/07 09:00:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalintranet')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalintranet
+---
+2014/07/07 09:00:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalintranet')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalintranet
+---

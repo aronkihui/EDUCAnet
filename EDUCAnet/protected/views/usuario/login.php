@@ -1,8 +1,8 @@
 
+<div class="container-fluid">
+<h1>Ingreso</h1>
 
-<h1>Login xD</h1>
-
-<p>Please fill out the following form with your login credentials:</p>
+<p>Por favor ingrese sus datos para ingresar al sistema</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -13,7 +13,7 @@
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Los campos con <span class="required">*</span> son requeridos</p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombreusuario'); ?>
@@ -42,3 +42,4 @@
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</div>
