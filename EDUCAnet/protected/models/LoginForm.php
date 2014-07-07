@@ -3,11 +3,11 @@
 /**
  * LoginForm class.
  * LoginForm is the data structure for keeping
- * user login form data. It is used by the 'login' action of 'SiteController'.
+
  */
 class LoginForm extends CFormModel
 {
-	public $username;
+	public $nombreusuario;
 	public $password;
 	public $rememberMe;
 
@@ -21,8 +21,8 @@ class LoginForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			// username and password are required
-			array('username, password', 'required'),
+			// username and password are requiredUsuario()
+			array('nombreusuario, password', 'required'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
@@ -48,9 +48,9 @@ class LoginForm extends CFormModel
 	{
 		if(!$this->hasErrors())
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
+			$this->_identity=new UserIdentity($this->nombreusuario,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+				$this->addError('password','Usuario y/o Contraseña incorrecta.');
 		}
 	}
 
@@ -62,7 +62,7 @@ class LoginForm extends CFormModel
 	{
 		if($this->_identity===null)
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
+			$this->_identity=new UserIdentity($this->nombreusuario,$this->password);
 			$this->_identity->authenticate();
 		}
 		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
@@ -72,6 +72,8 @@ class LoginForm extends CFormModel
 			return true;
 		}
 		else
+                {
 			return false;
+                }
 	}
 }

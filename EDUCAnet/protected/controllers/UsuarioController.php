@@ -39,9 +39,9 @@ class UsuarioController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('@'),
 			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+			//array('deny',  // deny all users
+				//'users'=>array('*'),
+			//),
 		);
 	}
 
@@ -49,17 +49,47 @@ class UsuarioController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
-	}
+        public function actionLogin()
+        {
+            $model=new LoginForm;
+            
+           	// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
 
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
+		// collect user input data
+		if(isset($_POST['LoginForm']))
+		{
+                        //$tipoUsuario = Yii::app()->user->getState('tipoUsuario');
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $model->login())
+                        {
+                                //$tipoUsuario = Yii::app()->user->getState('tipoUsuario');
+                               // if($tipoUsuario==='1')
+                                //{
+                                        $this->redirect('http://localhost/EDUCAnet/EDUCAnet/index.php/portalbiblioteca/portalbiblioteca');
+                               // }
+                               // elseif($tipoUsuario==='2')
+                                //{
+                               //         $this->redirect('http://localhost/EDUCAnet/EDUCAnet/index.php/profesor/gestionacademica');
+                                //}
+                        }
+		}
+		// display the login form
+		$this->render('login',array('model'=>$model));
+            
+            
+        }
+        
+        
+
+
+
+	
 	public function actionCreate()
 	{
 		$model=new Usuario;
@@ -70,7 +100,7 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
-                        
+                        //cambiar funcion para codificar password 
                          $model->password=md5($model->password);
                         
 			if($model->save())
@@ -98,7 +128,7 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
-                        
+                        //cambiar la funcion ppara modicar la codificacion del password
                           $model->password=md5($model->password);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idusuario));
@@ -127,6 +157,7 @@ class UsuarioController extends Controller
 	/**
 	 * Lists all models.
 	 */
+        /*
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Usuario');
@@ -134,6 +165,8 @@ class UsuarioController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
+         * 
+         */
 
 	/**
 	 * Manages all models.

@@ -57,6 +57,7 @@
                                                 array('label'=>'Biblioteca Virtual', 'url'=>array('/portalbiblioteca/portalbiblioteca')),
                                                 array('label'=>'Administrador sistema', 'url'=>array('/superuser/superuser')),
                                                 array('label'=>'matriculador', 'url'=>array('/matriculador/matriculador')),
+                                                 array('label'=>'login', 'url'=>array('/usuario/login')),
                                                 /*array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                                                 array('label'=>'Contact', 'url'=>array('/site/contact')),
                                                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
