@@ -14,10 +14,10 @@
  *
  * The followings are the available model relations:
  * @property Anotaciones[] $anotaciones
- * @property Asignaturacomun[] $asignaturacomuns
  * @property Asignaturaelectivo[] $asignaturaelectivos
- * @property Cursocomun[] $cursocomuns
+ * @property Curso[] $cursos
  * @property Usuario $usuarioIdusuario
+ * @property Asignatura[] $asignaturas
  */
 class Profesor extends CActiveRecord
 {
@@ -39,7 +39,7 @@ class Profesor extends CActiveRecord
 		return array(
 			array('nombre, apellido, direccion, telefono, email, usuario_idusuario', 'required'),
 			array('usuario_idusuario', 'numerical', 'integerOnly'=>true),
-			array('nombre, apellido', 'length', 'max'=>10),
+			array('nombre, apellido', 'length', 'max'=>50),
 			array('direccion, telefono, email', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -56,10 +56,10 @@ class Profesor extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'anotaciones' => array(self::HAS_MANY, 'Anotaciones', 'profesor_idprofesor'),
-			'asignaturacomuns' => array(self::HAS_MANY, 'Asignaturacomun', 'profesor_idprofesor'),
 			'asignaturaelectivos' => array(self::HAS_MANY, 'Asignaturaelectivo', 'profesor_idprofesor'),
-			'cursocomuns' => array(self::HAS_MANY, 'Cursocomun', 'profesor_idprofesor'),
+			'cursos' => array(self::HAS_MANY, 'Curso', 'profesor_idprofesor'),
 			'usuarioIdusuario' => array(self::BELONGS_TO, 'Usuario', 'usuario_idusuario'),
+			'asignaturas' => array(self::MANY_MANY, 'Asignatura', 'profesor_has_asignatura(profesor_idprofesor, asignatura_idasignatura)'),
 		);
 	}
 

@@ -79,7 +79,8 @@ $this->breadcrumbs=array(
         'update'=>'#res'
     )
         );?></li>
-      
+     
+      <li>
       <?php echo CHtml::ajaxLink(
     'Mis Profesores',          // the link body (it will NOT be HTML-encoded.)
     array('portalalumno/mis_anotaciones'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.

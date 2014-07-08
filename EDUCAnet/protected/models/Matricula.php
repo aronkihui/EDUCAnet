@@ -1,34 +1,30 @@
 <?php
 
 /**
- * This is the model class for table "alumno".
+ * This is the model class for table "matricula".
  *
- * The followings are the available columns in table 'alumno':
- * @property integer $idalumno
- * @property string $nombre
- * @property string $apellido
- * @property string $direccion
- * @property integer $telefono
- * @property string $email
- * @property string $fecha_nacimiento
+ * The followings are the available columns in table 'matricula':
+ * @property integer $idmatricula
+ * @property integer $apoderado_idapoderado
+ * @property integer $alumno_idalumno
+ * @property string $fecha
  * @property integer $curso_idcurso
- * @property integer $usuario_idusuario
+ * @property integer $matriculador_idmatriculador
  *
  * The followings are the available model relations:
+ * @property Alumno $alumnoIdalumno
+ * @property Apoderado $apoderadoIdapoderado
  * @property Curso $cursoIdcurso
- * @property Usuario $usuarioIdusuario
- * @property Anotaciones[] $anotaciones
- * @property Evaluacion[] $evaluacions
- * @property Matricula[] $matriculas
+ * @property Matriculador $matriculadorIdmatriculador
  */
-class Alumno extends CActiveRecord
+class Matricula extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'alumno';
+		return 'matricula';
 	}
 
 	/**
@@ -39,13 +35,11 @@ class Alumno extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, direccion, telefono, email, fecha_nacimiento, curso_idcurso, usuario_idusuario', 'required'),
-			array('telefono, curso_idcurso, usuario_idusuario', 'numerical', 'integerOnly'=>true),
-			array('nombre, apellido, direccion', 'length', 'max'=>50),
-			array('email', 'length', 'max'=>45),
+			array('apoderado_idapoderado, alumno_idalumno, fecha, curso_idcurso, matriculador_idmatriculador', 'required'),
+			array('apoderado_idapoderado, alumno_idalumno, curso_idcurso, matriculador_idmatriculador', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idalumno, nombre, apellido, direccion, telefono, email, fecha_nacimiento, curso_idcurso, usuario_idusuario', 'safe', 'on'=>'search'),
+			array('idmatricula, apoderado_idapoderado, alumno_idalumno, fecha, curso_idcurso, matriculador_idmatriculador', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,11 +51,10 @@ class Alumno extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'alumnoIdalumno' => array(self::BELONGS_TO, 'Alumno', 'alumno_idalumno'),
+			'apoderadoIdapoderado' => array(self::BELONGS_TO, 'Apoderado', 'apoderado_idapoderado'),
 			'cursoIdcurso' => array(self::BELONGS_TO, 'Curso', 'curso_idcurso'),
-			'usuarioIdusuario' => array(self::BELONGS_TO, 'Usuario', 'usuario_idusuario'),
-			'anotaciones' => array(self::HAS_MANY, 'Anotaciones', 'alumno_idalumno'),
-			'evaluacions' => array(self::HAS_MANY, 'Evaluacion', 'alumno_idalumno'),
-			'matriculas' => array(self::HAS_MANY, 'Matricula', 'alumno_idalumno'),
+			'matriculadorIdmatriculador' => array(self::BELONGS_TO, 'Matriculador', 'matriculador_idmatriculador'),
 		);
 	}
 
@@ -71,15 +64,12 @@ class Alumno extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idalumno' => 'Idalumno',
-			'nombre' => 'Nombre',
-			'apellido' => 'Apellido',
-			'direccion' => 'Direccion',
-			'telefono' => 'Telefono',
-			'email' => 'Email',
-			'fecha_nacimiento' => 'Fecha Nacimiento',
+			'idmatricula' => 'Idmatricula',
+			'apoderado_idapoderado' => 'Apoderado Idapoderado',
+			'alumno_idalumno' => 'Alumno Idalumno',
+			'fecha' => 'Fecha',
 			'curso_idcurso' => 'Curso Idcurso',
-			'usuario_idusuario' => 'Usuario Idusuario',
+			'matriculador_idmatriculador' => 'Matriculador Idmatriculador',
 		);
 	}
 
@@ -101,15 +91,12 @@ class Alumno extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idalumno',$this->idalumno);
-		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('apellido',$this->apellido,true);
-		$criteria->compare('direccion',$this->direccion,true);
-		$criteria->compare('telefono',$this->telefono);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('fecha_nacimiento',$this->fecha_nacimiento,true);
+		$criteria->compare('idmatricula',$this->idmatricula);
+		$criteria->compare('apoderado_idapoderado',$this->apoderado_idapoderado);
+		$criteria->compare('alumno_idalumno',$this->alumno_idalumno);
+		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('curso_idcurso',$this->curso_idcurso);
-		$criteria->compare('usuario_idusuario',$this->usuario_idusuario);
+		$criteria->compare('matriculador_idmatriculador',$this->matriculador_idmatriculador);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -120,7 +107,7 @@ class Alumno extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Alumno the static model class
+	 * @return Matricula the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
