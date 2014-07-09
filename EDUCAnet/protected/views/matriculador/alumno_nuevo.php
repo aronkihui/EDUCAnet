@@ -1,10 +1,7 @@
-<?php
 
-
-echo'alumno nuevo';
-
-
-?>
+<div class="container-fluid">
+<h2><?php echo'ingreso nueva matricula '?></h2>
+</div>
 
 <div class="container-fluid">
 
@@ -20,20 +17,30 @@ echo'alumno nuevo';
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son requeridos</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombreusuario'); ?>
-		<?php echo $form->textField($model,'nombreusuario'); ?>
-		<?php echo $form->error($model,'nombreusuario'); ?>
+		<?php echo $form->labelEx($model,'nombreApoderado'); ?>
+		<?php echo $form->textField($model,'nombreApoderado'); ?>
+		<?php echo $form->error($model,'nombreusuarioApoderado'); ?>
+	</div>
+        <div class="row">
+		<?php echo $form->labelEx($model,'passwordApoderado'); ?>
+		<?php echo $form->textField($model,'passwordApoderado'); ?>
+		<?php echo $form->error($model,'passwordApoderado'); ?>
+	</div>
+        <div class="row">
+		<?php echo $form->labelEx($model,'nombreusuarioAlumno'); ?>
+		<?php echo $form->textField($model,'nombreusuarioAlumno'); ?>
+		<?php echo $form->error($model,'nombreusuarioAlumno'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->textField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->labelEx($model,'passwordAlumno'); ?>
+		<?php echo $form->textField($model,'passwordAlumno'); ?>
+		<?php echo $form->error($model,'passwordAlumno'); ?>
 	</div>
 
 	

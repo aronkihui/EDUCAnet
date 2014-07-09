@@ -11,11 +11,11 @@
  * @property integer $telefono
  * @property string $email
  * @property string $fecha_nacimiento
- * @property integer $curso_idcurso
+ * @property string $rut
+ * @property string $fecha_creacion
  * @property integer $usuario_idusuario
  *
  * The followings are the available model relations:
- * @property Curso $cursoIdcurso
  * @property Usuario $usuarioIdusuario
  * @property Anotaciones[] $anotaciones
  * @property Evaluacion[] $evaluacions
@@ -39,13 +39,13 @@ class Alumno extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, direccion, telefono, email, fecha_nacimiento, curso_idcurso, usuario_idusuario', 'required'),
-			array('telefono, curso_idcurso, usuario_idusuario', 'numerical', 'integerOnly'=>true),
+			array('nombre, apellido, direccion, telefono, email, fecha_nacimiento, rut, fecha_creacion', 'required'),
+			array('telefono, usuario_idusuario', 'numerical', 'integerOnly'=>true),
 			array('nombre, apellido, direccion', 'length', 'max'=>50),
-			array('email', 'length', 'max'=>45),
+			array('email, rut', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idalumno, nombre, apellido, direccion, telefono, email, fecha_nacimiento, curso_idcurso, usuario_idusuario', 'safe', 'on'=>'search'),
+			array('idalumno, nombre, apellido, direccion, telefono, email, fecha_nacimiento, rut, fecha_creacion, usuario_idusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,7 +57,6 @@ class Alumno extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'cursoIdcurso' => array(self::BELONGS_TO, 'Curso', 'curso_idcurso'),
 			'usuarioIdusuario' => array(self::BELONGS_TO, 'Usuario', 'usuario_idusuario'),
 			'anotaciones' => array(self::HAS_MANY, 'Anotaciones', 'alumno_idalumno'),
 			'evaluacions' => array(self::HAS_MANY, 'Evaluacion', 'alumno_idalumno'),
@@ -78,7 +77,8 @@ class Alumno extends CActiveRecord
 			'telefono' => 'Telefono',
 			'email' => 'Email',
 			'fecha_nacimiento' => 'Fecha Nacimiento',
-			'curso_idcurso' => 'Curso Idcurso',
+			'rut' => 'Rut',
+			'fecha_creacion' => 'Fecha Creacion',
 			'usuario_idusuario' => 'Usuario Idusuario',
 		);
 	}
@@ -108,7 +108,8 @@ class Alumno extends CActiveRecord
 		$criteria->compare('telefono',$this->telefono);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('fecha_nacimiento',$this->fecha_nacimiento,true);
-		$criteria->compare('curso_idcurso',$this->curso_idcurso);
+		$criteria->compare('rut',$this->rut,true);
+		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
 		$criteria->compare('usuario_idusuario',$this->usuario_idusuario);
 
 		return new CActiveDataProvider($this, array(

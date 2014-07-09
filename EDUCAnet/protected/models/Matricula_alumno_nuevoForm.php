@@ -8,11 +8,9 @@
 
 class Matricula_alumno_nuevoForm extends CFormModel
 {
+    //datos formulario para ingreso de apoderado
     
-   
-    
-    public $nombreusuario;
-	public $password;
+       
 	public $rememberMe;
 
 	private $_identity;
@@ -26,7 +24,8 @@ class Matricula_alumno_nuevoForm extends CFormModel
 	{
 		return array(
 			// username and password are requiredUsuario()
-			array('nombreusuario, password','required'),
+			array('nombreusuarioApoderado, passwordApoderado,nombreusuarioAlumno ,passwordAlumno','required'),
+                 
 			// rememberMe needs to be a boolean
 			
 			// password needs to be authenticated

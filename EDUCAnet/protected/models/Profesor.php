@@ -10,6 +10,8 @@
  * @property string $direccion
  * @property string $telefono
  * @property string $email
+ * @property string $fecha_ingreso
+ * @property string $rut
  * @property integer $usuario_idusuario
  *
  * The followings are the available model relations:
@@ -37,13 +39,13 @@ class Profesor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, direccion, telefono, email, usuario_idusuario', 'required'),
+			array('nombre, apellido, direccion, telefono, email, fecha_ingreso, rut', 'required'),
 			array('usuario_idusuario', 'numerical', 'integerOnly'=>true),
 			array('nombre, apellido', 'length', 'max'=>50),
-			array('direccion, telefono, email', 'length', 'max'=>45),
+			array('direccion, telefono, email, rut', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idprofesor, nombre, apellido, direccion, telefono, email, usuario_idusuario', 'safe', 'on'=>'search'),
+			array('idprofesor, nombre, apellido, direccion, telefono, email, fecha_ingreso, rut, usuario_idusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,6 +77,8 @@ class Profesor extends CActiveRecord
 			'direccion' => 'Direccion',
 			'telefono' => 'Telefono',
 			'email' => 'Email',
+			'fecha_ingreso' => 'Fecha Ingreso',
+			'rut' => 'Rut',
 			'usuario_idusuario' => 'Usuario Idusuario',
 		);
 	}
@@ -103,6 +107,8 @@ class Profesor extends CActiveRecord
 		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('email',$this->email,true);
+		$criteria->compare('fecha_ingreso',$this->fecha_ingreso,true);
+		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('usuario_idusuario',$this->usuario_idusuario);
 
 		return new CActiveDataProvider($this, array(

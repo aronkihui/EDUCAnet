@@ -10,6 +10,8 @@
  * @property string $telefono
  * @property string $direccion
  * @property string $email
+ * @property string $rut
+ * @property string $fecha_creacion
  * @property integer $usuario_idusuario
  *
  * The followings are the available model relations:
@@ -34,12 +36,12 @@ class Apoderado extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idapoderado, nombre, apellido, telefono, direccion, usuario_idusuario', 'required'),
-			array('idapoderado, usuario_idusuario', 'numerical', 'integerOnly'=>true),
-			array('nombre, apellido, telefono, direccion, email', 'length', 'max'=>45),
+			array('nombre, apellido, telefono, direccion, rut, fecha_creacion', 'required'),
+			array('usuario_idusuario', 'numerical', 'integerOnly'=>true),
+			array('nombre, apellido, telefono, direccion, email, rut', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idapoderado, nombre, apellido, telefono, direccion, email, usuario_idusuario', 'safe', 'on'=>'search'),
+			array('idapoderado, nombre, apellido, telefono, direccion, email, rut, fecha_creacion, usuario_idusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +70,8 @@ class Apoderado extends CActiveRecord
 			'telefono' => 'Telefono',
 			'direccion' => 'Direccion',
 			'email' => 'Email',
+			'rut' => 'Rut',
+			'fecha_creacion' => 'Fecha Creacion',
 			'usuario_idusuario' => 'Usuario Idusuario',
 		);
 	}
@@ -96,6 +100,8 @@ class Apoderado extends CActiveRecord
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('email',$this->email,true);
+		$criteria->compare('rut',$this->rut,true);
+		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
 		$criteria->compare('usuario_idusuario',$this->usuario_idusuario);
 
 		return new CActiveDataProvider($this, array(
