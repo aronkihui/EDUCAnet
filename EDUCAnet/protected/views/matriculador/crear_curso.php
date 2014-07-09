@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-
-echo'alumno antiguo'
-
 ?>
+
+
+<p>aqui va formulario creacion curso</p>

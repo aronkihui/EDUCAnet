@@ -8,12 +8,13 @@
  * @property integer $apoderado_idapoderado
  * @property integer $alumno_idalumno
  * @property string $fecha
+ * @property integer $estadoMatricula
  * @property integer $matriculador_idmatriculador
  *
  * The followings are the available model relations:
  * @property Curso[] $cursos
- * @property Alumno $alumnoIdalumno
  * @property Apoderado $apoderadoIdapoderado
+ * @property Alumno $alumnoIdalumno
  * @property Matriculador $matriculadorIdmatriculador
  */
 class Matricula extends CActiveRecord
@@ -34,11 +35,11 @@ class Matricula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('apoderado_idapoderado, alumno_idalumno, fecha, matriculador_idmatriculador', 'required'),
-			array('apoderado_idapoderado, alumno_idalumno, matriculador_idmatriculador', 'numerical', 'integerOnly'=>true),
+			array('apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, matriculador_idmatriculador', 'required'),
+			array('apoderado_idapoderado, alumno_idalumno, estadoMatricula, matriculador_idmatriculador', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idmatricula, apoderado_idapoderado, alumno_idalumno, fecha, matriculador_idmatriculador', 'safe', 'on'=>'search'),
+			array('idmatricula, apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, matriculador_idmatriculador', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,8 +52,8 @@ class Matricula extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'cursos' => array(self::HAS_MANY, 'Curso', 'matricula_idmatricula'),
-			'alumnoIdalumno' => array(self::BELONGS_TO, 'Alumno', 'alumno_idalumno'),
 			'apoderadoIdapoderado' => array(self::BELONGS_TO, 'Apoderado', 'apoderado_idapoderado'),
+			'alumnoIdalumno' => array(self::BELONGS_TO, 'Alumno', 'alumno_idalumno'),
 			'matriculadorIdmatriculador' => array(self::BELONGS_TO, 'Matriculador', 'matriculador_idmatriculador'),
 		);
 	}
@@ -67,6 +68,7 @@ class Matricula extends CActiveRecord
 			'apoderado_idapoderado' => 'Apoderado Idapoderado',
 			'alumno_idalumno' => 'Alumno Idalumno',
 			'fecha' => 'Fecha',
+			'estadoMatricula' => 'Estado Matricula',
 			'matriculador_idmatriculador' => 'Matriculador Idmatriculador',
 		);
 	}
@@ -93,6 +95,7 @@ class Matricula extends CActiveRecord
 		$criteria->compare('apoderado_idapoderado',$this->apoderado_idapoderado);
 		$criteria->compare('alumno_idalumno',$this->alumno_idalumno);
 		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('estadoMatricula',$this->estadoMatricula);
 		$criteria->compare('matriculador_idmatriculador',$this->matriculador_idmatriculador);
 
 		return new CActiveDataProvider($this, array(

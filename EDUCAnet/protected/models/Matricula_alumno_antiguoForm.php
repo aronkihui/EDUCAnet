@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class Matricula_alumno_nuevoForm extends CFormModel
+class Matricula_alumno_antiguoForm extends CFormModel
 {
     //datos formulario para ingreso de apoderado
     public $nombreApoderado, $apellidoApoderado, $telefonoApoderado, $direccionApoderado, $rutApoderado, $fecha_creacionApoderado;

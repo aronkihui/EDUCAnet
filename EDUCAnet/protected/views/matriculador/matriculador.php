@@ -18,7 +18,7 @@
      <li class="active"> 
 <?php echo CHtml::ajaxLink(
     'Matricula alumno nuevo',          // the link body (it will NOT be HTML-encoded.)
-    array('matriculador/matricula_alumno_nuevo'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array('matriculador/mostrar_alumnos_nuevos'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
     array(
         'update'=>'#res'
     )
@@ -27,7 +27,7 @@
      <li class="active"> 
 <?php echo CHtml::ajaxLink(
     'Matricula alumno antiguo',          // the link body (it will NOT be HTML-encoded.)
-    array('matriculador/matricula_alumno_antiguo'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array('matriculador/mostrar_alumnos_antiguos'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
     array(
         'update'=>'#res'
     )
@@ -37,8 +37,8 @@
       
        <li class="active"> 
 <?php echo CHtml::ajaxLink(
-    'Mis Profesores',          // the link body (it will NOT be HTML-encoded.)
-    array('portalalumno/mis_profesores'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    'Administracion cursos',          // the link body (it will NOT be HTML-encoded.)
+    array('matriculador/admin_cursos'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
     array(
         'update'=>'#res'
     )
@@ -47,8 +47,8 @@
        <li class="active">
       
       <?php echo CHtml::ajaxLink(
-    'Mis Profesores',          // the link body (it will NOT be HTML-encoded.)
-    array('portalalumno/mis_anotaciones'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    'Administracion Asignaturas',          // the link body (it will NOT be HTML-encoded.)
+    array('matriculador/admin_asignaturas'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
     array(
         'update'=>'#res'
     )

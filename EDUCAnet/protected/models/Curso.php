@@ -6,7 +6,9 @@
  * The followings are the available columns in table 'curso':
  * @property integer $idcurso
  * @property string $nombrecurso
- * @property string $fecha_creacion
+ * @property string $año
+ * @property integer $nivel
+ * @property string $especialidad
  * @property integer $profesor_idprofesor
  * @property integer $matricula_idmatricula
  *
@@ -35,12 +37,13 @@ class Curso extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombrecurso, fecha_creacion', 'required'),
-			array('profesor_idprofesor, matricula_idmatricula', 'numerical', 'integerOnly'=>true),
+			array('nombrecurso, año, nivel, especialidad', 'required'),
+			array('nivel, profesor_idprofesor, matricula_idmatricula', 'numerical', 'integerOnly'=>true),
 			array('nombrecurso', 'length', 'max'=>40),
+			array('especialidad', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idcurso, nombrecurso, fecha_creacion, profesor_idprofesor, matricula_idmatricula', 'safe', 'on'=>'search'),
+			array('idcurso, nombrecurso, año, nivel, especialidad, profesor_idprofesor, matricula_idmatricula', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,7 +71,9 @@ class Curso extends CActiveRecord
 		return array(
 			'idcurso' => 'Idcurso',
 			'nombrecurso' => 'Nombrecurso',
-			'fecha_creacion' => 'Fecha Creacion',
+			'año' => 'Año',
+			'nivel' => 'Nivel',
+			'especialidad' => 'Especialidad',
 			'profesor_idprofesor' => 'Profesor Idprofesor',
 			'matricula_idmatricula' => 'Matricula Idmatricula',
 		);
@@ -94,7 +99,9 @@ class Curso extends CActiveRecord
 
 		$criteria->compare('idcurso',$this->idcurso);
 		$criteria->compare('nombrecurso',$this->nombrecurso,true);
-		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
+		$criteria->compare('año',$this->año,true);
+		$criteria->compare('nivel',$this->nivel);
+		$criteria->compare('especialidad',$this->especialidad,true);
 		$criteria->compare('profesor_idprofesor',$this->profesor_idprofesor);
 		$criteria->compare('matricula_idmatricula',$this->matricula_idmatricula);
 
