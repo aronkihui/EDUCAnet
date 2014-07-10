@@ -68,9 +68,45 @@ class MatriculadorController extends Controller
     
     public function actionCrear_asignatura()
             {
-        $this->render('crear_asignatura');
+        $model=new Asignatura;
+        $this->render('crear_asignatura',array('model'=>$model));
     }
     
+    public function actionCrear_bloque()
+    {
+  
+     $model=new Bloques;
+   
+     
+     $item = new Bloques;
+
+     $items=Bloques::model()->findAll();
+
+            if(isset($_POST['Bloques']))
+            {
+                $model->attributes=$_POST['Bloques'];
+                 if($model->validate())
+                 {
+                     $model->save();
+                 $this->refresh();
+                    }
+
+                    $valid=true;
+                    foreach($items as $i=>$item)
+                    {
+                            if(isset($_POST['Bloques'][$i]))
+
+                            $item->attributes=$_POST['Bloques'][$i];
+                            $valid=$item->validate() && $valid;
+                            if($valid)$item->save();
+                    }
+
+
+            }
+    $this->render('crear_bloque',array('items'=>$items,'model'=>$model));
+    }
+
+
     
     public function actionAdmin_profesores() 
       {
