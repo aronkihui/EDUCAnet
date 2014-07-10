@@ -9,8 +9,8 @@
  * @property string $año
  * @property integer $nivel
  * @property string $especialidad
- * @property integer $profesor_idprofesor
  * @property integer $matricula_idmatricula
+ * @property string $profesor_idprofesor
  *
  * The followings are the available model relations:
  * @property BloquesAsignaturaCurso[] $bloquesAsignaturaCursos
@@ -38,12 +38,13 @@ class Curso extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nombrecurso, año, nivel, especialidad', 'required'),
-			array('nivel, profesor_idprofesor, matricula_idmatricula', 'numerical', 'integerOnly'=>true),
+			array('nivel, matricula_idmatricula', 'numerical', 'integerOnly'=>true),
 			array('nombrecurso', 'length', 'max'=>40),
 			array('especialidad', 'length', 'max'=>1),
+			array('profesor_idprofesor', 'length', 'max'=>21),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idcurso, nombrecurso, año, nivel, especialidad, profesor_idprofesor, matricula_idmatricula', 'safe', 'on'=>'search'),
+			array('idcurso, nombrecurso, año, nivel, especialidad, matricula_idmatricula, profesor_idprofesor', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,8 +75,8 @@ class Curso extends CActiveRecord
 			'año' => 'Año',
 			'nivel' => 'Nivel',
 			'especialidad' => 'Especialidad',
-			'profesor_idprofesor' => 'Profesor Idprofesor',
 			'matricula_idmatricula' => 'Matricula Idmatricula',
+			'profesor_idprofesor' => 'Profesor Idprofesor',
 		);
 	}
 
@@ -102,8 +103,8 @@ class Curso extends CActiveRecord
 		$criteria->compare('año',$this->año,true);
 		$criteria->compare('nivel',$this->nivel);
 		$criteria->compare('especialidad',$this->especialidad,true);
-		$criteria->compare('profesor_idprofesor',$this->profesor_idprofesor);
 		$criteria->compare('matricula_idmatricula',$this->matricula_idmatricula);
+		$criteria->compare('profesor_idprofesor',$this->profesor_idprofesor,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

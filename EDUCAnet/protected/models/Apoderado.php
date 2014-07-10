@@ -4,13 +4,12 @@
  * This is the model class for table "apoderado".
  *
  * The followings are the available columns in table 'apoderado':
- * @property integer $idapoderado
+ * @property string $idapoderado
  * @property string $nombre
  * @property string $apellido
  * @property string $telefono
  * @property string $direccion
  * @property string $email
- * @property string $rut
  * @property string $fecha_creacion
  * @property integer $usuario_idusuario
  *
@@ -36,12 +35,13 @@ class Apoderado extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, telefono, direccion, rut, fecha_creacion', 'required'),
+			array('idapoderado, nombre, apellido, telefono, direccion, fecha_creacion', 'required'),
 			array('usuario_idusuario', 'numerical', 'integerOnly'=>true),
-			array('nombre, apellido, telefono, direccion, email, rut', 'length', 'max'=>45),
+			array('idapoderado', 'length', 'max'=>21),
+			array('nombre, apellido, telefono, direccion, email', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idapoderado, nombre, apellido, telefono, direccion, email, rut, fecha_creacion, usuario_idusuario', 'safe', 'on'=>'search'),
+			array('idapoderado, nombre, apellido, telefono, direccion, email, fecha_creacion, usuario_idusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,7 +70,6 @@ class Apoderado extends CActiveRecord
 			'telefono' => 'Telefono',
 			'direccion' => 'Direccion',
 			'email' => 'Email',
-			'rut' => 'Rut',
 			'fecha_creacion' => 'Fecha Creacion',
 			'usuario_idusuario' => 'Usuario Idusuario',
 		);
@@ -94,13 +93,12 @@ class Apoderado extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idapoderado',$this->idapoderado);
+		$criteria->compare('idapoderado',$this->idapoderado,true);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('apellido',$this->apellido,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('email',$this->email,true);
-		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
 		$criteria->compare('usuario_idusuario',$this->usuario_idusuario);
 

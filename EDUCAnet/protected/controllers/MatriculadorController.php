@@ -56,7 +56,8 @@ class MatriculadorController extends Controller
             {
         
         //crear model del form personalizado
-        $this->render('crear_curso');
+        $model= new Curso;
+        $this->render('crear_curso',array('model'=>$model));
     }
     
     
@@ -68,6 +69,20 @@ class MatriculadorController extends Controller
     public function actionCrear_asignatura()
             {
         $this->render('crear_asignatura');
+    }
+    
+    
+    public function actionAdmin_profesores() 
+      {
+      
+        $this->renderPartial('admin_profesores');
+    }
+    
+    public function actionCrear_profesor() 
+            {
+        
+        $model=new Profesor;
+        $this->render('crear_profesor',array('model'=>$model));
     }
 
 

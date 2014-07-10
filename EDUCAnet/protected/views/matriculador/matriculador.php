@@ -54,6 +54,16 @@
     )
         );?></li>
  
+        <li class="active">
+      
+      <?php echo CHtml::ajaxLink(
+    'Administracion Profesores',          // the link body (it will NOT be HTML-encoded.)
+    array('matriculador/admin_profesores'), // the URL for the AJAX request. If empty, it is assumed to be the current URL.
+    array(
+        'update'=>'#res'
+    )
+        );?></li>
+ 
       
       
     </ul>

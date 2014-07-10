@@ -4,22 +4,20 @@
  * This is the model class for table "profesor".
  *
  * The followings are the available columns in table 'profesor':
- * @property integer $idprofesor
+ * @property string $idprofesor
  * @property string $nombre
  * @property string $apellido
  * @property string $direccion
  * @property string $telefono
  * @property string $email
  * @property string $fecha_ingreso
- * @property string $rut
  * @property integer $usuario_idusuario
  *
  * The followings are the available model relations:
  * @property Anotaciones[] $anotaciones
- * @property Asignaturaelectivo[] $asignaturaelectivos
  * @property Curso[] $cursos
  * @property Usuario $usuarioIdusuario
- * @property Asignatura[] $asignaturas
+ * @property ProfesorHasAsignatura[] $profesorHasAsignaturas
  */
 class Profesor extends CActiveRecord
 {
@@ -39,13 +37,14 @@ class Profesor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, direccion, telefono, email, fecha_ingreso, rut', 'required'),
+			array('idprofesor, nombre, apellido, direccion, telefono, email, fecha_ingreso', 'required'),
 			array('usuario_idusuario', 'numerical', 'integerOnly'=>true),
+			array('idprofesor', 'length', 'max'=>21),
 			array('nombre, apellido', 'length', 'max'=>50),
-			array('direccion, telefono, email, rut', 'length', 'max'=>45),
+			array('direccion, telefono, email', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idprofesor, nombre, apellido, direccion, telefono, email, fecha_ingreso, rut, usuario_idusuario', 'safe', 'on'=>'search'),
+			array('idprofesor, nombre, apellido, direccion, telefono, email, fecha_ingreso, usuario_idusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,10 +57,9 @@ class Profesor extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'anotaciones' => array(self::HAS_MANY, 'Anotaciones', 'profesor_idprofesor'),
-			'asignaturaelectivos' => array(self::HAS_MANY, 'Asignaturaelectivo', 'profesor_idprofesor'),
 			'cursos' => array(self::HAS_MANY, 'Curso', 'profesor_idprofesor'),
 			'usuarioIdusuario' => array(self::BELONGS_TO, 'Usuario', 'usuario_idusuario'),
-			'asignaturas' => array(self::MANY_MANY, 'Asignatura', 'profesor_has_asignatura(profesor_idprofesor, asignatura_idasignatura)'),
+			'profesorHasAsignaturas' => array(self::HAS_MANY, 'ProfesorHasAsignatura', 'profesor_idprofesor'),
 		);
 	}
 
@@ -78,7 +76,6 @@ class Profesor extends CActiveRecord
 			'telefono' => 'Telefono',
 			'email' => 'Email',
 			'fecha_ingreso' => 'Fecha Ingreso',
-			'rut' => 'Rut',
 			'usuario_idusuario' => 'Usuario Idusuario',
 		);
 	}
@@ -101,14 +98,13 @@ class Profesor extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idprofesor',$this->idprofesor);
+		$criteria->compare('idprofesor',$this->idprofesor,true);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('apellido',$this->apellido,true);
 		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('fecha_ingreso',$this->fecha_ingreso,true);
-		$criteria->compare('rut',$this->rut,true);
 		$criteria->compare('usuario_idusuario',$this->usuario_idusuario);
 
 		return new CActiveDataProvider($this, array(
