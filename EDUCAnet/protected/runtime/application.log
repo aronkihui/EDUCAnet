@@ -10126,3 +10126,226 @@ in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
 2014/07/10 23:18:05 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
 in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
 in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "0" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "1" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "2" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "3" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "4" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "5" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:23:26 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "0" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "1" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "2" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "3" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "4" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "5" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:36:51 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "0" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "1" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "2" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "3" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "4" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "5" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:03 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:04 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:04 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 23:51:04 [warning] [application] Failed to set unsafe attribute "idbloques" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (99)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:30:38 [warning] [application] Failed to set unsafe attribute "fecha_creacion" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:30:38 [error] [exception.CException] exception 'CException' with message 'Property "Bloques.archivo" is not defined.' in /opt/lampp/htdocs/EDUCAnet/framework/base/CComponent.php:130
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(145): CComponent->__get('archivo')
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/Bloques.php(117): CActiveRecord->__get('archivo')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(1071): Bloques->beforeSave()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php(90): CActiveRecord->save()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): MatriculadorController->actionCrear_bloque()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('crear_bloque')
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculador/cr...')
+#16 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador/crear_bloque
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/crear_bloque
+---
+2014/07/10 18:30:56 [warning] [application] Failed to set unsafe attribute "fecha_creacion" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/11 00:42:33 [error] [php] Object of class Bloques could not be converted to string (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/matriculador/crear_bloque.php:62)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): MatriculadorController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): MatriculadorController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php(106): MatriculadorController->render()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): MatriculadorController->actionCrear_bloque()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): MatriculadorController->runAction()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): MatriculadorController->filterAccessControl()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): MatriculadorController->runActionWithFilters()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): MatriculadorController->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador/crear_bloque
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/matriculador/crear_bloque.php (62)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (106)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:19 [warning] [application] Failed to set unsafe attribute "0" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:19 [warning] [application] Failed to set unsafe attribute "1" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:19 [warning] [application] Failed to set unsafe attribute "2" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:19 [warning] [application] Failed to set unsafe attribute "3" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:19 [warning] [application] Failed to set unsafe attribute "4" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:19 [warning] [application] Failed to set unsafe attribute "5" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:19 [warning] [application] Failed to set unsafe attribute "6" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:34 [warning] [application] Failed to set unsafe attribute "0" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:34 [warning] [application] Failed to set unsafe attribute "1" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:34 [warning] [application] Failed to set unsafe attribute "2" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:34 [warning] [application] Failed to set unsafe attribute "3" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:34 [warning] [application] Failed to set unsafe attribute "4" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:34 [warning] [application] Failed to set unsafe attribute "5" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:34 [warning] [application] Failed to set unsafe attribute "6" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:58 [warning] [application] Failed to set unsafe attribute "0" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:58 [warning] [application] Failed to set unsafe attribute "1" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:58 [warning] [application] Failed to set unsafe attribute "2" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:58 [warning] [application] Failed to set unsafe attribute "3" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:58 [warning] [application] Failed to set unsafe attribute "4" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:58 [warning] [application] Failed to set unsafe attribute "5" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/10 18:54:58 [warning] [application] Failed to set unsafe attribute "6" of "Bloques".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (87)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)

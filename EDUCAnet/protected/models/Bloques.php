@@ -31,7 +31,7 @@ class Bloques extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('hora_inicio, hora_fin, fecha_creacion', 'required'),
+			array('hora_inicio, hora_fin', 'required'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idbloques, hora_inicio, hora_fin, fecha_creacion', 'safe', 'on'=>'search'),
@@ -102,4 +102,23 @@ class Bloques extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
+        
+        public function beforeSave()
+                {
+            
+            if(parent::beforeSave()){
+            {
+            date_default_timezone_set("America/Santiago");
+            $this->fecha_creacion = date("Y-m-d H:i:s");
+            
+           
+         
+             return true;
+             }
+             return false;
+            }
+            
+        }
 }
