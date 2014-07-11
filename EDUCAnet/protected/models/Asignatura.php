@@ -7,6 +7,7 @@
  * @property integer $idasignatura
  * @property string $nombre
  * @property integer $horas
+ * @property string $fecha_creacion
  *
  * The followings are the available model relations:
  * @property BloquesAsignaturaCurso[] $bloquesAsignaturaCursos
@@ -37,7 +38,7 @@ class Asignatura extends CActiveRecord
 			array('nombre', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idasignatura, nombre, horas', 'safe', 'on'=>'search'),
+			array('idasignatura, nombre, horas, fecha_creacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +66,7 @@ class Asignatura extends CActiveRecord
 			'idasignatura' => 'Idasignatura',
 			'nombre' => 'Nombre',
 			'horas' => 'Horas',
+			'fecha_creacion' => 'Fecha Creacion',
 		);
 	}
 
@@ -89,6 +91,7 @@ class Asignatura extends CActiveRecord
 		$criteria->compare('idasignatura',$this->idasignatura);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('horas',$this->horas);
+		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,4 +108,23 @@ class Asignatura extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
+        
+         public function beforeSave()
+                {
+            
+            if(parent::beforeSave()){
+            {
+            date_default_timezone_set("America/Santiago");
+            $this->fecha_creacion = date("Y-m-d H:i:s");
+            
+           
+         
+             return true;
+             }
+             return false;
+            }
+            
+        }
 }

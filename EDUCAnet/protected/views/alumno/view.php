@@ -27,8 +27,8 @@ $this->menu=array(
 		'direccion',
 		'telefono',
 		'email',
+		'fecha_nacimiento',
+		'fecha_creacion',
 		'usuario_idusuario',
-		'cursocomun_idcurso',
-		'cursoelectivo_idcursoelectivo',
 	),
 )); ?>

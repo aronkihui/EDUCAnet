@@ -5,17 +5,18 @@
  *
  * The followings are the available columns in table 'matricula':
  * @property integer $idmatricula
- * @property integer $apoderado_idapoderado
- * @property integer $alumno_idalumno
+ * @property string $apoderado_idapoderado
+ * @property string $alumno_idalumno
  * @property string $fecha
  * @property integer $estadoMatricula
- * @property integer $matriculador_idmatriculador
+ * @property string $matriculador_idmatriculador
+ * @property integer $curso_idcurso
  *
  * The followings are the available model relations:
- * @property Curso[] $cursos
- * @property Apoderado $apoderadoIdapoderado
  * @property Alumno $alumnoIdalumno
+ * @property Apoderado $apoderadoIdapoderado
  * @property Matriculador $matriculadorIdmatriculador
+ * @property Curso $cursoIdcurso
  */
 class Matricula extends CActiveRecord
 {
@@ -35,11 +36,12 @@ class Matricula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, matriculador_idmatriculador', 'required'),
-			array('apoderado_idapoderado, alumno_idalumno, estadoMatricula, matriculador_idmatriculador', 'numerical', 'integerOnly'=>true),
+			array('apoderado_idapoderado, alumno_idalumno, estadoMatricula, matriculador_idmatriculador, curso_idcurso', 'required'),
+			array('estadoMatricula, curso_idcurso', 'numerical', 'integerOnly'=>true),
+			array('apoderado_idapoderado, alumno_idalumno, matriculador_idmatriculador', 'length', 'max'=>21),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idmatricula, apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, matriculador_idmatriculador', 'safe', 'on'=>'search'),
+			array('idmatricula, apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, matriculador_idmatriculador, curso_idcurso', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,10 +53,10 @@ class Matricula extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'cursos' => array(self::HAS_MANY, 'Curso', 'matricula_idmatricula'),
-			'apoderadoIdapoderado' => array(self::BELONGS_TO, 'Apoderado', 'apoderado_idapoderado'),
 			'alumnoIdalumno' => array(self::BELONGS_TO, 'Alumno', 'alumno_idalumno'),
+			'apoderadoIdapoderado' => array(self::BELONGS_TO, 'Apoderado', 'apoderado_idapoderado'),
 			'matriculadorIdmatriculador' => array(self::BELONGS_TO, 'Matriculador', 'matriculador_idmatriculador'),
+			'cursoIdcurso' => array(self::BELONGS_TO, 'Curso', 'curso_idcurso'),
 		);
 	}
 
@@ -70,6 +72,7 @@ class Matricula extends CActiveRecord
 			'fecha' => 'Fecha',
 			'estadoMatricula' => 'Estado Matricula',
 			'matriculador_idmatriculador' => 'Matriculador Idmatriculador',
+			'curso_idcurso' => 'Curso Idcurso',
 		);
 	}
 
@@ -92,11 +95,12 @@ class Matricula extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idmatricula',$this->idmatricula);
-		$criteria->compare('apoderado_idapoderado',$this->apoderado_idapoderado);
-		$criteria->compare('alumno_idalumno',$this->alumno_idalumno);
+		$criteria->compare('apoderado_idapoderado',$this->apoderado_idapoderado,true);
+		$criteria->compare('alumno_idalumno',$this->alumno_idalumno,true);
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('estadoMatricula',$this->estadoMatricula);
-		$criteria->compare('matriculador_idmatriculador',$this->matriculador_idmatriculador);
+		$criteria->compare('matriculador_idmatriculador',$this->matriculador_idmatriculador,true);
+		$criteria->compare('curso_idcurso',$this->curso_idcurso);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -113,4 +117,51 @@ class Matricula extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
+        
+        
+        
+        
+   public function beforeSave()
+                {
+            
+            if(parent::beforeSave()){
+            {
+            date_default_timezone_set("America/Santiago");
+            $this->fecha = date("Y-m-d H:i:s");
+            
+            
+             return true;
+             }
+             return false;
+            }
+                }     
+        
+    
+                
+                
+                
+      public function getApoderado()
+        {
+        $apoderado = Apoderado::model()->findAll(array('order'=>'fecha_creacion asc'));
+        $apoderadoArray = CHtml::listData($apoderado, 'idapoderado','idapoderado','nombre');
+        return $apoderadoArray;
+        }
+
+    public function getAlumno() 
+        {
+    
+        $alumno= Alumno::model()->findAll(array('order'=>'fecha_creacion asc'));
+        $alumnoArray=CHtml::listData($alumno,'idalumno','idalumno','nombre');
+        return $alumnoArray;
+        }
+        
+        public function getCurso()
+                {
+            $curso=  Curso::model()->findAll(array('order'=>'año asc'));
+            $cursoArray=CHtml::listData($curso,'idcurso','nivel','nombrecurso');
+            return $cursoArray;
+        }
+        
 }

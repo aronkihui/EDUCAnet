@@ -1,5 +1,6 @@
 <div class="container-fluid border well ">
 
+    <a class=" btn-large  btn-inverse btn " href="<?php echo $this->createUrl('matriculador/matriculador');?>">volver</a>
 <!-- nuevo ingreso de bloque-->
 <div class="container-fluid centered ">
 <div class="form">

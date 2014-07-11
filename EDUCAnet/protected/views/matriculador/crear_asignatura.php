@@ -1,49 +1,85 @@
+<div class="container-fluid border well ">
 
-<div class="container-fluid well-small well">
-    <h2 class="title centered"><?php echo'Formulario Creacion Asigntura'?></h2>
-    
     <a class=" btn-large  btn-inverse btn " href="<?php echo $this->createUrl('matriculador/matriculador');?>">volver</a>
-    
-    <h4 class="note centered ">Campos con <span class="required">*</span> son requeridos</h4>
-</div>
-
-<div class="tabbable table-bordered well">
-
-
+<!-- nuevo ingreso de bloque-->
+<div class="container-fluid centered ">
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'asignatura-crear_asignatura-form',
-	 'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,)
+	'id'=>'crear-asignaturas-form',
+	// Please note: When you enable ajax validation, make sure the corresponding
+	// controller action is handling ajax validation correctly.
+	// See class documentation of CActiveForm for details on this,
+	// you need to use the performAjaxValidation()-method described there.
+	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Campos con  <span class="required">*</span> son requeridos</p>
+    <h3 class="title centered ">Crear nueva Asignatura </h3>
+	<p class="note">Campos con <span class="required">*</span> son requeridos</p>
 
-	
 
-          <div class=" left span3 tabbable table-bordered">
-	<div class="row">
+ 
+	<div class="row span3">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre'); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
 
-	<div class="row">
+	<div class="row span3">
 		<?php echo $form->labelEx($model,'horas'); ?>
 		<?php echo $form->textField($model,'horas'); ?>
 		<?php echo $form->error($model,'horas'); ?>
 	</div>
 
+	
+
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('agregar nuevo asignatura'); ?>
 	</div>
 
-          </div>
 <?php $this->endWidget(); ?>
-              
-              
 
 </div><!-- form -->
+
+
+</div>
+
+
+
+
+
+
+<div class="container-fluid ">
+
+    <h3 class="title text-info centered"> Asignaturas Creadas </h3>
+<div class="form">
+<?php echo CHtml::beginForm(); ?>
+    <table class="table tabbable table-bordered">
+        <tr><th>id asignatura</th><th>nombre</th><th>horas totales</th><th>fecha creacion</th></tr>
+<?php foreach($items as $i=>$item): ?>
+<tr>
+    
+    
+    <td><?php echo CHtml::activeTextField($item,"[$i]idasignatura",array('disabled'=>'disabled')); ?></td>
+    <td ><?php echo CHtml::activeTextField($item,"[$i]nombre"); ?></td>
+    <td><?php echo CHtml::activeTextField($item,"[$i]horas"); ?></td>
+     <td><?php echo CHtml::activeTextField($item,"[$i]fecha_creacion",array('disabled'=>'disabled')); ?></td>
+
+</tr>
+<?php endforeach; ?>
+
+</table>
+ 
+<?php echo CHtml::submitButton('Actualizar'); ?>
+<?php echo CHtml::endForm(); ?>
+</div><!-- form -->
+
+
+
+
+
+
+</div>
+</div>
+

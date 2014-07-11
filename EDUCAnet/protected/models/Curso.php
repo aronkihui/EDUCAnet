@@ -7,17 +7,18 @@
  * @property integer $idcurso
  * @property string $nombrecurso
  * @property string $año
- * @property integer $nivel
+ * @property string $nivel
  * @property string $especialidad
- * @property integer $matricula_idmatricula
+ * @property string $fecha_creacion
+ * @property integer $cupos
  * @property string $profesor_idprofesor
  *
  * The followings are the available model relations:
  * @property BloquesAsignaturaCurso[] $bloquesAsignaturaCursos
- * @property Matricula $matriculaIdmatricula
  * @property Profesor $profesorIdprofesor
  * @property Asignatura[] $asignaturas
  * @property Evaluacion[] $evaluacions
+ * @property Matricula[] $matriculas
  */
 class Curso extends CActiveRecord
 {
@@ -37,14 +38,15 @@ class Curso extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombrecurso, año, nivel, especialidad', 'required'),
-			array('nivel, matricula_idmatricula', 'numerical', 'integerOnly'=>true),
+			array('nombrecurso, año, nivel, especialidad, fecha_creacion, cupos', 'required'),
+			array('cupos', 'numerical', 'integerOnly'=>true),
 			array('nombrecurso', 'length', 'max'=>40),
-			array('especialidad', 'length', 'max'=>1),
+			array('nivel', 'length', 'max'=>13),
+			array('especialidad', 'length', 'max'=>45),
 			array('profesor_idprofesor', 'length', 'max'=>21),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idcurso, nombrecurso, año, nivel, especialidad, matricula_idmatricula, profesor_idprofesor', 'safe', 'on'=>'search'),
+			array('idcurso, nombrecurso, año, nivel, especialidad, fecha_creacion, cupos, profesor_idprofesor', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,10 +59,10 @@ class Curso extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'bloquesAsignaturaCursos' => array(self::HAS_MANY, 'BloquesAsignaturaCurso', 'curso_idcurso'),
-			'matriculaIdmatricula' => array(self::BELONGS_TO, 'Matricula', 'matricula_idmatricula'),
 			'profesorIdprofesor' => array(self::BELONGS_TO, 'Profesor', 'profesor_idprofesor'),
 			'asignaturas' => array(self::MANY_MANY, 'Asignatura', 'curso_has_asignatura(curso_idcurso, asignatura_idasignatura)'),
 			'evaluacions' => array(self::HAS_MANY, 'Evaluacion', 'curso_idcurso'),
+			'matriculas' => array(self::HAS_MANY, 'Matricula', 'curso_idcurso'),
 		);
 	}
 
@@ -75,7 +77,8 @@ class Curso extends CActiveRecord
 			'año' => 'Año',
 			'nivel' => 'Nivel',
 			'especialidad' => 'Especialidad',
-			'matricula_idmatricula' => 'Matricula Idmatricula',
+			'fecha_creacion' => 'Fecha Creacion',
+			'cupos' => 'Cupos',
 			'profesor_idprofesor' => 'Profesor Idprofesor',
 		);
 	}
@@ -101,9 +104,10 @@ class Curso extends CActiveRecord
 		$criteria->compare('idcurso',$this->idcurso);
 		$criteria->compare('nombrecurso',$this->nombrecurso,true);
 		$criteria->compare('año',$this->año,true);
-		$criteria->compare('nivel',$this->nivel);
+		$criteria->compare('nivel',$this->nivel,true);
 		$criteria->compare('especialidad',$this->especialidad,true);
-		$criteria->compare('matricula_idmatricula',$this->matricula_idmatricula);
+		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
+		$criteria->compare('cupos',$this->cupos);
 		$criteria->compare('profesor_idprofesor',$this->profesor_idprofesor,true);
 
 		return new CActiveDataProvider($this, array(

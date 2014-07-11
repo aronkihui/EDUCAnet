@@ -1,18 +1,18 @@
 <?php
-/* @var $this AlumnoController */
+/* @var $this MatriculaController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Alumnos',
+	'Matriculas',
 );
 
 $this->menu=array(
-	array('label'=>'Create Alumno', 'url'=>array('create')),
-	array('label'=>'Manage Alumno', 'url'=>array('admin')),
+	array('label'=>'Create Matricula', 'url'=>array('create')),
+	array('label'=>'Manage Matricula', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Alumnos</h1>
+<h1>Matriculas</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

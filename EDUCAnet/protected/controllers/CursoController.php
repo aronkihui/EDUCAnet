@@ -1,6 +1,6 @@
 <?php
 
-class CursocomunController extends Controller
+class CursoController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,14 +62,14 @@ class CursocomunController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Cursocomun;
+		$model=new Curso;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Cursocomun']))
+		if(isset($_POST['Curso']))
 		{
-			$model->attributes=$_POST['Cursocomun'];
+			$model->attributes=$_POST['Curso'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idcurso));
 		}
@@ -91,9 +91,9 @@ class CursocomunController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Cursocomun']))
+		if(isset($_POST['Curso']))
 		{
-			$model->attributes=$_POST['Cursocomun'];
+			$model->attributes=$_POST['Curso'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idcurso));
 		}
@@ -122,7 +122,7 @@ class CursocomunController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Cursocomun');
+		$dataProvider=new CActiveDataProvider('Curso');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class CursocomunController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Cursocomun('search');
+		$model=new Curso('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Cursocomun']))
-			$model->attributes=$_GET['Cursocomun'];
+		if(isset($_GET['Curso']))
+			$model->attributes=$_GET['Curso'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class CursocomunController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Cursocomun the loaded model
+	 * @return Curso the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Cursocomun::model()->findByPk($id);
+		$model=Curso::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class CursocomunController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Cursocomun $model the model to be validated
+	 * @param Curso $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='cursocomun-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='curso-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

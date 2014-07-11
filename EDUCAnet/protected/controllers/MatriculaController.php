@@ -1,6 +1,6 @@
 <?php
 
-class AlumnoController extends Controller
+class MatriculaController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,16 +62,16 @@ class AlumnoController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Alumno;
+		$model=new Matricula;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Alumno']))
+		if(isset($_POST['Matricula']))
 		{
-			$model->attributes=$_POST['Alumno'];
+			$model->attributes=$_POST['Matricula'];
 			if($model->save())
-				$this->redirect(Yii:: app() ->baseUrl.'/matricula/create');
+				$this->redirect(array('view','id'=>$model->idmatricula));
 		}
 
 		$this->render('create',array(
@@ -91,11 +91,11 @@ class AlumnoController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Alumno']))
+		if(isset($_POST['Matricula']))
 		{
-			$model->attributes=$_POST['Alumno'];
+			$model->attributes=$_POST['Matricula'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idalumno));
+				$this->redirect(array('view','id'=>$model->idmatricula));
 		}
 
 		$this->render('update',array(
@@ -122,7 +122,7 @@ class AlumnoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Alumno');
+		$dataProvider=new CActiveDataProvider('Matricula');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class AlumnoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Alumno('search');
+		$model=new Matricula('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Alumno']))
-			$model->attributes=$_GET['Alumno'];
+		if(isset($_GET['Matricula']))
+			$model->attributes=$_GET['Matricula'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class AlumnoController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Alumno the loaded model
+	 * @return Matricula the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Alumno::model()->findByPk($id);
+		$model=Matricula::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class AlumnoController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Alumno $model the model to be validated
+	 * @param Matricula $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='alumno-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='matricula-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

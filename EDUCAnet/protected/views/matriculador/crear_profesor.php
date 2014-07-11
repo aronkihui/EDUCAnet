@@ -1,37 +1,21 @@
-<div class="container-fluid well-small well">
-    <h2 class="title centered"><?php echo'Formulario Creacion Curso'?></h2>
-    
-    <a class=" btn-large  btn-inverse btn " href="<?php echo $this->createUrl('matriculador/matriculador');?>">volver</a>
-    
-    <h4 class="note centered ">Campos con <span class="required">*</span> son requeridos</h4>
-</div>
-
-<div class="tabbable table-bordered well">
-
-
-
+<?php
+/* @var $this ProfesorController */
+/* @var $model Profesor */
+/* @var $form CActiveForm */
+?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'profesor-crear_profesor-form',
-	'enableClientValidation'=>true,
+	 'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,)
 )); ?>
 
-	<p class="note">Campos con  <span class="required">*</span> son requeridos</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	
-
-        
-        
-        <div class=" left span3 tabbable table-bordered">
-	<div class="row">
-		<?php echo $form->labelEx($model,'idprofesor'); ?>
-		<?php echo $form->textField($model,'idprofesor'); ?>
-		<?php echo $form->error($model,'idprofesor'); ?>
-	</div>
+	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
@@ -79,12 +63,7 @@
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Submit'); ?>
 	</div>
-            
-        </div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
-
-
-</div>

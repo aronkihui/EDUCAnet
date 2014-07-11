@@ -15,35 +15,28 @@ class MatriculadorController extends Controller
         $this->render('matriculador');
     }
     
-    public function actionMostrar_alumnos_nuevos()
+    public function actionMostrar_alumnos()
     {
                 
-                 
-       $this->renderPartial('mostrar_alumnos_nuevos');
+       $this->renderPartial('mostrar_alumnos');
     }
-
-
-    
-    public function actionMostrar_alumnos_antiguos()
-    {
-        $this->renderPartial('mostrar_alumnos_antiguos');
-        
-    }
-    
+ 
     
     public function actionMatricula_alumno_nuevo()
     {
-        $model= new Matricula_alumno_nuevoForm;
-       $this->render('matricula_alumno_nuevo',array('model'=>$model)); 
+       
+       $this->render('matricula_alumno_nuevo'); 
         
     }
     
     public function actionMatricula_alumno_antiguo()
     {
-         $model= new Matricula_alumno_antiguoForm;
+         $model= new Matricula;
        $this->render('matricula_alumno_antiguo',array('model'=>$model)); 
         
     }
+    
+    
     
     
     public function actionAdmin_cursos()
@@ -69,8 +62,40 @@ class MatriculadorController extends Controller
     public function actionCrear_asignatura()
             {
         $model=new Asignatura;
-        $this->render('crear_asignatura',array('model'=>$model));
+      
+     $item = new Asignatura;
+
+     $items=  Asignatura::model()->findAll();
+
+            if(isset($_POST['Asignatura']))
+            {
+                $model->attributes=$_POST['Asignatura'];
+                 if($model->validate())
+                 {
+                     $model->save();
+                 $this->refresh();
+                    }
+
+                    $valid=true;
+                    foreach($items as $i=>$item)
+                    {
+                            if(isset($_POST['Asignatura'][$i]))
+                            $item->attributes=$_POST['Asignatura'][$i];
+                            $valid=$item->validate() && $valid;
+                            if($valid)
+                                $item->save();
+                    }
+
+
+            }
+        
+        
+        
+        $this->render('crear_asignatura',array('model'=>$model,'items'=>$items,));
     }
+    
+    
+    
     
     public function actionCrear_bloque()
     {
@@ -95,7 +120,6 @@ class MatriculadorController extends Controller
                     foreach($items as $i=>$item)
                     {
                             if(isset($_POST['Bloques'][$i]))
-
                             $item->attributes=$_POST['Bloques'][$i];
                             $valid=$item->validate() && $valid;
                             if($valid)$item->save();

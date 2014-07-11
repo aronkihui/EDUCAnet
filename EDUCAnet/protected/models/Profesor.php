@@ -37,7 +37,7 @@ class Profesor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idprofesor, nombre, apellido, direccion, telefono, email, fecha_ingreso', 'required'),
+			array('idprofesor, nombre, apellido, direccion, telefono, email, fecha_ingreso, usuario_idusuario', 'required'),
 			array('usuario_idusuario', 'numerical', 'integerOnly'=>true),
 			array('idprofesor', 'length', 'max'=>21),
 			array('nombre, apellido', 'length', 'max'=>50),
