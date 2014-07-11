@@ -25,12 +25,12 @@
 	<?php echo CHtml::encode($data->estadoMatricula); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('matriculador_idmatriculador')); ?>:</b>
-	<?php echo CHtml::encode($data->matriculador_idmatriculador); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('curso_idcurso')); ?>:</b>
 	<?php echo CHtml::encode($data->curso_idcurso); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('matriculadores_idmatriculador')); ?>:</b>
+	<?php echo CHtml::encode($data->matriculadores_idmatriculador); ?>
 	<br />
 
 

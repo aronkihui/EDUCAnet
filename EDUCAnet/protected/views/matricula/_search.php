@@ -33,17 +33,17 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'estadoMatricula'); ?>
-		<?php echo $form->textField($model,'estadoMatricula'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'matriculador_idmatriculador'); ?>
-		<?php echo $form->textField($model,'matriculador_idmatriculador',array('size'=>21,'maxlength'=>21)); ?>
+		<?php echo $form->textField($model,'estadoMatricula',array('size'=>25,'maxlength'=>25)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'curso_idcurso'); ?>
 		<?php echo $form->textField($model,'curso_idcurso'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'matriculadores_idmatriculador'); ?>
+		<?php echo $form->textField($model,'matriculadores_idmatriculador',array('size'=>21,'maxlength'=>21)); ?>
 	</div>
 
 	<div class="row buttons">

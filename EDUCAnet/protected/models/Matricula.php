@@ -8,15 +8,15 @@
  * @property string $apoderado_idapoderado
  * @property string $alumno_idalumno
  * @property string $fecha
- * @property integer $estadoMatricula
- * @property string $matriculador_idmatriculador
+ * @property string $estadoMatricula
  * @property integer $curso_idcurso
+ * @property string $matriculadores_idmatriculador
  *
  * The followings are the available model relations:
  * @property Alumno $alumnoIdalumno
  * @property Apoderado $apoderadoIdapoderado
- * @property Matriculador $matriculadorIdmatriculador
  * @property Curso $cursoIdcurso
+ * @property Matriculadores $matriculadoresIdmatriculador
  */
 class Matricula extends CActiveRecord
 {
@@ -36,12 +36,13 @@ class Matricula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('apoderado_idapoderado, alumno_idalumno, estadoMatricula, matriculador_idmatriculador, curso_idcurso', 'required'),
-			array('estadoMatricula, curso_idcurso', 'numerical', 'integerOnly'=>true),
-			array('apoderado_idapoderado, alumno_idalumno, matriculador_idmatriculador', 'length', 'max'=>21),
+			array('apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, curso_idcurso, matriculadores_idmatriculador', 'required'),
+			array('curso_idcurso', 'numerical', 'integerOnly'=>true),
+			array('apoderado_idapoderado, alumno_idalumno, matriculadores_idmatriculador', 'length', 'max'=>21),
+			array('estadoMatricula', 'length', 'max'=>25),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idmatricula, apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, matriculador_idmatriculador, curso_idcurso', 'safe', 'on'=>'search'),
+			array('idmatricula, apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, curso_idcurso, matriculadores_idmatriculador', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,8 +56,8 @@ class Matricula extends CActiveRecord
 		return array(
 			'alumnoIdalumno' => array(self::BELONGS_TO, 'Alumno', 'alumno_idalumno'),
 			'apoderadoIdapoderado' => array(self::BELONGS_TO, 'Apoderado', 'apoderado_idapoderado'),
-			'matriculadorIdmatriculador' => array(self::BELONGS_TO, 'Matriculador', 'matriculador_idmatriculador'),
 			'cursoIdcurso' => array(self::BELONGS_TO, 'Curso', 'curso_idcurso'),
+			'matriculadoresIdmatriculador' => array(self::BELONGS_TO, 'Matriculadores', 'matriculadores_idmatriculador'),
 		);
 	}
 
@@ -71,8 +72,8 @@ class Matricula extends CActiveRecord
 			'alumno_idalumno' => 'Alumno Idalumno',
 			'fecha' => 'Fecha',
 			'estadoMatricula' => 'Estado Matricula',
-			'matriculador_idmatriculador' => 'Matriculador Idmatriculador',
 			'curso_idcurso' => 'Curso Idcurso',
+			'matriculadores_idmatriculador' => 'Matriculadores Idmatriculador',
 		);
 	}
 
@@ -98,9 +99,9 @@ class Matricula extends CActiveRecord
 		$criteria->compare('apoderado_idapoderado',$this->apoderado_idapoderado,true);
 		$criteria->compare('alumno_idalumno',$this->alumno_idalumno,true);
 		$criteria->compare('fecha',$this->fecha,true);
-		$criteria->compare('estadoMatricula',$this->estadoMatricula);
-		$criteria->compare('matriculador_idmatriculador',$this->matriculador_idmatriculador,true);
+		$criteria->compare('estadoMatricula',$this->estadoMatricula,true);
 		$criteria->compare('curso_idcurso',$this->curso_idcurso);
+		$criteria->compare('matriculadores_idmatriculador',$this->matriculadores_idmatriculador,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -120,7 +121,7 @@ class Matricula extends CActiveRecord
         
         
         
-        
+          
         
         
    public function beforeSave()
@@ -163,5 +164,7 @@ class Matricula extends CActiveRecord
             $cursoArray=CHtml::listData($curso,'idcurso','nivel','nombrecurso');
             return $cursoArray;
         }
+        
+        
         
 }

@@ -1,4 +1,11 @@
 <?php
+/* @var $this MatriculaController */
+/* @var $model Matricula */
+
+$this->breadcrumbs=array(
+	'Matriculas'=>array('index'),
+	'Create',
+);
 
 $this->menu=array(
 	array('label'=>'List Matricula', 'url'=>array('index')),

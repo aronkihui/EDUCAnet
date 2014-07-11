@@ -50,9 +50,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'alumno_idalumno',
 		'fecha',
 		'estadoMatricula',
-		'matriculador_idmatriculador',
-		/*
 		'curso_idcurso',
+		/*
+		'matriculadores_idmatriculador',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -26,7 +26,7 @@ $this->menu=array(
 		'alumno_idalumno',
 		'fecha',
 		'estadoMatricula',
-		'matriculador_idmatriculador',
 		'curso_idcurso',
+		'matriculadores_idmatriculador',
 	),
 )); ?>
