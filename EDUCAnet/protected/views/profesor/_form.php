@@ -8,11 +8,9 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'profesor-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	 'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,)
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -20,14 +18,20 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'Rut Profesor'); ?>
+		<?php echo $form->textField($model,'idprofesor',array('size'=>21,'maxlength'=>21)); ?>
+		<?php echo $form->error($model,'idprofesor'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'nombre',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'apellido'); ?>
-		<?php echo $form->textField($model,'apellido',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'apellido',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'apellido'); ?>
 	</div>
 
@@ -49,14 +53,33 @@
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
+	
+
 	<div class="row">
-		<?php echo $form->labelEx($model,'usuario_idusuario'); ?>
-		<?php echo $form->textField($model,'usuario_idusuario'); ?>
-		<?php echo $form->error($model,'usuario_idusuario'); ?>
+		<?php echo $form->labelEx($model,'fecha_nacimiento'); ?>
+		 <?php
+
+$this->widget('zii.widgets.jui.CJuiDatePicker',array(
+    'model' => $model,
+     'language' => 'es',
+    
+    'attribute'=>'fecha_nacimiento',
+    'options'=>array(
+        'dateFormat'=>'yy/mm/dd',
+        'showAnim'=>'slideDown',
+        'changeYear' => true,           // can change year
+        'changeMonth' => true,  
+        'yearRange' => '1909:2099',  
+    ),  
+    
+));
+
+?>
 	</div>
 
+	
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear Profesor' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

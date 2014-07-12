@@ -27,6 +27,8 @@ $this->menu=array(
 		'direccion',
 		'telefono',
 		'email',
+		'fecha_ingreso',
+		'fecha_nacimiento',
 		'usuario_idusuario',
 	),
 )); ?>

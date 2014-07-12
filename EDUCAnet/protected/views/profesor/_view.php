@@ -29,9 +29,19 @@
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_ingreso')); ?>:</b>
+	<?php echo CHtml::encode($data->fecha_ingreso); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_nacimiento')); ?>:</b>
+	<?php echo CHtml::encode($data->fecha_nacimiento); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('usuario_idusuario')); ?>:</b>
 	<?php echo CHtml::encode($data->usuario_idusuario); ?>
 	<br />
 
+	*/ ?>
 
 </div>

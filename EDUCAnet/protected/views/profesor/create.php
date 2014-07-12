@@ -1,11 +1,4 @@
 <?php
-/* @var $this ProfesorController */
-/* @var $model Profesor */
-
-$this->breadcrumbs=array(
-	'Profesors'=>array('index'),
-	'Create',
-);
 
 $this->menu=array(
 	array('label'=>'List Profesor', 'url'=>array('index')),
@@ -13,6 +6,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Profesor</h1>
+<h1>Crear Profesor</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

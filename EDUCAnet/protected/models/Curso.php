@@ -125,4 +125,22 @@ class Curso extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+         public function beforeSave()
+                {
+            
+            if(parent::beforeSave()){
+            {
+            date_default_timezone_set("America/Santiago");
+            $this->fecha_creacion = date("Y-m-d H:i:s");
+            
+            
+             return true;
+             }
+             return false;
+            }
+            
+        }
+        
+         
 }

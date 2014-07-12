@@ -47,8 +47,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'matriculadores_idmatriculador'); ?>
-		<?php echo $form->textField($model,'matriculadores_idmatriculador',array('size'=>21,'maxlength'=>21)); ?>
+		
 		<?php echo $form->error($model,'matriculadores_idmatriculador'); ?>
+            
+            <?php echo $form->dropDownList($model,'curso_idcurso',$model->getIdMatriculador()); ?>
 	</div>
 
 	<div class="row buttons">

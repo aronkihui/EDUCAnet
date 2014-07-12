@@ -2,10 +2,6 @@
 /* @var $this MatriculaController */
 /* @var $model Matricula */
 
-$this->breadcrumbs=array(
-	'Matriculas'=>array('index'),
-	'Create',
-);
 
 $this->menu=array(
 	array('label'=>'List Matricula', 'url'=>array('index')),
@@ -13,6 +9,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Matricula</h1>
+<h1>Asignar Matricula alumno apoderado</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

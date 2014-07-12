@@ -8,11 +8,9 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'curso-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	 'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,)
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -20,7 +18,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombrecurso'); ?>
+		<?php echo $form->labelEx($model,'nombre curso'); ?>
 		<?php echo $form->textField($model,'nombrecurso',array('size'=>40,'maxlength'=>40)); ?>
 		<?php echo $form->error($model,'nombrecurso'); ?>
 	</div>
@@ -33,21 +31,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nivel'); ?>
-		<?php echo $form->textField($model,'nivel',array('size'=>13,'maxlength'=>13)); ?>
+		<?php echo $form->dropDownList($model,'especialidad', array('primero'=>'primero','segundo'=>'segundo','tercero'=>'tercero','cuarto'=>'cuarto')); ?>
 		<?php echo $form->error($model,'nivel'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'especialidad'); ?>
-		<?php echo $form->textField($model,'especialidad',array('size'=>45,'maxlength'=>45)); ?>
+		 <?php echo $form->dropDownList($model,'especialidad', array('tecnico'=>'tecnico','humanista'=>'humanista')); ?>
+		
 		<?php echo $form->error($model,'especialidad'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_creacion'); ?>
-		<?php echo $form->textField($model,'fecha_creacion'); ?>
-		<?php echo $form->error($model,'fecha_creacion'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'cupos'); ?>
@@ -55,14 +50,10 @@
 		<?php echo $form->error($model,'cupos'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'profesor_idprofesor'); ?>
-		<?php echo $form->textField($model,'profesor_idprofesor',array('size'=>21,'maxlength'=>21)); ?>
-		<?php echo $form->error($model,'profesor_idprofesor'); ?>
-	</div>
+	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear nuevo curso ' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

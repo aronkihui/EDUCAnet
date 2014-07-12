@@ -13,8 +13,8 @@
 
 <p>aqui va informacion de profesores</p>
 
-<a class="btn  alert-info" href="<?php echo $this->createUrl('matriculador/crear_profesor');?>">crear profesor</a>
 
+<a class="btn  alert-info" href="<?php echo Yii:: app() ->baseUrl.'/profesor/create'?>">Crear  nuevo profesor</a>
 
 <div class="container-fluid">
     

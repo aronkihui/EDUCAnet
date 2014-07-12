@@ -164,7 +164,15 @@ class Matricula extends CActiveRecord
             $cursoArray=CHtml::listData($curso,'idcurso','nivel','nombrecurso');
             return $cursoArray;
         }
-        
-        
-        
+        public $id;
+
+
+        public function getIdMatriculador()
+        {
+                $id=Yii::app()->user->id;
+            $matriculador= Matriculadores::model()->findAllBySql('SELECT * FROM matriculadores where usuario_idusuario =:param',array(':param'=>$id));
+            $matricularArray=CHtml::listData($matriculador,'idmatriculador','idmatriculador','nombre');
+        return $matricularArray;
+            
+        }
 }

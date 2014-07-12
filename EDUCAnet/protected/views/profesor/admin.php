@@ -52,6 +52,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'telefono',
 		'email',
 		/*
+		'fecha_ingreso',
+		'fecha_nacimiento',
 		'usuario_idusuario',
 		*/
 		array(
