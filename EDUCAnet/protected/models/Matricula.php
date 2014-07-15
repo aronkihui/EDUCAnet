@@ -36,7 +36,7 @@ class Matricula extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('apoderado_idapoderado, alumno_idalumno, fecha, estadoMatricula, curso_idcurso, matriculadores_idmatriculador', 'required'),
+			array('apoderado_idapoderado, alumno_idalumno,  estadoMatricula, curso_idcurso, matriculadores_idmatriculador', 'required'),
 			array('curso_idcurso', 'numerical', 'integerOnly'=>true),
 			array('apoderado_idapoderado, alumno_idalumno, matriculadores_idmatriculador', 'length', 'max'=>21),
 			array('estadoMatricula', 'length', 'max'=>25),

@@ -7,6 +7,8 @@
 
 <a class="btn  alert-info" href="<?php echo Yii:: app() ->baseUrl.'/curso/create'?>">Crear  nuevo curso</a>
 
+<a class="btn  alert-info" href="<?php echo Yii:: app() ->baseUrl.'/bloquesAsignaturaCurso/create'?>">Crear  horarios</a>
+
 <div class="container-fluid">
     
     <p>muestra los cursos creados y activos de la institucion</p>

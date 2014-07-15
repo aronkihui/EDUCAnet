@@ -38,10 +38,10 @@ class Curso extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombrecurso, año, nivel, especialidad, fecha_creacion, cupos', 'required'),
+			array('nombrecurso, año, nivel, especialidad,  cupos', 'required'),
 			array('cupos', 'numerical', 'integerOnly'=>true),
 			array('nombrecurso', 'length', 'max'=>40),
-			array('nivel', 'length', 'max'=>13),
+			
 			array('especialidad', 'length', 'max'=>45),
 			array('profesor_idprofesor', 'length', 'max'=>21),
 			// The following rule is used by search().

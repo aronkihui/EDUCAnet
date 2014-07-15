@@ -8,11 +8,9 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'matricula-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	 'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,)
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -21,13 +19,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Rut Apoderado'); ?>
-		<?php echo $form->dropDownList($model,'curso_idcurso',$model->getApoderado()); ?>
+		<?php echo $form->dropDownList($model,'apoderado_idapoderado',$model->getApoderado()); ?>
 		<?php echo $form->error($model,'apoderado_idapoderado'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'alumno_idalumno'); ?>
-		<?php echo $form->dropDownList($model,'curso_idcurso',$model->getAlumno()); ?>
+		<?php echo $form->labelEx($model,'Rut Alumno'); ?>
+		<?php echo $form->dropDownList($model,'alumno_idalumno',$model->getAlumno()); ?>
 		<?php echo $form->error($model,'alumno_idalumno'); ?>
 	</div>
 
@@ -46,15 +44,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'matriculadores_idmatriculador'); ?>
+		<?php echo $form->labelEx($model,'Rut matriculador'); ?>
 		
 		<?php echo $form->error($model,'matriculadores_idmatriculador'); ?>
             
-            <?php echo $form->dropDownList($model,'curso_idcurso',$model->getIdMatriculador()); ?>
+            <?php echo $form->dropDownList($model,'matriculadores_idmatriculador',$model->getIdMatriculador()); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear Matricula' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -19,19 +19,32 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre curso'); ?>
-		<?php echo $form->textField($model,'nombrecurso',array('size'=>40,'maxlength'=>40)); ?>
+		<?php echo $form->dropDownList($model,'nombrecurso', 
+            range('a', 'z')); ?>
 		<?php echo $form->error($model,'nombrecurso'); ?>
 	</div>
 
 	<div class="row">
+          
 		<?php echo $form->labelEx($model,'año'); ?>
-		<?php echo $form->textField($model,'año'); ?>
+              <?php  
+              $años=array();
+              for($i=1980;$i<2100;$i++)
+            {
+            $años[$i]=$i;              
+            }  
+        
+            echo $form->dropDownList($model,'año',$años);
+           
+            ?>
+		
 		<?php echo $form->error($model,'año'); ?>
 	</div>
 
 	<div class="row">
+            
 		<?php echo $form->labelEx($model,'nivel'); ?>
-		<?php echo $form->dropDownList($model,'especialidad', array('primero'=>'primero','segundo'=>'segundo','tercero'=>'tercero','cuarto'=>'cuarto')); ?>
+		<?php echo $form->dropDownList($model,'nivel', array('primero'=>'primero','segundo'=>'segundo','tercero'=>'tercero','cuarto'=>'cuarto')); ?>
 		<?php echo $form->error($model,'nivel'); ?>
 	</div>
 
