@@ -1,0 +1,3 @@
+consultas 
+inner join ?
+ SELECT d.nombre,nivel,nombrecurso ,a.nombre,hora_inicio,hora_fin FROM horario h INNER JOIN bloques b ON b.idbloques = h.bloques_id_inicio INNER JOIN asignatura a ON h.asignatura_idasignatura = a.idasignatura INNER JOIN curso c ON h.curso_idcurso = c.idcurso Inner join dia d ON h.dia_iddia = d.iddia 

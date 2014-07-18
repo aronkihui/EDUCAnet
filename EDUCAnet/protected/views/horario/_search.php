@@ -1,6 +1,6 @@
 <?php
-/* @var $this BloquesAsignaturaCursoController */
-/* @var $model BloquesAsignaturaCurso */
+/* @var $this HorarioController */
+/* @var $model Horario */
 /* @var $form CActiveForm */
 ?>
 
@@ -37,8 +37,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'dia'); ?>
-		<?php echo $form->textField($model,'dia'); ?>
+		<?php echo $form->label($model,'dia_iddia'); ?>
+		<?php echo $form->textField($model,'dia_iddia'); ?>
 	</div>
 
 	<div class="row buttons">

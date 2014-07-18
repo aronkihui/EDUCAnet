@@ -1,6 +1,6 @@
 <?php
-/* @var $this BloquesAsignaturaCursoController */
-/* @var $data BloquesAsignaturaCurso */
+/* @var $this HorarioController */
+/* @var $data Horario */
 ?>
 
 <div class="view">
@@ -25,8 +25,8 @@
 	<?php echo CHtml::encode($data->bloques_id_fin); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('dia')); ?>:</b>
-	<?php echo CHtml::encode($data->dia); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dia_iddia')); ?>:</b>
+	<?php echo CHtml::encode($data->dia_iddia); ?>
 	<br />
 
 
