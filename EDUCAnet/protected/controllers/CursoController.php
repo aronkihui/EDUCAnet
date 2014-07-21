@@ -87,27 +87,18 @@ class CursoController extends Controller
 	public function actionActualizarCurso()
 	{
             
-             $model=new Bloques;
-   
-     
-     $item = new Bloques;
+             
+     $model=new Curso;
+     $item = new Curso;
 
-     $items=Bloques::model()->findAll();
+     $items=  Curso::model()->findAll();
 
-            if(isset($_POST['Bloques']))
-            {
-                $model->attributes=$_POST['Bloques'];
-                 if($model->validate())
-                 {
-                     $model->save();
-                 $this->refresh();
-                    }
-
-                    $valid=true;
+            if(isset($_POST['Curso']))
+            {       $valid=true;
                     foreach($items as $i=>$item)
                     {
-                            if(isset($_POST['Bloques'][$i]))
-                            $item->attributes=$_POST['Bloques'][$i];
+                            if(isset($_POST['Curso'][$i]))
+                            $item->attributes=$_POST['Curso'][$i];
                             $valid=$item->validate() && $valid;
                             if($valid)$item->save();
                     }
@@ -117,6 +108,8 @@ class CursoController extends Controller
     $this->render('actualizarCurso',array('items'=>$items,'model'=>$model));
 		
 	}
+        
+        
 
 	/**
 	 * Deletes a particular model.

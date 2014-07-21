@@ -142,5 +142,18 @@ class Curso extends CActiveRecord
             
         }
         
+        
+         public function getProfesor()
+        {
+        $profesor = Profesor::model()->findAllBySql('SELECT idprofesor,nombre FROM profesor');
+        $profesorArray = CHtml::listData($profesor, 'idprofesor','nombre','idprofesor');
+        return $profesorArray;
+        }
+        
+         
+            
+        
+
+        
          
 }

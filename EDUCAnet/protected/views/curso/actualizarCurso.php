@@ -1,7 +1,7 @@
 
 <div class="container-fluid ">
 
-    <h3 class="title text-info centered"> Bloques creados </h3>
+    <h3 class="title text-info centered"> Asignacion de profesores a curso</h3>
 <div class="form">
 <?php echo CHtml::beginForm(); ?>
     <table class="table tabbable table-bordered">
@@ -10,11 +10,14 @@
 <tr>
     
     
-    <td><?php echo CHtml::activeTextField($item,"[$i]idbloques",array('disabled'=>'disabled')); ?></td>
-    <td ><?php echo CHtml::activeTextField($item,"[$i]hora_inicio"); ?></td>
-    <td><?php echo CHtml::activeTextField($item,"[$i]hora_fin"); ?></td>
-     <td><?php echo CHtml::activeTextField($item,"[$i]fecha_creacion",array('disabled'=>'disabled')); ?></td>
-
+    <td><?php echo CHtml::activeTextField($item,"[$i]nombrecurso",array('disabled'=>'disabled')); ?></td>
+     <td><?php echo CHtml::activeTextField($item,"[$i]año",array('disabled'=>'disabled')); ?></td>
+      <td><?php echo CHtml::activeTextField($item,"[$i]nivel",array('disabled'=>'disabled')); ?></td>
+       <td><?php echo CHtml::activeTextField($item,"[$i]especialidad",array('disabled'=>'disabled')); ?></td>
+        <td><?php echo CHtml::activeTextField($item,"[$i]fecha_creacion",array('disabled'=>'disabled')); ?></td>
+         <td><?php echo CHtml::activeTextField($item,"[$i]cupos",array('disabled'=>'disabled')); ?></td>
+          <td ><?php echo CHtml::activeDropDownList($item,"[$i]profesor_idprofesor",$model->getProfesor(), array('empty' => 'Seleccione profesor')); ?></td>
+    
 </tr>
 <?php endforeach; ?>
 
