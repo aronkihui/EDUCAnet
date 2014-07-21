@@ -19,8 +19,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre curso'); ?>
-		<?php echo $form->dropDownList($model,'nombrecurso', 
-            range('a', 'z')); ?>
+		<?php echo $form->dropDownList($model,'nombrecurso',range('a', 'z')); ?>
 		<?php echo $form->error($model,'nombrecurso'); ?>
 	</div>
 
@@ -66,7 +65,7 @@
 	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model0->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

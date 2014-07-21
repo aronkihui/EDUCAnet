@@ -22,16 +22,23 @@ class MatriculadorController extends Controller
     }
  
     
-    public function actionMatricula_alumno_nuevo()
-    {
-       
-       $this->render('matricula_alumno_nuevo'); 
-        
-    }
+
     
     public function actionMatricula_alumno_antiguo()
     {
-         $model= new Matricula;
+        $model=new Matricula;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Matricula']))
+		{
+			$model->attributes=$_POST['Matricula'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idmatricula));
+		}
+
+		
        $this->render('matricula_alumno_antiguo',array('model'=>$model)); 
         
     }

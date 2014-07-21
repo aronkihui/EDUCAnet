@@ -1,3 +1,5 @@
 consultas 
 inner join ?
  SELECT d.nombre,nivel,nombrecurso ,a.nombre,hora_inicio,hora_fin FROM horario h INNER JOIN bloques b ON b.idbloques = h.bloques_id_inicio INNER JOIN asignatura a ON h.asignatura_idasignatura = a.idasignatura INNER JOIN curso c ON h.curso_idcurso = c.idcurso Inner join dia d ON h.dia_iddia = d.iddia 
+
+select al.nombre,al.apellido from alumno al inner join matricula mat on mat.alumno_idalumno = al.idalumno inner join curso cur on cur.idcurso = mat.curso_idcurso inner join profesor profe on profe.idprofesor= cur.profesor_idprofesor 

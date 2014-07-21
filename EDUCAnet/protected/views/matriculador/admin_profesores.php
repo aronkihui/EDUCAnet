@@ -15,6 +15,7 @@
 
 
 <a class="btn  alert-info" href="<?php echo Yii:: app() ->baseUrl.'/profesor/create'?>">Crear  nuevo profesor</a>
+<a class="btn  alert-info" href="<?php echo Yii:: app() ->baseUrl.'/curso/actualizarCurso'?>">Asignar profesor jefe a curso</a>
 
 <div class="container-fluid">
     

@@ -720,7 +720,7 @@ class MatriculaForm extends CFormModel
                 {
             $añoActual= date('Y');
             $curso=  Curso::model()->findAll(array("condition"=>"año =$añoActual"));
-            $cursoArray=CHtml::listData($curso,'idcurso','nombrecurso');
+            $cursoArray=CHtml::listData($curso,'idcurso','nombrecurso','nivel');
             return $cursoArray;
         }
         

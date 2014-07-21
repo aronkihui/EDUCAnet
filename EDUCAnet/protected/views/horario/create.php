@@ -15,4 +15,3 @@ $this->menu=array(
 
 <h1>Create Horario</h1>
 
-<?php $this->renderPartial('_form', array('model0'=>$model0  )); ?>

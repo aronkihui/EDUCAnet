@@ -39,9 +39,9 @@ class CursoController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+			//array('deny',  // deny all users
+			//	'users'=>array('*'),
+			//),
 		);
 	}
 
@@ -84,23 +84,38 @@ class CursoController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionActualizarCurso()
 	{
-		$model=$this->loadModel($id);
+            
+             $model=new Bloques;
+   
+     
+     $item = new Bloques;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+     $items=Bloques::model()->findAll();
 
-		if(isset($_POST['Curso']))
-		{
-			$model->attributes=$_POST['Curso'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idcurso));
-		}
+            if(isset($_POST['Bloques']))
+            {
+                $model->attributes=$_POST['Bloques'];
+                 if($model->validate())
+                 {
+                     $model->save();
+                 $this->refresh();
+                    }
 
-		$this->render('update',array(
-			'model'=>$model,
-		));
+                    $valid=true;
+                    foreach($items as $i=>$item)
+                    {
+                            if(isset($_POST['Bloques'][$i]))
+                            $item->attributes=$_POST['Bloques'][$i];
+                            $valid=$item->validate() && $valid;
+                            if($valid)$item->save();
+                    }
+
+
+            }
+    $this->render('actualizarCurso',array('items'=>$items,'model'=>$model));
+		
 	}
 
 	/**

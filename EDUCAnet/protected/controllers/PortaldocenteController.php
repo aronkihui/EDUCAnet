@@ -12,7 +12,7 @@ class PortaldocenteController extends Controller{
     
     public function actionPortaldocente()
     {
-        
+      
         $this->render('portaldocente');
     }
     
@@ -24,7 +24,20 @@ class PortaldocenteController extends Controller{
       
     public function actionMis_colegas()
     {
-        $this->renderPartial('mis_colegas');
+        //mostrar profesores
+        
+   
+     
+     //$item = new Profesor;
+
+     $items=  Profesor::model()->findAll(array('index'=>'idprofesor'));
+   
+    
+
+
+            
+    $this->render('mis_colegas',array('items'=>$items));
+        
     }
     
       
@@ -48,6 +61,9 @@ class PortaldocenteController extends Controller{
         $this->renderPartial('gestionar_anotaciones');
     }
     
+    
+    
+   
     
 }
 ?>

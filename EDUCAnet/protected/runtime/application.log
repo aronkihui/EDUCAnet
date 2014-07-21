@@ -8779,3 +8779,1641 @@ REQUEST_URI=/EDUCAnet/EDUCAnet/curso/create
 in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/_form.php (69)
 in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/create.php (18)
 in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php (79)
+2014/07/18 23:02:52 [error] [exception.CException] exception 'CException' with message 'Property "Matricula.nombreApoderado" is not defined.' in /opt/lampp/htdocs/EDUCAnet/framework/base/CComponent.php:130
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(145): CComponent->__get('nombreApoderado')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('nombreApoderado')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Matricula), 'nombreApoderado')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Matricula), 'nombreApoderado', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Matricula), 'nombreApoderado', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/matriculador/matricula_alumno_antiguo.php(30): CActiveForm->textField(Object(Matricula), 'nombreApoderado')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('matricula_alumn...', Array, true)
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php(35): CController->render('matricula_alumn...', Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): MatriculadorController->actionMatricula_alumno_antiguo()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('matricula_alumn...')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculador/ma...')
+#22 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador/matricula_alumno_antiguo
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/matriculador
+---
+2014/07/18 23:03:17 [error] [exception.CException] exception 'CException' with message 'Property "Matricula.nombreApoderado" is not defined.' in /opt/lampp/htdocs/EDUCAnet/framework/base/CComponent.php:130
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(145): CComponent->__get('nombreApoderado')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('nombreApoderado')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Matricula), 'nombreApoderado')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Matricula), 'nombreApoderado', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Matricula), 'nombreApoderado', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/matriculador/matricula_alumno_antiguo.php(30): CActiveForm->textField(Object(Matricula), 'nombreApoderado')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('matricula_alumn...', Array, true)
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php(35): CController->render('matricula_alumn...', Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): MatriculadorController->actionMatricula_alumno_antiguo()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('matricula_alumn...')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculador/ma...')
+#22 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador/matricula_alumno_antiguo
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/matriculador
+---
+2014/07/18 23:35:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bloquesAsignaturaCurso/create".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('bloquesAsignatu...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/bloquesAsignaturaCurso/create
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/matriculador
+---
+2014/07/18 23:36:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bloquesAsignaturaCurso/create".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('bloquesAsignatu...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/bloquesAsignaturaCurso/create
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/matriculador
+---
+2014/07/18 23:36:24 [error] [php] Undefined variable: model1 (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/_form.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): HorarioController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/create.php(18): HorarioController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): HorarioController->renderInternal()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): HorarioController->renderFile()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): HorarioController->renderPartial()
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(223): HorarioController->render()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): HorarioController->runAction()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): HorarioController->filterAccessControl()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): HorarioController->runActionWithFilters()
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): HorarioController->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/_form.php (43)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/create.php (18)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (223)
+2014/07/18 23:36:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "matriculaForm/create".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculaForm/c...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/matriculaForm/create
+---
+2014/07/19 02:13:45 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(27): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405728825330
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (27)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:13:46 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(27): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405728826533
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (27)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:15:08 [error] [exception.CException] exception 'CException' with message 'PortaldocenteController cannot find the requested view "crear_bloque".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('crear_bloque', Array, true)
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(56): CController->render('crear_bloque', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('mis_colegas')
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portaldocente/m...')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405728908321
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portaldocente/portaldocente
+---
+2014/07/19 02:15:09 [error] [exception.CException] exception 'CException' with message 'PortaldocenteController cannot find the requested view "crear_bloque".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('crear_bloque', Array, true)
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(56): CController->render('crear_bloque', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('mis_colegas')
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portaldocente/m...')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405728909258
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portaldocente/portaldocente
+---
+2014/07/19 02:15:09 [error] [exception.CException] exception 'CException' with message 'PortaldocenteController cannot find the requested view "crear_bloque".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('crear_bloque', Array, true)
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(56): CController->render('crear_bloque', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('mis_colegas')
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portaldocente/m...')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405728909443
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portaldocente/portaldocente
+---
+2014/07/19 02:15:40 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(61): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405728940344
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (61)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:17:57 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(61): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729077889
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (61)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:20:28 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(61): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729228813
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (61)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:35 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729295310
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:37 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729297041
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:37 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729297326
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:37 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729297517
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:37 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729297680
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:37 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729297865
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:38 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729298109
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:38 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729298871
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:39 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729299314
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:21:39 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:55)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729299494
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (55)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:27:16 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:39)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729636578
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (39)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:27:18 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:39)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405729638661
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (39)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:36:10 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:39)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405730170155
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (39)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:36:11 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:39)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405730171137
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (39)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:36:11 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:39)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405730171686
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (39)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:36:12 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:39)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405730172086
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (39)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:36:12 [error] [php] Undefined variable: model (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php:39)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405730172270
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (39)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:37:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mis_colegas".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('mis_colegas')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/mis_colegas
+---
+2014/07/19 02:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portalalumno')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portalalumno
+---
+2014/07/19 02:39:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bloquesAsignaturaCurso".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('bloquesAsignatu...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/bloquesAsignaturaCurso/
+---
+2014/07/19 02:39:59 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(44): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405730399572
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (44)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 02:41:03 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(44): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405730463233
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (44)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 03:32:44 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(44): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405733564710
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (44)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 03:43:19 [error] [exception.CException] exception 'CException' with message 'Property "Profesor.id" is not defined.' in /opt/lampp/htdocs/EDUCAnet/framework/base/CComponent.php:130
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(145): CComponent->__get('id')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(1892): CActiveRecord->__get('id')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(1351): CActiveRecord->populateRecords(Array, true, 'id')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(33): CActiveRecord->findAll(Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('mis_colegas')
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('portaldocente/m...')
+#11 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405734199465
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/portaldocente/portaldocente
+---
+2014/07/19 03:43:30 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(44): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405734210365
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (44)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/19 03:45:36 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php:11)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): PortaldocenteController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php(44): PortaldocenteController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): PortaldocenteController->actionMis_colegas()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(286): PortaldocenteController->runAction()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): PortaldocenteController->runActionWithFilters()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): PortaldocenteController->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/portaldocente/mis_colegas?_=1405734336715
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/portaldocente/mis_colegas.php (11)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/PortaldocenteController.php (44)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/20 05:22:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('view')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculador/vi...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador/3
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/matricula_alumno_antiguo
+---
+2014/07/20 05:22:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculador')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador/
+---
+2014/07/20 05:22:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "matricula_alumno_nuevo".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('matricula_alumn...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('matricula_alumn...')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculador/ma...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador/matricula_alumno_nuevo
+---
+2014/07/20 05:22:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('matriculador')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/matriculador
+---
+2014/07/20 05:39:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'bd_educanet'' in /opt/lampp/htdocs/EDUCAnet/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/base/CModule.php(387): CDbConnection->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Curso))
+#7 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(65): CActiveRecord->__construct()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionCreate()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('create')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/create')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/curso/create
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/matriculador
+---
+2014/07/20 05:48:12 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('1')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/1
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/curso/create
+---
+2014/07/20 05:48:46 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('2')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/2
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/create
+---
+2014/07/20 05:49:05 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('3')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/3
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/create
+---
+2014/07/20 05:49:38 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('4')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/4
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/create
+---
+2014/07/20 05:50:16 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('5')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/5
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/curso/create
+---
+2014/07/20 05:53:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/create
+---
+2014/07/20 05:53:31 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('6')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/6
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/create
+---
+2014/07/21 07:32:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "13864900-8".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('13864900-8')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('13864900-8')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/138649...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/13864900-8
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/profesor/create
+---
+2014/07/21 07:34:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "14074238-4".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('14074238-4')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('14074238-4')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/140742...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/14074238-4
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/profesor/create
+---
+2014/07/21 07:35:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "14348301-0".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('14348301-0')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('14348301-0')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/143483...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/14348301-0
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/profesor/create
+---
+2014/07/21 07:37:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "14571850-3".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('14571850-3')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('14571850-3')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/145718...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/14571850-3
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/profesor/create
+---
+2014/07/21 07:39:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "15312494-9".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('15312494-9')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('15312494-9')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/153124...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/15312494-9
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/profesor/create
+---
+2014/07/21 08:18:55 [error] [php] call_user_func() expects parameter 1 to be a valid callback, first array member is not a valid class name or object (/opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php:2143)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(723): listData()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php(16): MatriculaForm->getCurso()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): HorarioController->renderInternal()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): HorarioController->renderFile()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): HorarioController->renderPartial()
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(86): HorarioController->render()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): HorarioController->runAction()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): HorarioController->filterAccessControl()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): HorarioController->runActionWithFilters()
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): HorarioController->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (723)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php (16)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (86)
+2014/07/21 08:22:36 [error] [php] call_user_func() expects parameter 1 to be a valid callback, array must have exactly two members (/opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php:2143)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(723): listData()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php(16): MatriculaForm->getCurso()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): HorarioController->renderInternal()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): HorarioController->renderFile()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): HorarioController->renderPartial()
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(86): HorarioController->render()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): HorarioController->runAction()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): HorarioController->filterAccessControl()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): HorarioController->runActionWithFilters()
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): HorarioController->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (723)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php (16)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (86)
+2014/07/21 08:22:58 [error] [php] call_user_func() expects parameter 1 to be a valid callback, array must have exactly two members (/opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php:2143)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(723): listData()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php(16): MatriculaForm->getCurso()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): HorarioController->renderInternal()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): HorarioController->renderFile()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): HorarioController->renderPartial()
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(86): HorarioController->render()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): HorarioController->runAction()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): HorarioController->filterAccessControl()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): HorarioController->runActionWithFilters()
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): HorarioController->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (723)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php (16)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (86)
+2014/07/21 08:23:08 [error] [php] call_user_func() expects parameter 1 to be a valid callback, array must have exactly two members (/opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php:2143)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(723): listData()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php(16): MatriculaForm->getCurso()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): HorarioController->renderInternal()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): HorarioController->renderFile()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): HorarioController->renderPartial()
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(86): HorarioController->render()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): HorarioController->runAction()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): HorarioController->filterAccessControl()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): HorarioController->runActionWithFilters()
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): HorarioController->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (723)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php (16)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (86)
+2014/07/21 08:23:19 [error] [php] call_user_func() expects parameter 1 to be a valid callback, array must have exactly two members (/opt/lampp/htdocs/EDUCAnet/framework/web/helpers/CHtml.php:2143)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(723): listData()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php(16): MatriculaForm->getCurso()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): HorarioController->renderInternal()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): HorarioController->renderFile()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): HorarioController->renderPartial()
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(86): HorarioController->render()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): HorarioController->runAction()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): HorarioController->filterAccessControl()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): HorarioController->runActionWithFilters()
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): HorarioController->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (723)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/horario/matricula_form.php (16)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (86)
+2014/07/21 08:26:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bd_educanet`.`horario`, CONSTRAINT `fk_horario_dia1` FOREIGN KEY (`dia_iddia`) REFERENCES `dia` (`iddia`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `horario` (`curso_idcurso`, `asignatura_idasignatura`, `bloques_id_inicio`, `bloques_id_fin`, `dia_iddia`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (648)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (81)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 08:26:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bd_educanet`.`horario`, CONSTRAINT `fk_horario_dia1` FOREIGN KEY (`dia_iddia`) REFERENCES `dia` (`iddia`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `horario` (`curso_idcurso`, `asignatura_idasignatura`, `bloques_id_inicio`, `bloques_id_fin`, `dia_iddia`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /opt/lampp/htdocs/EDUCAnet/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(648): CActiveRecord->save()
+#3 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(81): MatriculaForm->save()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('create')
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('horario/create')
+#15 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/horario/create
+---
+2014/07/21 08:29:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bd_educanet`.`horario`, CONSTRAINT `fk_horario_dia1` FOREIGN KEY (`dia_iddia`) REFERENCES `dia` (`iddia`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `horario` (`curso_idcurso`, `asignatura_idasignatura`, `bloques_id_inicio`, `bloques_id_fin`, `dia_iddia`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (650)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (81)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 08:29:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bd_educanet`.`horario`, CONSTRAINT `fk_horario_dia1` FOREIGN KEY (`dia_iddia`) REFERENCES `dia` (`iddia`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `horario` (`curso_idcurso`, `asignatura_idasignatura`, `bloques_id_inicio`, `bloques_id_fin`, `dia_iddia`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /opt/lampp/htdocs/EDUCAnet/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(650): CActiveRecord->save()
+#3 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(81): MatriculaForm->save()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('create')
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('horario/create')
+#15 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/horario/create
+---
+2014/07/21 08:30:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bd_educanet`.`horario`, CONSTRAINT `fk_horario_dia1` FOREIGN KEY (`dia_iddia`) REFERENCES `dia` (`iddia`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `horario` (`curso_idcurso`, `asignatura_idasignatura`, `bloques_id_inicio`, `bloques_id_fin`, `dia_iddia`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php (650)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php (81)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 08:30:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bd_educanet`.`horario`, CONSTRAINT `fk_horario_dia1` FOREIGN KEY (`dia_iddia`) REFERENCES `dia` (`iddia`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `horario` (`curso_idcurso`, `asignatura_idasignatura`, `bloques_id_inicio`, `bloques_id_fin`, `dia_iddia`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /opt/lampp/htdocs/EDUCAnet/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/models/MatriculaForm.php(650): CActiveRecord->save()
+#3 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/HorarioController.php(81): MatriculaForm->save()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): HorarioController->actionCreate()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('create')
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('horario/create')
+#15 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/horario/create
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/horario/create
+---
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "0" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "1" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "2" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "3" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "4" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "5" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "6" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "7" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 02:33:49 [warning] [application] Failed to set unsafe attribute "8" of "Asignatura".
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/MatriculadorController.php (79)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 09:28:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/admin')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/profesor/create
+---
+2014/07/21 09:28:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/admin')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/admin
+---
+2014/07/21 09:28:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/admin')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/admin
+---
+2014/07/21 09:29:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('profesor/admin')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/profesor/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/profesor/index
+---
+2014/07/21 09:30:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/create
+---
+2014/07/21 09:30:43 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/create
+---
+2014/07/21 09:33:44 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:34:33 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:34:43 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:35:24 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(64): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:36:18 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:36:46 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(64): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:36:53 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php:412
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(383): CGridView->createDataColumn('a??o')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(147): CGridView->init()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/admin.php(64): CBaseController->widget('zii.widgets.gri...', Array)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(143): CController->render('admin', Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionAdmin()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#21 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/admin
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:39:05 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('1')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/1
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/update/1
+---
+2014/07/21 09:39:28 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('1')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/1
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/
+---
+2014/07/21 09:39:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:336
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/update')
+#10 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/update/
+---
+2014/07/21 09:40:12 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /opt/lampp/htdocs/EDUCAnet/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('1')
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/1
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/curso/update/1
+---
+2014/07/21 09:41:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:336
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/update')
+#10 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/update/
+---
+2014/07/21 09:41:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:336
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/update')
+#10 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/index.php/curso/update
+---
+2014/07/21 09:43:26 [error] [php] Undefined variable: items (/opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/update.php:9)
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(869): CursoController->renderFile()
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CursoController->renderPartial()
+#2 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(101): CursoController->render()
+#3 unknown(0): CursoController->actionUpdate()
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CursoController->runAction()
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CursoController->filterAccessControl()
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#13 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CursoController->runActionWithFilters()
+#14 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CursoController->run()
+#15 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CWebApplication->run()
+REQUEST_URI=/EDUCAnet/EDUCAnet/curso/update/1
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/views/curso/update.php (9)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php (101)
+in /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php (13)
+2014/07/21 09:43:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:336
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/update')
+#10 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/curso/update/
+---
+2014/07/21 09:43:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:336
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/update')
+#10 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/curso/update
+---
+2014/07/21 09:44:27 [error] [exception.CException] exception 'CException' with message 'CursoController cannot find the requested view "crear_bloque".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(782): CController->renderPartial('crear_bloque', Array, true)
+#1 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/protected/controllers/CursoController.php(117): CController->render('crear_bloque', Array)
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/actions/CInlineAction.php(49): CursoController->actionUpdate()
+#3 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/EDUCAnet/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(291): CFilterChain->run()
+#10 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('update')
+#12 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/update')
+#13 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/curso/update
+---
+2014/07/21 09:45:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actualizarCurso".' in /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/EDUCAnet/framework/web/CController.php(270): CController->missingAction('actualizarCurso')
+#1 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(282): CController->run('actualizarCurso')
+#2 /opt/lampp/htdocs/EDUCAnet/framework/web/CWebApplication.php(141): CWebApplication->runController('curso/actualiza...')
+#3 /opt/lampp/htdocs/EDUCAnet/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/EDUCAnet/EDUCAnet/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EDUCAnet/EDUCAnet/curso/actualizarCurso
+HTTP_REFERER=http://localhost/EDUCAnet/EDUCAnet/index.php/matriculador/matriculador
+---
