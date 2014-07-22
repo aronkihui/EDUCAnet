@@ -18,24 +18,24 @@ class PortaldocenteController extends Controller{
     
     public function actionMis_alumnos()
     {
-        $this->renderPartial('mis_alumnos');
+        $items=  Yii::app()->db->createCommand()
+            ->select('al.nombre,al.apellido,al.telefono,al.email, cur.nombrecurso , cur.nivel')
+            ->from('alumno al')
+            ->join('matricula mat','mat.alumno_idalumno = al.idalumno')
+            ->join('curso cur', 'cur.idcurso = mat.curso_idcurso')
+            ->join('profesor profe', 'profe.idprofesor = cur.profesor_idprofesor')
+            ->where('profe.idprofesor="13864900-8"')
+            
+            ->query();
+ 
+
+        $this->renderPartial('mis_alumnos',array('items'=>$items));
     }
     
       
     public function actionMis_colegas()
-    {
-        //mostrar profesores
-        
-   
-     
-     //$item = new Profesor;
-
+    { 
      $items=  Profesor::model()->findAll(array('index'=>'idprofesor'));
-   
-    
-
-
-            
     $this->render('mis_colegas',array('items'=>$items));
         
     }
@@ -53,7 +53,19 @@ class PortaldocenteController extends Controller{
     
     public function actionMis_asignaturas()
     {
-        $this->renderPartial('mis_asignaturas');
+        
+         $items=  Yii::app()->db->createCommand()
+            ->select('al.nombre,al.apellido,al.telefono,al.email, cur.nombrecurso , cur.nivel')
+            ->from('alumno al')
+            ->join('matricula mat','mat.alumno_idalumno = al.idalumno')
+            ->join('curso cur', 'cur.idcurso = mat.curso_idcurso')
+            ->join('profesor profe', 'profe.idprofesor = cur.profesor_idprofesor')
+            ->where('profe.idprofesor="13864900-8"')
+            
+            ->query();
+        
+        
+        $this->renderPartial('mis_asignaturas',array('items'=>$items));
     }
     
     public function actionGestionar_anotaciones()

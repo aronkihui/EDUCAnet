@@ -5,7 +5,7 @@
 <div class="form">
 <?php echo CHtml::beginForm(); ?>
     <table class="table tabbable table-bordered">
-        <tr><th>Numero bloque</th><th>hora  inicio</th><th>hora fin</th><th>fecha creacion</th></tr>
+        <tr><th>Curso</th><th>Año</th><th>Nivel</th><th>Especialidad</th><th>Fecha Creacion</th><th>Cupos</th><th>Profesor</th> </tr>
 <?php foreach($items as $i=>$item): ?>
 <tr>
     

@@ -114,6 +114,7 @@ class MatriculadorController extends Controller
 
      $items=Bloques::model()->findAll();
 
+
             if(isset($_POST['Bloques']))
             {
                 $model->attributes=$_POST['Bloques'];
@@ -137,6 +138,39 @@ class MatriculadorController extends Controller
     $this->render('crear_bloque',array('items'=>$items,'model'=>$model));
     }
 
+    public function actionProfesor_tiene_asignatura() {
+        
+         $model=new ProfesorHasAsignatura;
+   
+     
+     $item = new ProfesorHasAsignatura;
+
+     $items=  ProfesorHasAsignatura::model()->findAll();
+
+
+            if(isset($_POST['ProfesorHasAsignatura']))
+            {
+                $model->attributes=$_POST['ProfesorHasAsignatura'];
+                 if($model->validate())
+                 {
+                     $model->save();
+                 $this->refresh();
+                    }
+
+                    $valid=true;
+                    foreach($items as $i=>$item)
+                    {
+                            if(isset($_POST['ProfesorHasAsignatura'][$i]))
+                            $item->attributes=$_POST['ProfesorHasAsignatura'][$i];
+                            $valid=$item->validate() && $valid;
+                            if($valid)$item->save();
+                    }
+
+
+            }
+        
+        $this->render('profesor_tiene_asignatura',array('items'=>$items,'model'=>$model));
+    }
 
     
     public function actionAdmin_profesores() 

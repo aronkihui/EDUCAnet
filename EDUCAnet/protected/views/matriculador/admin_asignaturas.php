@@ -17,6 +17,8 @@
 
 <a class="btn  alert-info" href="<?php echo $this->createUrl('matriculador/crear_bloque');?>">crear bloque</a>
 
+<a class="btn  alert-info" href="<?php echo $this->createUrl('matriculador/profesor_tiene_asignatura');?>">administrar asignaturas profesor</a>
+
 
 <div class="container-fluid">
     
