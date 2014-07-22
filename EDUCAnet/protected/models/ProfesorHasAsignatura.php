@@ -7,6 +7,7 @@
  * @property integer $asignatura_idasignatura
  * @property string $año
  * @property string $profesor_idprofesor
+ * @property integer $idprofesor_has_asignatura
  *
  * The followings are the available model relations:
  * @property Asignatura $asignaturaIdasignatura
@@ -30,12 +31,12 @@ class ProfesorHasAsignatura extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('asignatura_idasignatura, año, profesor_idprofesor', 'required'),
+			array('asignatura_idasignatura, profesor_idprofesor', 'required'),
 			array('asignatura_idasignatura', 'numerical', 'integerOnly'=>true),
 			array('profesor_idprofesor', 'length', 'max'=>21),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('asignatura_idasignatura, año, profesor_idprofesor', 'safe', 'on'=>'search'),
+			array('asignatura_idasignatura, año, profesor_idprofesor, idprofesor_has_asignatura', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +62,7 @@ class ProfesorHasAsignatura extends CActiveRecord
 			'asignatura_idasignatura' => 'Asignatura Idasignatura',
 			'año' => 'Año',
 			'profesor_idprofesor' => 'Profesor Idprofesor',
+			'idprofesor_has_asignatura' => 'Idprofesor Has Asignatura',
 		);
 	}
 
@@ -85,6 +87,7 @@ class ProfesorHasAsignatura extends CActiveRecord
 		$criteria->compare('asignatura_idasignatura',$this->asignatura_idasignatura);
 		$criteria->compare('año',$this->año,true);
 		$criteria->compare('profesor_idprofesor',$this->profesor_idprofesor,true);
+		$criteria->compare('idprofesor_has_asignatura',$this->idprofesor_has_asignatura);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -102,19 +105,35 @@ class ProfesorHasAsignatura extends CActiveRecord
 		return parent::model($className);
 	}
         
-         public function getProfesor()
-                {
-            $profesor= Profesor::model()->findAll(array('order'=>'idprofesor asc'));
-            $profesorArray=CHtml::listData($profesor,'idprofesor','nombre','idprofesor');
-            return $profesorArray;
+        public function getAsignatura() {
+            $asignatura=  Asignatura::model()->findAll();
+            $asignaturaArray=CHtml::ListData($asignatura,'idasignatura','nombre');
+            return $asignaturaArray;
         }
         
-        public function getAsignatura() {
-            $asignatura= Asignatura::model()->findAll(array('order'=>'idasignatura asc'));
-            $asignaturaArray=CHtml::listData($asignatura,'idasignatura','nombre');
-            return $asignaturaArray;
+        public function getProfesor() {
+            $profesor=  Profesor::model()->findAll();
+            $profesorArray=CHtml::ListData($profesor,'idprofesor','nombre','idprofesor');
+            return $profesorArray;
             
         }
         
+                  
+        
+        
+   public function beforeSave()
+                {
+            
+            if(parent::beforeSave()){
+            {
+            date_default_timezone_set("America/Santiago");
+            $this->año = date("Y");
+            
+            
+             return true;
+             }
+             return false;
+            }
+                }  
         
 }

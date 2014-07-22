@@ -1,4 +1,8 @@
-
+<?php
+/* @var $this ProfesorHasAsignaturaController */
+/* @var $model ProfesorHasAsignatura */
+/* @var $form CActiveForm */
+?>
 
 <div class="form">
 
@@ -11,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Campos con  <span class="required">*</span> son requeridos</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -21,11 +25,7 @@
 		<?php echo $form->error($model,'asignatura_idasignatura'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'Año'); ?>
-		<?php echo $form->textField($model,'año'); ?>
-		<?php echo $form->error($model,'año'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Profesor'); ?>
@@ -35,14 +35,12 @@
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Asignar'); ?>
+		<?php echo CHtml::submitButton('asignar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
-
-
 
 
 
@@ -59,9 +57,9 @@
 <tr>
     
     
-    <td><?php echo CHtml::activeTextField($item,"[$i]asignatura_idasignatura",array('disabled'=>'disabled')); ?></td>
-    <td ><?php echo CHtml::activeTextField($item,"[$i]profesor_idprofesor"); ?></td>
-    <td><?php echo CHtml::activeTextField($item,"[$i]año"); ?></td>
+    <td><?php echo CHtml::activeDropDownList($item,"[$i]asignatura_idasignatura",$model->getAsignatura()); ?></td>
+    <td ><?php echo CHtml::activeDropDownList($item,"[$i]profesor_idprofesor",$model->getProfesor(),array('disabled'=>'disabled')); ?></td>
+    <td><?php echo CHtml::activeTextField($item,"[$i]año",array('disabled'=>'disabled')); ?></td>
      
 </tr>
 <?php endforeach; ?>
