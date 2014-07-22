@@ -4,7 +4,5 @@ inner join ?
 
 select al.nombre,al.apellido,al.telefono,al.email, cur.nombrecurso , cur.nivel from alumno al inner join matricula mat on mat.alumno_idalumno = al.idalumno inner join curso cur on cur.idcurso = mat.curso_idcurso inner join profesor profe on profe.idprofesor= cur.profesor_idprofesor WHERE profe.idprofesor='14348301-0'
 
- <td><?php echo CHtml::activeTextField($item,"[$i]nombre",array('disabled'=>'disabled')); echo CHtml::activeTextField($item,"[$i]apellido",array('disabled'=>'disabled'));?></td>
-    <td><?php echo CHtml::activeTextField($item,"[$i]telefono",array('disabled'=>'disabled')); ?></td>
-     <td><?php echo CHtml::activeTextField($item,"[$i]email",array('disabled'=>'disabled')); ?></td>
-     
+ select asig.nombre,cur.nombrecurso,profe.nombre from profesor_has_asignatura phras inner join profesor profe on profe.idprofesor= phras.profesor_idprofesor inner join asignatura asig on 
+asig.idasignatura=phras.asignatura_idasignatura inner join curso_has_asignatura  crhas on crhas.asignatura_idasignatura=asig.idasignatura inner join 
