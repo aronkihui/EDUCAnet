@@ -4,8 +4,13 @@
  * This is the model class for table "curso_has_asignatura".
  *
  * The followings are the available columns in table 'curso_has_asignatura':
+ * @property integer $idcurso_has_asignatura
  * @property integer $curso_idcurso
  * @property integer $asignatura_idasignatura
+ *
+ * The followings are the available model relations:
+ * @property Asignatura $asignaturaIdasignatura
+ * @property Curso $cursoIdcurso
  */
 class CursoHasAsignatura extends CActiveRecord
 {
@@ -29,7 +34,7 @@ class CursoHasAsignatura extends CActiveRecord
 			array('curso_idcurso, asignatura_idasignatura', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('curso_idcurso, asignatura_idasignatura', 'safe', 'on'=>'search'),
+			array('idcurso_has_asignatura, curso_idcurso, asignatura_idasignatura', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -41,6 +46,8 @@ class CursoHasAsignatura extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'asignaturaIdasignatura' => array(self::BELONGS_TO, 'Asignatura', 'asignatura_idasignatura'),
+			'cursoIdcurso' => array(self::BELONGS_TO, 'Curso', 'curso_idcurso'),
 		);
 	}
 
@@ -50,6 +57,7 @@ class CursoHasAsignatura extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'idcurso_has_asignatura' => 'Idcurso Has Asignatura',
 			'curso_idcurso' => 'Curso Idcurso',
 			'asignatura_idasignatura' => 'Asignatura Idasignatura',
 		);
@@ -73,6 +81,7 @@ class CursoHasAsignatura extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('idcurso_has_asignatura',$this->idcurso_has_asignatura);
 		$criteria->compare('curso_idcurso',$this->curso_idcurso);
 		$criteria->compare('asignatura_idasignatura',$this->asignatura_idasignatura);
 
@@ -91,4 +100,19 @@ class CursoHasAsignatura extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
+        public function getCurso() {
+        $curso=  Curso::model()->findAll();
+        $cursoArray=CHtml::listData($curso,'idcurso','nombrecurso','nivel');
+        return $cursoArray;
+         
+        }
+        
+        public function getAsignatura() {
+            $asignatura=  Asignatura::model()->findAll();
+            $asignaturaArray=CHtml::listData($asignatura,'idasignatura','nombre');
+            return $asignaturaArray;
+        }
+        
 }

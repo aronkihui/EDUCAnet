@@ -54,16 +54,14 @@ class PortaldocenteController extends Controller{
     public function actionMis_asignaturas()
     {
         
-         $items=  Yii::app()->db->createCommand()
-            ->select('al.nombre,al.apellido,al.telefono,al.email, cur.nombrecurso , cur.nivel')
-            ->from('alumno al')
-            ->join('matricula mat','mat.alumno_idalumno = al.idalumno')
-            ->join('curso cur', 'cur.idcurso = mat.curso_idcurso')
-            ->join('profesor profe', 'profe.idprofesor = cur.profesor_idprofesor')
-            ->where('profe.idprofesor="13864900-8"')
-            
+         
+        $items=  Yii::app()->db->createCommand()
+            ->select('*')
+            ->from('profesor_has_asignatura')            
+            ->where('profesor_idprofesor="13864900-8"')            
             ->query();
-        
+                 
+   
         
         $this->renderPartial('mis_asignaturas',array('items'=>$items));
     }

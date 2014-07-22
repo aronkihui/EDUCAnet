@@ -9,6 +9,8 @@
 
 <a class="btn  alert-info" href="<?php echo Yii:: app() ->baseUrl.'/horario/create'?>">Crear  horarios</a>
 
+<a class="btn  alert-info" href="<?php echo Yii:: app() ->baseUrl.'/matriculador/cursoasignatura'?>">Asignar ramos a cursos</a>
+
 <div class="container-fluid">
     
     <p>muestra los cursos creados y activos de la institucion</p>

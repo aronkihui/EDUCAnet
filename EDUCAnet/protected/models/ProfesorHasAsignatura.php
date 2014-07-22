@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'profesor_has_asignatura':
  * @property integer $asignatura_idasignatura
- * @property string $año
+ * @property integer $año
  * @property string $profesor_idprofesor
  * @property integer $idprofesor_has_asignatura
  *
@@ -31,8 +31,8 @@ class ProfesorHasAsignatura extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('asignatura_idasignatura, profesor_idprofesor', 'required'),
-			array('asignatura_idasignatura', 'numerical', 'integerOnly'=>true),
+			array('asignatura_idasignatura, año, profesor_idprofesor', 'required'),
+			array('asignatura_idasignatura, año', 'numerical', 'integerOnly'=>true),
 			array('profesor_idprofesor', 'length', 'max'=>21),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -85,7 +85,7 @@ class ProfesorHasAsignatura extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('asignatura_idasignatura',$this->asignatura_idasignatura);
-		$criteria->compare('año',$this->año,true);
+		$criteria->compare('año',$this->año);
 		$criteria->compare('profesor_idprofesor',$this->profesor_idprofesor,true);
 		$criteria->compare('idprofesor_has_asignatura',$this->idprofesor_has_asignatura);
 
@@ -104,36 +104,4 @@ class ProfesorHasAsignatura extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-        
-        public function getAsignatura() {
-            $asignatura=  Asignatura::model()->findAll();
-            $asignaturaArray=CHtml::ListData($asignatura,'idasignatura','nombre');
-            return $asignaturaArray;
-        }
-        
-        public function getProfesor() {
-            $profesor=  Profesor::model()->findAll();
-            $profesorArray=CHtml::ListData($profesor,'idprofesor','nombre','idprofesor');
-            return $profesorArray;
-            
-        }
-        
-                  
-        
-        
-   public function beforeSave()
-                {
-            
-            if(parent::beforeSave()){
-            {
-            date_default_timezone_set("America/Santiago");
-            $this->año = date("Y");
-            
-            
-             return true;
-             }
-             return false;
-            }
-                }  
-        
 }

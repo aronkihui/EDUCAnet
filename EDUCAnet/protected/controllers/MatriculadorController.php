@@ -61,6 +61,36 @@ class MatriculadorController extends Controller
     }
     
     
+    public function actionCursoAsignatura() {
+        
+    $model=new CursoHasAsignatura;
+    $items= CursoHasAsignatura::model()->findAll();
+      if(isset($_POST['CursoHasAsignatura']))
+            {
+                $model->attributes=$_POST['CursoHasAsignatura'];
+                 if($model->validate())
+                 {
+                     $model->save();
+                 $this->refresh();
+                    }
+
+                    $valid=true;
+                    foreach($items as $i=>$item)
+                    {
+                            if(isset($_POST['CursoHasAsignatura'][$i]))
+                            $item->attributes=$_POST['CursoHasAsignatura'][$i];
+                            $valid=$item->validate() && $valid;
+                            if($valid)
+                                $item->save();
+                    }
+
+
+            }
+    $this->render('curso_has_asignatura',array('model'=>$model,'items'=>$items));
+        
+    }
+    
+    
     public function actionAdmin_asignaturas()
             {
         $this->renderPartial('admin_asignaturas');

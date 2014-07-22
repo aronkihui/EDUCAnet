@@ -9,11 +9,10 @@
        
 <?php foreach($items as $i=>$item): ?>
 <tr>
-    <td> <?php echo $item['nombre']; echo $item['apellido']?></td>
-    <td><?php echo $item['apellido']?></td>
-    <td> <?php echo $item['telefono']?></td>
-    <td> <?php echo $item['email']?></td>   
-     <td> <?php echo $item['nivel']; echo $item['nombrecurso']?></td>
+    <td> <?php echo $item['profesor_idprofesor'];?></td>
+    <td><?php echo $item['asignatura_idasignatura']?></td>
+    <td> <?php echo $item['año']?></td>
+   
     
 </tr>
 <?php endforeach; ?>

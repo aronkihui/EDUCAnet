@@ -1,1 +1,4 @@
 SELECT * FROM `archivo` WHERE archivo_fecha <= '2014-04-09 13:19:55.000000' ORDER BY idarchivo desc limit 3 
+
+SELECT profe.nombre,profe.apellido, asig.nombre, prhas.año FROM profesor_has_asignatura prhas inner join asignatura asig on prhas.asignatura_idasignatura = asig.idasignatura 
+inner join profesor profe on profe.idprofesor = prhas.profesor_idprofesor where profe.idprofesor ='13864900-8'
