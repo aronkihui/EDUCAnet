@@ -5,7 +5,7 @@
  * LoginForm is the data structure for keeping
 
  */
-class MatriculaForm extends CFormModel
+class HorarioForm extends CFormModel
 {
 	
         

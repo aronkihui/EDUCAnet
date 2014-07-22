@@ -68,22 +68,22 @@ class HorarioController extends Controller
 	{
             
             //MODELOS ?
-		$model=new MatriculaForm;
+		$model=new HorarioForm;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['MatriculaForm']))
+		if(isset($_POST['HorarioForm']))
 		{
                    
-			$model->attributes=$_POST['MatriculaForm'];   
+			$model->attributes=$_POST['HorarioForm'];   
                       
                         if($model->save())                                                 
                         $this->redirect(array('view','id'=>$model0->id));;
                            
 		}
 
-		$this->render('matricula_form',array('model'=>$model));
+		$this->render('horario_form',array('model'=>$model));
 	}
         
         
